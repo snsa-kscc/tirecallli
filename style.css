@@ -485,7 +485,17 @@ footer {
 }
 
 .footer__item:first-child img {
-  max-width: 30rem;
+  max-width: 25rem;
+}
+
+.footer__item:first-child svg {
+  max-width: 5rem;
+}
+
+.footer__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .first {
@@ -549,6 +559,7 @@ main {
 
 .product__aside {
   flex: 7 1 55rem;
+  padding: 0 clamp(0.5em, 4vw, 6em);
 }
 
 .product__info {
@@ -639,6 +650,11 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--small {
 
 input[name="panel"]:checked ~ .accordion__content.accordion__content--med {
   height: 190px;
+}
+
+input[name="panel"]:checked
+  ~ .accordion__content.accordion__content--med-large {
+  height: 260px;
 }
 
 input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
@@ -871,6 +887,23 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
 
 .card__image {
   margin: 1em 0;
+}
+
+.upsell {
+  margin: 3em clamp(0.5em, 4vw, 6em);
+}
+
+.upsell__group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  column-gap: 2em;
+  row-gap: 2em;
+  margin: 2em 0;
+}
+
+.upsell h5 {
+  font-size: 2rem;
+  margin-top: 0.5em;
 }
 
 /* @media (max-width: 800px) {
