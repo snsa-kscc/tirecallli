@@ -915,6 +915,28 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
   margin: 8em 0;
 }
 
+.parkha {
+  margin-top: clamp(6em, 20vw, 18em);
+}
+
+.parkha__item h4 {
+  color: white;
+}
+
+.parkha__group--pos-relative {
+  position: relative;
+}
+
+.parkha__group--black {
+  background-color: black;
+}
+
+.parkha__item--pos-absolute {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
+
 /* cards */
 
 .cards {
@@ -944,6 +966,15 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
 .upsell h5 {
   font-size: 2rem;
   margin-top: 0.5em;
+}
+
+.legal {
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
+.legal h5 {
+  margin: 1em 0;
 }
 
 @media (max-width: 800px) {
