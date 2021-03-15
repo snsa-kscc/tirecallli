@@ -869,13 +869,53 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
   mix-blend-mode: difference;
 }
 
+/* pants */
+
 .pants {
   margin-top: clamp(6em, 20vw, 18em);
 }
 
-.pants h4 {
+.pants__title {
   text-align: center;
 }
+
+.pants__subtitle {
+  text-align: center;
+  outline: 5px solid;
+  padding: 0.5em;
+}
+
+.pants__group {
+  margin: 4em;
+}
+
+.pants__group--flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pants__body--text-end {
+  text-align: end;
+  margin-bottom: 2em;
+}
+
+.pants__group--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  justify-content: center;
+  align-items: center;
+  column-gap: 2em;
+  row-gap: 2em;
+  margin: 2em 2em;
+}
+
+.pants__hero {
+  margin: 8em 0;
+}
+
+/* cards */
 
 .cards {
   display: grid;
@@ -906,9 +946,9 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
   margin-top: 0.5em;
 }
 
-/* @media (max-width: 800px) {
-  header,
-  footer {
-    display: none;
+@media (max-width: 800px) {
+  .mission__item--transformed {
+    transform: unset;
+    mix-blend-mode: unset;
   }
-} */
+}
