@@ -73,7 +73,8 @@ body {
 }
 
 img,
-video {
+video,
+svg {
   display: block;
   width: 100%;
   height: 100%;
@@ -813,7 +814,8 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
 }
 
 .mission__body-accentuated,
-.parkha__body-accentuated {
+.parkha__body-accentuated,
+.black-tee__body-accentuated {
   font-size: clamp(3rem, 3vw, 4.5rem);
   font-weight: bold;
   line-height: 1em;
@@ -1010,6 +1012,67 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
   .parkha__item--grid-item {
     margin: 2em 0;
   }
+}
+
+.black-tee {
+  margin-top: clamp(6em, 20vw, 18em);
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.black-tee__item--flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.black-tee__list + .black-tee__list {
+  margin-top: 2em;
+}
+
+.black-tee__head {
+  background-color: black;
+  color: white;
+  padding: 1em 1em 0em;
+}
+
+.black-tee__figure {
+  position: relative;
+}
+
+.black_tee__pics {
+  position: absolute;
+  display: flex;
+  left: 25%;
+  transform: translateX(-20%);
+  bottom: 5%;
+  max-width: 75%;
+}
+
+.black_tee__pics img {
+  margin-right: 1em;
+}
+
+.black-tee__group--flex-left {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 2em;
+}
+
+.black-tee__group--flex-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2em;
+  margin-top: 4em;
+}
+
+.black-tee__group--flex-left > div,
+.black-tee__group--flex-right > div {
+  flex: 1 1 31rem;
 }
 
 /* cards */
