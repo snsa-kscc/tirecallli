@@ -112,7 +112,6 @@ button {
 }
 
 .button--cta {
-  /* border-radius: 50%; */
   overflow: hidden;
   border: 2px solid;
   background: none;
@@ -223,24 +222,16 @@ a:hover {
   outline: none;
 }
 
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
 a:focus {
-  /* Provide a fallback style for browsers
- that don't support :focus-visible */
   outline: none;
   background: lightgrey;
 }
 
 a:focus:not(:focus-visible) {
-  /* Remove the focus indicator on mouse-focus for browsers
- that do support :focus-visible */
   background: transparent;
 }
 
 a:focus-visible {
-  /* Draw a very noticeable focus style for
- keyboard-focus on browsers that do support
- :focus-visible */
   outline: 2px solid red;
   background: transparent;
 }
@@ -260,7 +251,6 @@ a::before {
   content: "";
   height: 2px;
   opacity: 0;
-  /* show by default */
 }
 
 a:hover span {
@@ -376,30 +366,6 @@ a:hover::before {
   }
 }
 
-/* a {
-  color: var(--base-color);
-  text-decoration: none;
-  outline: 0;
-  transition: color 0.3s ease;
-  position: relative;
-}
-
-a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 1px;
-  width: 0;
-  background: var(--accent-color);
-  left: 0;
-  bottom: 0;
-  transition: all 0.3s ease;
-}
-
-a:hover::after {
-  width: 100%;
-} */
-
 h1 {
   font-size: clamp(8rem, 15vw, 20rem);
 }
@@ -466,10 +432,6 @@ footer {
   font-size: 6rem;
   color: white;
 }
-
-/* .landscape {
-  width: 100vw;
-} */
 
 .hero {
   display: grid;
@@ -619,12 +581,8 @@ main {
   color: rgb(116, 116, 116);
 }
 
-.accordion input:checked + label {
-}
-
 .accordion input:checked + label:after {
   content: "-";
-  /* adjsut line-height to vertically center icon */
   line-height: 1.5em;
 }
 
@@ -786,7 +744,6 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
 /* mission */
 
 .mission__group {
-  /* padding: 0 3em clamp(2em, 4vw, 5em); */
   padding: clamp(2em, 4vw, 5em) 3em;
   overflow: hidden;
 }
@@ -815,7 +772,8 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
 
 .mission__body-accentuated,
 .parkha__body-accentuated,
-.black-tee__body-accentuated {
+.black-tee__body-accentuated,
+.hoodie__body-accentuated {
   font-size: clamp(3rem, 3vw, 4.5rem);
   font-weight: bold;
   line-height: 1em;
@@ -1015,7 +973,7 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
 }
 
 .black-tee {
-  margin-top: clamp(6em, 20vw, 18em);
+  margin: clamp(6em, 20vw, 18em) 0;
   margin-left: 2em;
   margin-right: 2em;
 }
@@ -1073,6 +1031,93 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
 .black-tee__group--flex-left > div,
 .black-tee__group--flex-right > div {
   flex: 1 1 31rem;
+}
+
+.hoodie {
+  background-color: black;
+  padding-top: clamp(6em, 20vw, 18em);
+  padding-bottom: clamp(3em, 10vw, 6em);
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.hoodie__group--flex {
+  display: flex;
+  gap: 4em;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.hoodie__head {
+  color: black;
+  background-color: white;
+  padding: 1em 1em 0em;
+}
+
+.hoodie__accentuated {
+  align-self: flex-start;
+  max-width: 50%;
+}
+
+.hoodie__body-accentuated {
+  color: white;
+}
+
+.hoodie__body-accentuated--stroke {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+}
+
+.hoodie__copy {
+  color: white;
+}
+
+.hoodie__group--grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr 2fr;
+  grid-template-rows: 3fr repeat(2, 1fr) repeat(2, 2fr);
+  align-items: center;
+  gap: 2em;
+  max-width: 80%;
+  margin: 4em auto;
+}
+
+.hoodie__item:nth-child(1) {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.hoodie__item:nth-child(2) {
+  grid-area: 3 / 1 / 6 / 3;
+}
+.hoodie__item:nth-child(3) {
+  grid-area: 1 / 2 / 4 / 5;
+}
+.hoodie__item:nth-child(4) {
+  grid-area: 2 / 4 / 5 / 6;
+}
+.hoodie__item:nth-child(5) {
+  grid-area: 5 / 4 / 6 / 6;
+}
+
+@media (max-width: 768px) {
+  .hoodie__group--grid {
+    max-width: unset;
+  }
+}
+
+@media (max-width: 650px) {
+  .hoodie__group--grid {
+    display: inline-block;
+  }
+  .hoodie__group--grid > div {
+    padding: 1em 0;
+  }
+}
+
+.hoodie__figure {
+  max-width: 70%;
+  margin: 0 0 0 auto;
 }
 
 /* cards */
