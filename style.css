@@ -812,7 +812,8 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
   background: rgb(22, 22, 22);
 }
 
-.mission__body-accentuated {
+.mission__body-accentuated,
+.parkha__body-accentuated {
   font-size: clamp(3rem, 3vw, 4.5rem);
   font-weight: bold;
   line-height: 1em;
@@ -931,10 +932,32 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
   background-color: black;
 }
 
+.parkha__group--flex {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4em 2em;
+}
+
 .parkha__item--pos-absolute {
   position: absolute;
   top: 50%;
   left: 5%;
+}
+
+.parkha__item--flex-item {
+  flex: 1 1 31rem;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.parkha__item--flex-item:last-of-type {
+  padding: 2em;
+}
+
+.parkha__body-accentuated {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
 }
 
 /* cards */
