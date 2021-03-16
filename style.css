@@ -560,7 +560,7 @@ main {
   position: relative;
   display: block;
   padding: 1em;
-  border-top: 1px solid #fff;
+  /* border-top: 1px solid #fff; */
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   font-size: 1.5em;
   cursor: pointer;
@@ -1307,4 +1307,144 @@ form {
 
 .contact button {
   margin-top: 1em;
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all 0.25s ease;
+}
+.modal_bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+.modal-state {
+  display: none;
+}
+.modal-state:checked + .modal {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-state:checked + .modal .modal_inner {
+  top: 0;
+}
+
+.modal_inner {
+  transition: top 0.25s ease;
+  position: absolute;
+  top: -20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  margin: auto;
+  overflow: auto;
+  background: #fff;
+  padding: 3em 2em;
+  height: 50%;
+}
+
+.modal_close {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 1.1em;
+  height: 1.1em;
+  cursor: pointer;
+}
+
+.modal_close:after,
+.modal_close:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 1.5em;
+  background: #ccc;
+  display: block;
+  transform: rotate(45deg);
+  left: 50%;
+  margin: -3px 0 0 -1px;
+  top: 0;
+}
+
+.modal_close:hover:after,
+.modal_close:hover:before {
+  background: #aaa;
+}
+
+.modal_close:before {
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .modal_inner {
+    width: 90%;
+    height: 50%;
+    box-sizing: border-box;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: black;
+  outline: 2px solid black;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:focus {
+  background: rgb(240, 240, 240);
+  transition: all 0.3s;
+}
+
+table {
+  color: black;
+  border: 3px solid black;
+  text-transform: uppercase;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+th {
+  font-size: 1.2rem;
+  text-align: left;
+  color: #fff;
+  background: black;
+  padding: 0.5em;
+  border: 1px solid black;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+}
+
+tr:nth-of-type(2) {
+  font-weight: bold;
+  border-bottom: 3px solid black;
+}
+
+td {
+  border: 1px solid black;
+  padding: 0.5em;
+  text-align: center;
+}
+
+td:first-child {
+  text-align: right;
+  padding-right: 1em;
+  border-right: 3px solid black;
+  font-weight: bold;
 }
