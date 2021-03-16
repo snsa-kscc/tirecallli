@@ -773,7 +773,8 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
 .mission__body-accentuated,
 .parkha__body-accentuated,
 .black-tee__body-accentuated,
-.hoodie__body-accentuated {
+.hoodie__body-accentuated,
+.gray-tee__body-accentuated {
   font-size: clamp(3rem, 3vw, 4.5rem);
   font-weight: bold;
   line-height: 1em;
@@ -797,12 +798,14 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
 
 .mission__item--rotate-right {
   transform: rotate(30deg);
-  margin: 5em;
+}
+
+.mission__item--rotate-right img {
+  width: 60%;
 }
 
 .mission__item--rotate-left {
   transform: rotate(320deg);
-  margin: 5em;
 }
 
 .mission__item--flex-column {
@@ -988,7 +991,8 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
   margin-top: 2em;
 }
 
-.black-tee__head {
+.black-tee__head,
+.gray-tee__head {
   background-color: black;
   color: white;
   padding: 1em 1em 0em;
@@ -1118,6 +1122,57 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
 .hoodie__figure {
   max-width: 70%;
   margin: 0 0 0 auto;
+}
+
+.gray-tee {
+  margin-top: clamp(6em, 20vw, 18em);
+}
+
+.gray-tee__item + .gray-tee__item {
+  margin-top: 2em;
+}
+
+.gray-tee__group--flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.gray-tee__group--bg {
+  background-image: url("assets/img/campaign/girl-in-gray-new-life-tshirt-with-black-parkha-bg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 2em 0;
+}
+
+.gray-tee__pics--flex {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  align-items: flex-start;
+}
+
+.gray-tee__pics--flex > div:first-child {
+  margin-top: 2em;
+}
+
+.gray-tee__pics--flex div {
+  flex: 0 1 45rem;
+}
+
+.gray-tee__list {
+  background: white;
+  padding: 2em;
+  margin-top: 2em;
+  max-width: 30%;
+}
+
+@media (max-width: 700px) {
+  .gray-tee__list {
+    max-width: 50%;
+  }
 }
 
 /* cards */
