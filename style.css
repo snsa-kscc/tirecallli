@@ -1219,8 +1219,22 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
   margin: 1em 0;
 }
 
-.upsell {
+.upsell,
+.explore {
   margin: 3em clamp(0.5em, 4vw, 6em);
+}
+
+.explore__group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  column-gap: 2em;
+  row-gap: 2em;
+  margin: 2em 0;
+  align-items: center;
+}
+
+.explore__copy--middle {
+  margin-bottom: 1em;
 }
 
 .upsell__group {
@@ -1261,57 +1275,6 @@ form {
   position: relative;
   height: 6rem;
   overflow: hidden;
-}
-
-input,
-textarea {
-  width: 100%;
-  height: 100%;
-  font-family: inherit;
-  color: black;
-  background-color: transparent;
-  border: none;
-  padding-top: 30px;
-  outline: none;
-}
-
-label {
-  position: absolute;
-  bottom: 0px;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  font-size: 0.7em;
-  font-weight: 200;
-  pointer-events: none;
-  border-bottom: 1px solid black;
-  color: black;
-}
-
-label::after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  border-bottom: 1px solid black;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-}
-
-input:focus + label span,
-input:not(:placeholder-shown) + label span,
-textarea:focus + label span,
-textarea:not(:placeholder-shown) + label span {
-  transform: translateY(-150%);
-  font-size: 12px;
-}
-
-input:focus + label::after,
-input:not(:placeholder-shown) + label::after,
-textarea:focus + label::after,
-textarea:not(:placeholder-shown) + label::after {
-  transform: translateX(0%);
 }
 
 .form-entry span {
