@@ -1319,8 +1319,9 @@ form {
   left: 0;
   text-align: left;
   background: rgba(0, 0, 0, 0.6);
-  transition: all 0.25s ease;
+  /* transition: all 0.25s ease; */
 }
+
 .modal_bg {
   position: absolute;
   top: 0;
@@ -1329,9 +1330,11 @@ form {
   left: 0;
   cursor: pointer;
 }
+
 .modal-state {
   display: none;
 }
+
 .modal-state:checked + .modal {
   top: 0;
   opacity: 1;
@@ -1343,7 +1346,7 @@ form {
 }
 
 .modal_inner {
-  transition: top 0.25s ease;
+  /* transition: top 0.25s ease; */
   position: absolute;
   top: -20%;
   right: 0;
