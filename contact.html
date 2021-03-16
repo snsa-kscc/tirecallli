@@ -25,6 +25,57 @@
             </ul>
         </nav>
     </header>
+    <main class="contact">
+        <h2>Contact</h2>
+        <section class="contact__group">
+            <div class="contact__item">
+                <div class="contact__locations">
+                    <h5>Sales locations</h5>
+                    <p>approved! - Masarykova 18, 10000 Zagreb</p>
+                    <p>approved! – Mall of Split – Josipa Jovića 93, 21000 Split</p>
+                    <p>Market Concept Store - Frana Petrića 3, 10000 Zagreb </p>
+                    <p>Rockmark - Petra Berislavića 13, 10000 Zagreb </p>
+                    <p>PDV records (Pločnik) - Međimurska ulica 21, 10000 Zagreb</p>
+                </div>
+                <div class="contact__info">
+                    <h5>Contact</h5>
+                    <p>Short name: 14.4, vl. Matija Brlek</p>
+                    <p>Place: Vajdin vijenac 12, 10000 Zagreb</p>
+                    <p>Business bank and account number:</p>
+                    <p>Privredna banka Zagreb d.d., IBAN: HR5923400091160542572</p>
+                    <p>OIB: 88111750347</p>
+                    <p>Owner: Matija Brlek</p>
+                    <p>Contact: info@144.hr</p>
+                </div>
+            </div>
+            <div class="contact__item">
+                <div class="form">
+                    <form name="contact" method="POST" action="/#contact" netlify-honeypot="bot-field"
+                        data-netlify="true">
+                        <div class="hidden">
+                            <input type="text" name="bot-field" placeholder="&nbsp;" />
+                            <label><span>Phone</span></label>
+                        </div>
+                        <div class="form-entry">
+                            <input type="text" name="name" placeholder="&nbsp;" required />
+                            <label><span>Name</span></label>
+                        </div>
+                        <div class="form-entry">
+                            <input type="email" name="email" placeholder="&nbsp;" required />
+                            <label><span>Email</span></label>
+                        </div>
+                        <div class="form-entry">
+                            <textarea name="message" placeholder="&nbsp;" required></textarea>
+                            <label><span>Message</span></label>
+                        </div>
+                        <button class="button button--cta" type="submit">Send</button>
+                    </form>
+                </div>
+                <div class="confirmation"><span>Thanks</span></div>
+            </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="footer__item">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -49,6 +100,32 @@
             </nav>
         </div>
     </footer>
+    <script>
+        let testForm = document.querySelector("form");
+
+        testForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(testForm);
+            fetch(testForm.getAttribute("action"), {
+                method: "POST",
+                headers: {
+                    Accept: "application/x-www-form-urlencoded;charset=UTF-8",
+                    "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+                },
+                body: new URLSearchParams(formData).toString(),
+            }).then((res) => {
+                if (res) {
+                    document.querySelector(".confirmation").classList.add("show");
+                    testForm.reset();
+                    setTimeout(() => {
+                        document.querySelector(".confirmation").classList.remove("show");
+                    }, 5000);
+                }
+            });
+        });
+
+    </script>
 </body>
 
 </html>

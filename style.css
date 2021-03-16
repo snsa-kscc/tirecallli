@@ -1175,6 +1175,36 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
   }
 }
 
+.about,
+.contact {
+  margin: clamp(2em, 20vw, 6em) 2em;
+}
+
+.about h2,
+.contact h2 {
+  margin-bottom: 1em;
+}
+
+.about p,
+.contact p {
+  margin-bottom: 1em;
+}
+
+.contact h5 {
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+
+.contact__group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.contact__item {
+  flex: 1 1 35rem;
+}
+
 /* cards */
 
 .cards {
@@ -1220,4 +1250,98 @@ input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
     transform: unset;
     mix-blend-mode: unset;
   }
+}
+
+form {
+  width: 90%;
+  margin: 4em auto;
+}
+
+.form-entry {
+  position: relative;
+  height: 6rem;
+  overflow: hidden;
+}
+
+input,
+textarea {
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+  color: black;
+  background-color: transparent;
+  border: none;
+  padding-top: 30px;
+  outline: none;
+}
+
+label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  font-size: 0.7em;
+  font-weight: 200;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+  color: black;
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid black;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+input:focus + label span,
+input:not(:placeholder-shown) + label span,
+textarea:focus + label span,
+textarea:not(:placeholder-shown) + label span {
+  transform: translateY(-150%);
+  font-size: 12px;
+}
+
+input:focus + label::after,
+input:not(:placeholder-shown) + label::after,
+textarea:focus + label::after,
+textarea:not(:placeholder-shown) + label::after {
+  transform: translateX(0%);
+}
+
+.form-entry span {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.confirmation {
+  background: black;
+  padding: 2em;
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: all 1s ease;
+  opacity: 0;
+  color: white;
+}
+
+.show {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.contact button {
+  margin-top: 1em;
 }
