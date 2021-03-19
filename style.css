@@ -89,6 +89,12 @@ svg {
   margin: 1em;
 }
 
+.controls {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+}
+
 button {
   pointer-events: auto;
   cursor: pointer;
@@ -1450,4 +1456,53 @@ td:first-child {
   padding-right: 1em;
   border-right: 3px solid black;
   font-weight: bold;
+}
+
+.sound {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.sound--icon {
+  color: #fff;
+  width: 75%;
+  height: 100%;
+  line-height: 100%;
+  font-size: 40px;
+  display: block;
+  margin: auto;
+}
+.sound--wave {
+  position: absolute;
+  border: 1.6px solid transparent;
+  border-right: 1.6px solid #fff;
+  border-radius: 50%;
+  transition: all 200ms;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.sound--wave_one {
+  width: 50%;
+  height: 50%;
+}
+.sound--wave_two {
+  width: 75%;
+  height: 75%;
+}
+.sound-mute .sound--wave {
+  border-radius: 0;
+  width: 50%;
+  height: 50%;
+  border-width: 0 1.6px 0 0;
+}
+.sound-mute .sound--wave_one {
+  transform: rotate(45deg) translate3d(0, -50%, 0);
+}
+.sound-mute .sound--wave_two {
+  transform: rotate(-45deg) translate3d(0, 50%, 0);
 }
