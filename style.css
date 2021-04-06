@@ -10,7 +10,7 @@
   font-family: "JosefinSans";
   src: url("assets/fonts/JosefinSansLight.woff") format("woff");
   font-style: normal;
-  font-weight: lighter;
+  font-weight: 100;
   text-rendering: optimizeLegibility;
 }
 
@@ -18,7 +18,7 @@
   font-family: "JosefinSans";
   src: url("assets/fonts/JosefinSansLightItalic.woff") format("woff");
   font-style: italic;
-  font-weight: lighter;
+  font-weight: 100;
   text-rendering: optimizeLegibility;
 }
 
