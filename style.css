@@ -1507,7 +1507,8 @@ td:first-child {
 .sound-mute .sound--wave_two {
   transform: rotate(-45deg) translate3d(0, 50%, 0);
 }
-.products-page {
+.products-page,
+.about-page {
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
