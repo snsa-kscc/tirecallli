@@ -542,7 +542,8 @@ main {
   justify-content: center;
 }
 
-.product__figures a {
+.product__figures a,
+.product__figures img {
   margin: 1em;
   flex: 1 1 46%;
 }
@@ -1505,4 +1506,9 @@ td:first-child {
 }
 .sound-mute .sound--wave_two {
   transform: rotate(-45deg) translate3d(0, 50%, 0);
+}
+.products-page {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
