@@ -221,7 +221,6 @@ a {
   cursor: pointer;
   font-size: 18px;
   position: relative;
-  white-space: nowrap;
 }
 
 a:hover {
@@ -543,7 +542,7 @@ main {
 }
 
 .product__figures a,
-.product__figures img {
+.product__figures > img {
   margin: 1em;
   flex: 1 1 46%;
 }
@@ -604,27 +603,6 @@ main {
 
 .accordion .accordion__content .accordion__header {
   padding: 1em 0;
-}
-
-/* 
-* Size Variations
-*/
-
-input[name="panel"]:checked ~ .accordion__content.accordion__content--small {
-  height: 140px;
-}
-
-input[name="panel"]:checked ~ .accordion__content.accordion__content--med {
-  height: 190px;
-}
-
-input[name="panel"]:checked
-  ~ .accordion__content.accordion__content--med-large {
-  height: 260px;
-}
-
-input[name="panel"]:checked ~ .accordion__content.accordion__content--large {
-  height: 350px;
 }
 
 .accordion__list {
