@@ -405,10 +405,15 @@ h5 {
 nav ul {
   display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
 }
 
-nav li + li {
-  padding-left: 2em;
+nav li {
+  margin-right: 2em;
+}
+
+nav li:last-child {
+  margin-right: 0;
 }
 
 header,
@@ -1490,4 +1495,64 @@ td:first-child {
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
+}
+.conversation .feature {
+  height: 80vh;
+  margin-top: 5vh;
+}
+.conversation .feature img {
+  object-fit: cover;
+}
+.conversation h4 {
+  text-align: end;
+}
+.conversation .feature__description {
+  margin-left: 3%;
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+}
+.conversation h3 {
+  color: white;
+  font-size: clamp(1rem, 1vw, 1.4rem);
+}
+.conversation article {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 18vh 2rem 2vh;
+  color: #3f556a;
+  font-weight: lighter;
+  font-size: clamp(1.7rem, 1.4vw, 2.1rem);
+  line-height: 1.7;
+}
+.conversation article p {
+  margin-bottom: 2rem;
+}
+.article__intro::first-line {
+  color: dimgray;
+  font-weight: normal;
+}
+.article__greet {
+  color: #1a1a1a;
+}
+.article__question {
+  color: dimgray;
+  font-weight: normal;
+  margin-top: 7vh;
+}
+.article__question--small-margin {
+  margin-top: 2rem;
+}
+.conversation article img {
+  max-height: 70vh;
+  width: auto;
+  max-width: 100%;
+  margin: 7vh auto;
+}
+.article-images {
+  display: flex;
+}
+.conversation .article-images img {
+  padding: 0 1rem;
+  margin: 4vh auto 0;
 }
