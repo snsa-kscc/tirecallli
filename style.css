@@ -1556,3 +1556,34 @@ td:first-child {
   padding: 0 1rem;
   margin: 4vh auto 0;
 }
+
+.dropdown {
+  font-size: 18px;
+  position: relative;
+}
+
+.dropdown > li {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 1rem);
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition: all 300ms ease-in-out;
+}
+
+.dropdown-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-menu ul {
+  flex-direction: column;
+}
+
+.dropdown-menu li {
+  margin-bottom: 0.25em;
+}
