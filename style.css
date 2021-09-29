@@ -1199,22 +1199,19 @@ main {
   }
 }
 
-.about,
-.contact {
+.about {
   margin: clamp(2em, 20vw, 6em) 2em;
 }
 
-.about h2,
-.contact h2 {
+.about h2 {
   margin-block: 1em;
 }
 
-.about p,
-.contact p {
+.about p {
   margin-bottom: 1em;
 }
 
-.contact h5 {
+.about h5 {
   margin-bottom: 1em;
   margin-top: 2em;
 }
@@ -1329,7 +1326,7 @@ form {
   display: none;
 }
 
-.contact button {
+.about button {
   margin-top: 1em;
 }
 

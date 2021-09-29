@@ -7,32 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tire Calligraphy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app.css">
 </head>
 
-<body class="about-page">
+<body>
     <header>
         <nav class="menu__left">
             <ul>
                 <li><a href="/campaign.html">Campaign</a></li>
-                <li><a href="/products.html">Products</a></li>
-                <li><a href="/sale.html">Sale</a></li>
-                <li><a href="/conversation.html">Conversation</a></li>
+                <li><a href="/199144.html">199144</a></li>
+                <li><a href="/new-life.html">New Life</a></li>
+                <li><a href="/death-moth.html">Death Moth</a></li>
             </ul>
         </nav>
         <div class="logo"><a href="/">Tire Calligraphy</a></div>
         <nav class="menu__right">
             <ul>
+                <li><a href="/conversation.html">Conversation</a></li>
                 <li><a href="/about.html">About</a></li>
-                <li><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main class="about">
         <h2>About</h2>
         <p>The term Tire Calligraphy was coined by Matej Pašalić, referring to the skid marks when ridding fixed gear.
-            The full
-            phrase was and still is Tire Calligraphy, Mallet & Ball, which represents the progression of our interests,
-            ridding fixed gear and playing bike polo.</p>
+            The full phrase was and still is Tire Calligraphy, Mallet & Ball, which represents the progression of our
+            interests, ridding fixed gear and playing bike polo.</p>
         <p>Our most important fuel, is the passion to build, be a part of and provide support for the community, the
             only way we can, striving to create top quality products for everyday situations, offering solutions built
             on a DIY principle, which we believe is the most honest and humble one.</p>
@@ -44,6 +44,53 @@
             climbing, being social with collaborations that match our vision of aesthetics and functionality, with every
             individual in mind.</p>
         <p>TC manifesto. 199144.</p>
+        <h2>Contact</h2>
+        <section class="contact__group">
+            <div class="contact__item">
+                <div class="contact__locations">
+                    <h5>Sales locations</h5>
+                    <p>approved! - Masarykova 18, 10000 Zagreb</p>
+                    <p>approved! – Mall of Split – Josipa Jovića 93, 21000 Split</p>
+                    <p>Market Concept Store - Frana Petrića 3, 10000 Zagreb </p>
+                    <p>Rockmark - Petra Berislavića 13, 10000 Zagreb </p>
+                    <p>PDV records (Pločnik) - Međimurska ulica 21, 10000 Zagreb</p>
+                </div>
+                <div class="contact__info">
+                    <h5>Contact</h5>
+                    <p>Short name: 14.4, vl. Matija Brlek</p>
+                    <p>Place: Vajdin vijenac 12, 10000 Zagreb</p>
+                    <p>Business bank and account number:</p>
+                    <p>Privredna banka Zagreb d.d., IBAN: HR5923400091160542572</p>
+                    <p>OIB: 88111750347</p>
+                    <p>Owner: Matija Brlek</p>
+                    <p>Contact: info@144.hr</p>
+                </div>
+            </div>
+            <div class="contact__item">
+                <div class="form">
+                    <form name="contact" method="POST" action="/#" netlify-honeypot="bot-field" data-netlify="true">
+                        <div class="hidden">
+                            <input type="text" name="bot-field" placeholder="&nbsp;" />
+                            <label><span>Phone</span></label>
+                        </div>
+                        <div class="form-entry">
+                            <input type="text" name="name" placeholder="&nbsp;" required />
+                            <label><span>Name</span></label>
+                        </div>
+                        <div class="form-entry">
+                            <input type="email" name="email" placeholder="&nbsp;" required />
+                            <label><span>Email</span></label>
+                        </div>
+                        <div class="form-entry">
+                            <textarea name="message" placeholder="&nbsp;" required></textarea>
+                            <label><span>Message</span></label>
+                        </div>
+                        <button class="button button--cta" type="submit">Send</button>
+                    </form>
+                </div>
+                <div class="confirmation"><span>Thanks</span></div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="footer__item">
@@ -69,6 +116,32 @@
             </nav>
         </div>
     </footer>
+    <script>
+        let testForm = document.querySelector("form");
+
+        testForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(testForm);
+            fetch(testForm.getAttribute("action"), {
+                method: "POST",
+                headers: {
+                    Accept: "application/x-www-form-urlencoded;charset=UTF-8",
+                    "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+                },
+                body: new URLSearchParams(formData).toString(),
+            }).then((res) => {
+                if (res) {
+                    document.querySelector(".confirmation").classList.add("show");
+                    testForm.reset();
+                    setTimeout(() => {
+                        document.querySelector(".confirmation").classList.remove("show");
+                    }, 5000);
+                }
+            });
+        });
+
+    </script>
 </body>
 
 </html>
