@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tire Calligraphy</title>
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body>
+<body class="products-page">
     <header>
         <nav class="menu__left">
             <ul>
@@ -27,135 +28,40 @@
         </nav>
     </header>
     <main>
-        <article class="product">
-            <aside class="product__aside">
-                <div class="product__figures">
-                    <img src="img/girl-in-white-tshirt-front.webp" alt="" />
-                    <img src="img/girl-in-white-tshirt-side-detail.webp" alt="" />
-                </div>
-                <div class="product__figures">
-                    <img src="img/white-tshirt-front-big.webp" loading="lazy" alt="" />
-                    <img src="img/white-tshirt-front.webp" loading="lazy" alt="" />
-                </div>
-                <div class="product__figures">
-                    <img src="img/white-tshirt-side-detail.webp" alt="" loading="lazy" />
-                    <div></div>
-                </div>
-            </aside>
-            <section class="product__info">
-                <div class="product__item">
-                    <h2>Fight Fire With Fire T-Shirt</h2>
-                </div>
-                <div class="product__item product__item--price">
-                    <p>Price: 35 eur</p>
-                </div>
-                <div class="product__item product__item--size-select">
-                    <p>Select your size and add to basket</p>
-                </div>
-                <div class="product__item product__item--sizes">
-                    <button class="button button--size button--flex"
-                        onclick='window.location.href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DKHTQEMAT66UG";'>
-                        <span>L</span>
-                    </button>
-                </div>
-                <div class="product__item product__item--description">
-                    <p>
-                        Inspired by Japanese culture and its minimalism and a sense of calm, but also with regard to its
-                        overwhelming dynamic and fast change, with this T we tried to juxtapose the two, playing with
-                        the term "a dog eat dog world", in this case presented by "sneaky" foxes.
-                    </p>
-                    <p>
-                        Kitsune, (japanese for fox), is very common in Japanese folklore; a creature of mythical status,
-                        oscillating between a symbol of cunning, and a powerful possessor of great intelligence and good
-                        fortune.
-                    </p>
-                    <p>
-                        A third piece we brought to life from Inkotober 2018 collection done by Skillcollector.
-                    </p>
-                    <p>
-                        This gender neutral T is a piece of our new 199144 collection.
-                        With a vision of neutral, universal items in mind, 199144 will spread through the seasons not
-                        constrained by time, location or fashion trends.
-                    </p>
-                </div>
-                <div class="product__item product__item--accordion">
-                    <div class="accordion">
-                        <div>
-                            <input type="checkbox" name="panel" id="panel-1" />
-                            <label for="panel-1">Details</label>
-                            <div class="accordion__content accordion__content--details">
-                                <ul class="accordion__list accordion-details__list">
-                                    <li>A gender-neutral cut</li>
-                                    <li>Side design</li>
-                                    <li>Color: White</li>
-                                    <li>Material: 100% cotton (200 gram, 7 oz)</li>
-                                    <li>Care: Machine-wash cold, warm (30°C)</li>
-                                    <li>Proudly created in Croatia from local craftswomen and men</li>
-                                </ul>
-                            </div>
-                        </div>
+        <section class="cards">
+            <a href="/Mint-Moth-Upcycled-Dress/">
+                <article>
+                    <div class="card__image">
+                        <img src="/Mint-Moth-Upcycled-Dress/img/girl-in-upcycled-mint-dress-back.webp" alt="">
                     </div>
-                </div>
-                <div class="product__item product__item--accordion">
-                    <div class="accordion">
-                        <div>
-                            <input type="checkbox" name="panel" id="panel-2" />
-                            <label for="panel-2">Size & Fit</label>
-                            <div class="accordion__content accordion__content--size">
-                                <ul class="accordion__list accordion-size__list">
-                                    <li>Klara is wearing size M and is 180cm/5.9 ft tall</li>
-                                    <li>True to size fit</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <h5>Mint Moth Upcycled Dress</h5>
+                    <div class="card__price">
+                        <p>40 eur</p>
                     </div>
-                </div>
-                <div class="product__item product__item--accordion">
-                    <div class="accordion">
-                        <div>
-                            <input type="checkbox" name="panel" id="panel-3" />
-                            <label for="panel-3">Shipping & Returns</label>
-                            <div class="accordion__content accordion__content--shipping">
-                                <div class="accordion__copy">
-                                    <p class="accordion__body">
-                                        Standard shipping and 30-day returns.
-                                    </p>
-                                    <p class="accordion__body">
-                                        Return policy exclusions apply.
-                                    </p>
-                                    <p class="accordion__body">
-                                        <a href="/legal.html">Learn more.</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                </article>
+            </a>
+            <a href="/Mint-Moth-Upcycled-Crop/">
+                <article>
+                    <div class="card__image">
+                        <img src="/Mint-Moth-Upcycled-Crop/img/girl-in-upcycled-mint-crop-top.webp" alt="">
                     </div>
-                </div>
-            </section>
-        </article>
-        <section class="upsell">
-            <h2>You might also like</h2>
-            <div class="upsell__group">
-                <a href="/Dobokh-Pant/">
-                    <div class="upsell__item">
-                        <img src="/Dobokh-Pant/img/womens-black-pant-with-belt-in-a-knot.webp" alt="" loading="lazy" />
-                        <h5>Dobokh Pant</h5>
+                    <h5>Mint Moth Upcycled Crop</h5>
+                    <div class="card__price">
+                        <p>40 eur</p>
                     </div>
-                </a>
-                <a href="/Dobokh-Parkha/">
-                    <div class="upsell__item">
-                        <img src="/Dobokh-Parkha/img/girl-in-black-jacket-front.webp" alt="" loading="lazy" />
-                        <h5>Dobokh Parkha</h5>
+                </article>
+            </a>
+            <a href="/Mint-Moth-Hoodie/">
+                <article>
+                    <div class="card__image">
+                        <img src="/Mint-Moth-Hoodie/img/girl-in-mint-hoodie.webp" alt="">
                     </div>
-                </a>
-                <a href="/New-Life-Black-Hoodie/">
-                    <div class="upsell__item">
-                        <img src="/New-Life-Black-Hoodie/img/girl-in-black-new-life-hoodie-front.webp" alt=""
-                            loading="lazy" />
-                        <h5>New Life Black Hoodie</h5>
+                    <h5>Mint Moth Hoodie</h5>
+                    <div class="card__price">
+                        <p>60 eur</p>
                     </div>
-                </a>
-            </div>
+                </article>
+            </a>
         </section>
     </main>
     <footer>
@@ -182,7 +88,6 @@
             </nav>
         </div>
     </footer>
-    <script src="../accordion.js"></script>
 </body>
 
 </html>
