@@ -2,98 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tire Calligraphy</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="products-page">
-    <header>
-        <nav class="menu__left">
-            <ul>
-                <li><a href="/campaign.html">Campaign</a></li>
-                <div class="dropdown">
-                    <li>Collection</li>
-                    <div class="dropdown-menu">
-                        <ul>
-                            <li><a href="/199144.html">199144</a></li>
-                            <li><a href="/new-life.html">New Life</a></li>
-                            <li><a href="/death-moth.html">Death Moth</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <li><a href="/conversation.html">Conversation</a></li>
-            </ul>
-        </nav>
+<body>
+    <header id="header">
         <div class="logo"><a href="/">Tire Calligraphy</a></div>
-        <nav class="menu__right">
+        <div class="burger" id="burger">
+            <div class="line1" id="line1"></div>
+            <div class="line2" id="line2"></div>
+        </div>
+        <nav id="menu">
             <ul>
+                <li><a href="/199144.html">199144</a></li>
+                <li><a href="/new-life.html">New Life</a></li>
+                <li><a href="/death-moth.html">Death Moth</a></li>
+                <li><a href="/campaign.html">Campaign</a></li>
+                <li><a href="/conversation.html">Conversation</a></li>
+                <li><a href="/archive.html">Archive</a></li>
                 <li><a href="/about.html">About</a></li>
-                <li><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="cards">
-            <a href="/Fight-Fire-With-Fire-T-Shirt/">
-                <article>
-                    <div class="card__image">
-                        <img src="/Fight-Fire-With-Fire-T-Shirt/img/girl-in-white-tshirt-front.webp" alt="">
-                    </div>
-                    <h5>Fight Fire With Fire T-Shirt</h5>
-                    <div class="card__price">
-                        <p><s>35 eur</s> 20 eur</p>
-                    </div>
-                </article>
-            </a>
-            <a href="/Mint-Moth-Upcycled-Dress/">
-                <article>
-                    <div class="card__image">
-                        <img src="/Mint-Moth-Upcycled-Dress/img/girl-in-upcycled-mint-dress-back.webp" alt="">
-                    </div>
-                    <h5>Mint Moth Upcycled Dress</h5>
-                    <div class="card__price">
-                        <p><s>40 eur</s> 28 eur</p>
-                    </div>
-                </article>
-            </a>
-            <a href="/Mint-Moth-Upcycled-Crop/">
-                <article>
-                    <div class="card__image">
-                        <img src="/Mint-Moth-Upcycled-Crop/img/girl-in-upcycled-mint-crop-top.webp" alt="">
-                    </div>
-                    <h5>Mint Moth Upcycled Crop</h5>
-                    <div class="card__price">
-                        <p><s>40 eur</s> 28 eur</p>
-                    </div>
-                </article>
-            </a>
-            <a href="/Reflective-Calli-Crewneck/">
-                <article>
-                    <div class="card__image">
-                        <img src="/Reflective-Calli-Crewneck/img/girl-in-a-white-crewneck-with-reflectivew-detail.webp"
-                            alt="">
-                    </div>
-                    <h5>Reflective Calli Crewneck</h5>
-                    <div class="card__price">
-                        <p><s>65 eur</s> 50 eur</p>
-                    </div>
-                </article>
-            </a>
-            <a href="/Mint-Moth-Hoodie/">
-                <article>
-                    <div class="card__image">
-                        <img src="/Mint-Moth-Hoodie/img/girl-in-mint-hoodie.webp" alt="">
-                    </div>
-                    <h5>Mint Moth Hoodie</h5>
-                    <div class="card__price">
-                        <p><s>60 eur</s> 40 eur</p>
-                    </div>
-                </article>
-            </a>
-        </section>
+
     </main>
     <footer>
         <div class="footer__item">
@@ -119,13 +55,7 @@
             </nav>
         </div>
     </footer>
-    <script>
-        let toggleButton = document.querySelector('.dropdown > li')
-        let toggleItem = document.querySelector(".dropdown-menu")
-        toggleButton.addEventListener('click', () => {
-            toggleItem.classList.toggle('active')
-        })
-    </script>
+    <script src="app.js" defer></script>
 </body>
 
 </html>

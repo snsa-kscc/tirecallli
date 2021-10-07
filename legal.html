@@ -10,19 +10,20 @@
 </head>
 
 <body>
-    <header>
-        <nav class="menu__left">
+    <header id="header">
+        <div class="logo"><a href="/">Tire Calligraphy</a></div>
+        <div class="burger" id="burger">
+            <div class="line1" id="line1"></div>
+            <div class="line2" id="line2"></div>
+        </div>
+        <nav id="menu">
             <ul>
-                <li><a href="/campaign.html">Campaign</a></li>
                 <li><a href="/199144.html">199144</a></li>
                 <li><a href="/new-life.html">New Life</a></li>
                 <li><a href="/death-moth.html">Death Moth</a></li>
-            </ul>
-        </nav>
-        <div class="logo"><a href="/">Tire Calligraphy</a></div>
-        <nav class="menu__right">
-            <ul>
+                <li><a href="/campaign.html">Campaign</a></li>
                 <li><a href="/conversation.html">Conversation</a></li>
+                <!-- <li><a href="/archive.html">Archive</a></li> -->
                 <li><a href="/about.html">About</a></li>
             </ul>
         </nav>
@@ -296,14 +297,21 @@
         </div>
         <div class="footer__item">
             <nav>
-                <a href="https://open.spotify.com/user/45x6aikpn8hg9ziczww1q5gku?si=b1c846b98b824752&nd=1"
-                    target="_blank" rel="noopener noreferrer">Spotify</a>
-                <a href="https://www.instagram.com/tirecalligraphy/" target="_blank"
-                    rel="noopener noreferrer">Instagram</a>
-                <a href="/legal.html">Legal</a>
+                <ul>
+                    <li>
+                        <a href="https://open.spotify.com/user/45x6aikpn8hg9ziczww1q5gku?si=b1c846b98b824752&nd=1"
+                            target="_blank" rel="noopener noreferrer">Spotify</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/tirecalligraphy/" target="_blank"
+                            rel="noopener noreferrer">Instagram</a>
+                    </li>
+                    <li><a href="/legal.html">Legal</a></li>
+                </ul>
             </nav>
         </div>
     </footer>
+    <script src="app.js" defer></script>
 </body>
 
 </html>
