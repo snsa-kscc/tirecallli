@@ -404,6 +404,10 @@ h5 {
   transform: translate3d(0, -100%, 0);
 }
 
+.scroll-down header.active {
+  transform: unset;
+}
+
 /* end of utils */
 
 nav ul {
@@ -444,7 +448,7 @@ header {
 }
 
 header.active {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -665,7 +669,6 @@ main {
   position: relative;
   display: block;
   padding: 1em;
-  /* border-top: 1px solid #fff; */
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   font-size: 1.5em;
   cursor: pointer;

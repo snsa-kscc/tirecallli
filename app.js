@@ -65,12 +65,4 @@ burger.addEventListener("click", () => {
   line1.classList.toggle("white");
   line2.classList.toggle("white");
   menu.classList.toggle("block");
-  document.body.classList.toggle("overflow-hidden");
-  document.documentElement.classList.toggle("overflow-hidden");
-});
-
-window.addEventListener("scroll", () => {
-  window.scrollY != 0
-    ? burger.classList.add("hidden")
-    : burger.classList.remove("hidden");
 });
