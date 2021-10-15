@@ -372,7 +372,7 @@ a:hover::before {
 }
 
 h1 {
-  font-size: clamp(8rem, 15vw, 20rem);
+  font-size: clamp(6rem, 15vw, 20rem);
 }
 
 h2 {
@@ -406,6 +406,19 @@ h5 {
 
 .scroll-down header.active {
   transform: unset;
+}
+
+.cursor {
+  width: 2em;
+  height: 2em;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: transform;
+  z-index: 100;
 }
 
 /* end of utils */
@@ -442,7 +455,7 @@ header {
   z-index: 10;
   background: white;
   width: 100%;
-  padding: 3em 4em 3em;
+  padding: 3em;
   outline: 1px solid;
   transition: all 300ms ease-in-out;
 }
@@ -1652,6 +1665,54 @@ td:first-child {
   object-fit: cover;
 }
 
+.archive-hero {
+  margin: 0 3vmax;
+  position: relative;
+}
+
+.archive-hero__pic {
+  width: 80%;
+  min-height: 45vh;
+  object-fit: cover;
+  object-position: right;
+}
+
+.archive-hero__title {
+  display: inline-block;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  mix-blend-mode: exclusion;
+  background: white;
+  line-height: 1em;
+}
+
+.archive-hero__title span {
+  display: inline-block;
+  transition: 0.4s;
+  will-change: transform;
+}
+
+.archive-hero__span-container-1 span {
+  transform-origin: bottom;
+}
+.archive-hero__span-container-2 span {
+  transform-origin: top;
+  transform: translateY(100%) rotateX(-90deg);
+}
+.archive-hero__span-container-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.archive-hero__title:hover .archive-hero__span-container-1 span {
+  transform: translateY(-100%) rotateX(-90deg);
+}
+.archive-hero__title:hover .archive-hero__span-container-2 span {
+  transform: translateY(0%) rotateX(0deg);
+}
+
 .dropdown {
   font-size: 18px;
   position: relative;
@@ -1681,4 +1742,7 @@ td:first-child {
 
 .dropdown-menu li {
   margin-bottom: 0.25em;
+}
+.new-font {
+  font-family: "VCR OSD Mono";
 }

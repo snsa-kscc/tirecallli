@@ -37,19 +37,35 @@ if (accordion) {
 const body = document.body;
 let lastScroll = 0;
 
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
+if (typeof locoScroll != "undefined") {
+  locoScroll.on("scroll", () => {
+    const currentScroll = locoScroll.scroll.instance.scroll.y;
 
-  if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-    body.classList.add("scroll-down");
-  } else if (
-    currentScroll < lastScroll &&
-    body.classList.contains("scroll-down")
-  ) {
-    body.classList.remove("scroll-down");
-  }
-  lastScroll = currentScroll;
-});
+    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+      body.classList.add("scroll-down");
+    } else if (
+      currentScroll < lastScroll &&
+      body.classList.contains("scroll-down")
+    ) {
+      body.classList.remove("scroll-down");
+    }
+    lastScroll = currentScroll;
+  });
+} else {
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+      body.classList.add("scroll-down");
+    } else if (
+      currentScroll < lastScroll &&
+      body.classList.contains("scroll-down")
+    ) {
+      body.classList.remove("scroll-down");
+    }
+    lastScroll = currentScroll;
+  });
+}
 
 let toggleButton = document.querySelector(".dropdown > li");
 let toggleItem = document.querySelector(".dropdown-menu");
