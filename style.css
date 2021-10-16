@@ -46,6 +46,14 @@
   text-rendering: optimizeLegibility;
 }
 
+@font-face {
+  font-family: "VCR OSD Mono";
+  src: url("assets/fonts/VCROSDMono.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
 :root {
   --base-color: #0f1218;
   --text-color: #4f4f4f;
