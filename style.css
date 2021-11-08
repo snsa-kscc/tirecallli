@@ -1754,3 +1754,17 @@ td:first-child {
 .new-font {
   font-family: "VCR OSD Mono";
 }
+.archive-oth {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+.archive-bdg {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
