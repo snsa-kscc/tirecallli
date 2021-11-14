@@ -1755,6 +1755,7 @@ td:first-child {
   font-family: "VCR OSD Mono";
 }
 .archive-oth {
+  padding: var(--gap-size, 1em);
   min-height: 80vh;
   display: flex;
   justify-content: center;
@@ -1762,9 +1763,14 @@ td:first-child {
   gap: 2em;
 }
 .archive-bdg {
+  padding: var(--gap-size, 1em);
   min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2em;
+}
+
+.testnipadding {
+  --gap-size: 2em;
 }
