@@ -1793,7 +1793,7 @@ td:first-child {
 .archive-sin {
   display: flex;
   flex-wrap: wrap;
-  gap: 2em;
+  gap: 4em;
   padding: clamp(2em, 7vw, 4em);
   min-height: 80vh;
   background: linear-gradient(
@@ -1807,7 +1807,6 @@ td:first-child {
   flex: 33rem 1 1;
   display: grid;
   grid-template-columns: 3fr 2fr;
-  grid-template-rows: 3fr 2fr 3fr;
   gap: 1em;
   justify-items: center;
   align-items: center;
@@ -1829,7 +1828,6 @@ td:first-child {
   flex: 33rem 1 1;
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
-  grid-template-rows: 3fr 2fr 3fr;
   gap: 1em;
   justify-items: center;
   align-items: center;
@@ -1851,7 +1849,6 @@ td:first-child {
 
 .archive-leg-crew {
   padding: clamp(2em, 7vw, 4em);
-  /* min-height: 80vh; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1890,6 +1887,8 @@ td:first-child {
 
 .archive-leg-crew__group-right > :nth-child(3) {
   grid-area: 4 / 1 / 5 / 3;
+  align-self: stretch;
+  object-fit: cover;
 }
 
 .archive-leg-crew__group-right > :nth-child(4) {
@@ -1901,7 +1900,8 @@ td:first-child {
 .archive-test {
   padding: 1em;
   min-height: 80vh;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   justify-content: center;
   align-items: center;
   gap: 2em;
