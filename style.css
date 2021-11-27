@@ -1909,6 +1909,14 @@ td:first-child {
   mix-blend-mode: overlay;
 }
 
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .archive-leg-crew__group-right > :nth-child(2) {
+      mix-blend-mode: normal;
+    }
+  }
+}
+
 .archive-leg-crew__group-right > :nth-child(3) {
   grid-area: 4 / 1 / 5 / 3;
   align-self: stretch;
