@@ -91,6 +91,7 @@ svg {
 
 video {
   object-fit: cover;
+  height: 100%;
 }
 
 svg {
@@ -387,6 +388,10 @@ a:hover::before {
   font-size: clamp(1.5rem, 1.6vw, 2.8rem);
 }
 
+.text--md {
+  font-size: 2.4rem;
+}
+
 h1 {
   font-size: clamp(6rem, 15vw, 20rem);
 }
@@ -410,6 +415,12 @@ h4 {
 
 h5 {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+h6 {
+  font-size: clamp(2.6rem, 3vw, 3.4rem);
+  margin-top: 1em;
+  margin-bottom: 0.8em;
 }
 
 .bold {
@@ -526,6 +537,27 @@ footer {
   align-items: center;
   border-top: 1px solid var(--base-color);
   margin: 4em;
+}
+
+.new-collection {
+  height: 100vh;
+  position: relative;
+}
+
+.new-collection img {
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.new-collection h4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  outline: 2px solid white;
+  mix-blend-mode: color-dodge;
 }
 
 .feature {
@@ -1305,7 +1337,6 @@ main {
 
 .about h5 {
   margin-bottom: 1em;
-  margin-top: 2em;
 }
 
 .contact__group {
@@ -1382,7 +1413,7 @@ main {
 
 form {
   width: 90%;
-  margin: 4em auto;
+  margin: 0 auto;
 }
 
 .form-entry {
