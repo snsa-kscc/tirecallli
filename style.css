@@ -94,10 +94,6 @@ video {
   height: 100%;
 }
 
-svg {
-  margin: 1em;
-}
-
 .controls {
   position: absolute;
   bottom: 2%;
@@ -537,6 +533,10 @@ footer {
   align-items: center;
   border-top: 1px solid var(--base-color);
   margin: 4em;
+}
+
+footer nav {
+  display: block;
 }
 
 .new-collection {
