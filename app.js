@@ -82,3 +82,22 @@ burger.addEventListener("click", () => {
   line2.classList.toggle("white");
   menu.classList.toggle("block");
 });
+
+const spanContainers = document.querySelectorAll(".archive-hero__title div");
+
+if (spanContainers) {
+  spanContainers.forEach((item) => {
+    const letters = item.children[0].textContent.split("");
+    item.innerHTML = "";
+    letters.forEach((el, idx) => {
+      item.innerHTML += `<span style="transition-delay: ${
+        0.07 * idx
+      }s">${el}</span>`;
+    });
+  });
+}
+
+console.log(
+  "%c Hi mom! Made with ❤️ by @tirecalligraphy",
+  "color: #ff0000; font-size: 20px;"
+);
