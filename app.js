@@ -77,7 +77,6 @@ setTimeout(() => {
         body.classList.remove("scroll-down");
       }
       lastScroll = currentScroll;
-      console.log(currentScroll);
     });
   }
 }, 500);
