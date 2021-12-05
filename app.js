@@ -37,35 +37,50 @@ if (accordion) {
 const body = document.body;
 let lastScroll = 0;
 
-if (typeof locoScroll != "undefined") {
-  locoScroll.on("scroll", () => {
-    const currentScroll = Math.round(locoScroll.scroll.instance.scroll.y / 100);
+setTimeout(() => {
+  if (typeof LocomotiveScroll != "undefined") {
+    const locoScroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+    });
+    locoScroll.on("scroll", () => {
+      const currentScroll = Math.round(
+        locoScroll.scroll.instance.scroll.y / 100
+      );
 
-    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-      body.classList.add("scroll-down");
-    } else if (
-      currentScroll < lastScroll &&
-      body.classList.contains("scroll-down")
-    ) {
-      body.classList.remove("scroll-down");
-    }
-    lastScroll = currentScroll;
-  });
-} else {
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
+      if (
+        currentScroll > lastScroll &&
+        !body.classList.contains("scroll-down")
+      ) {
+        body.classList.add("scroll-down");
+      } else if (
+        currentScroll < lastScroll &&
+        body.classList.contains("scroll-down")
+      ) {
+        body.classList.remove("scroll-down");
+      }
+      lastScroll = currentScroll;
+    });
+  } else {
+    window.addEventListener("scroll", () => {
+      const currentScroll = Math.round(window.pageYOffset / 50);
 
-    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-      body.classList.add("scroll-down");
-    } else if (
-      currentScroll < lastScroll &&
-      body.classList.contains("scroll-down")
-    ) {
-      body.classList.remove("scroll-down");
-    }
-    lastScroll = currentScroll;
-  });
-}
+      if (
+        currentScroll > lastScroll &&
+        !body.classList.contains("scroll-down")
+      ) {
+        body.classList.add("scroll-down");
+      } else if (
+        currentScroll < lastScroll &&
+        body.classList.contains("scroll-down")
+      ) {
+        body.classList.remove("scroll-down");
+      }
+      lastScroll = currentScroll;
+      console.log(currentScroll);
+    });
+  }
+}, 500);
 
 let toggleButton = document.querySelector(".dropdown > li");
 let toggleItem = document.querySelector(".dropdown-menu");
