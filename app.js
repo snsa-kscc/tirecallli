@@ -39,7 +39,7 @@ let lastScroll = 0;
 
 if (typeof locoScroll != "undefined") {
   locoScroll.on("scroll", () => {
-    const currentScroll = locoScroll.scroll.instance.scroll.y;
+    const currentScroll = Math.round(locoScroll.scroll.instance.scroll.y / 100);
 
     if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
       body.classList.add("scroll-down");
@@ -98,6 +98,6 @@ if (spanContainers) {
 }
 
 console.log(
-  "%c Hi mom! Made with ❤️ by @tirecalligraphy",
+  "%c Hi mom! Made with ❤️ by @dvasadva for @tirecalli",
   "color: #ff0000; font-size: 20px;"
 );

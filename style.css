@@ -391,6 +391,10 @@ a:hover::before {
   color: white;
 }
 
+.max-content {
+  width: max-content;
+}
+
 h1 {
   font-size: clamp(6rem, 15vw, 20rem);
 }
