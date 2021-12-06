@@ -34,6 +34,11 @@ setTimeout(() => {
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,
+      touchMultiplier: 3,
+      tablet: {
+        breakpoint: 0,
+        smooth: true,
+      },
     });
     locoScroll.on("scroll", () => {
       const currentScroll = Math.round(locoScroll.scroll.instance.scroll.y / 100);

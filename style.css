@@ -2094,6 +2094,13 @@ td:first-child {
   writing-mode: vertical-rl;
 }
 
+@media (max-width: 837px) {
+  .archive-grave-tee-limited__copy,
+  .archive-hand__copy {
+    writing-mode: unset;
+  }
+}
+
 .archive-grave-tee-limited__pics,
 .archive-hand__pics {
   display: grid;
