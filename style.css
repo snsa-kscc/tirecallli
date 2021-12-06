@@ -914,11 +914,7 @@ main {
 }
 
 .mission__group--gradient {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(148, 148, 148, 1) 100%
-  );
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(148, 148, 148, 1) 100%);
 }
 
 .mission__group--black {
@@ -1845,19 +1841,11 @@ td:first-child {
 .archive-grave-crew,
 .archive-heart {
   min-height: 80vh;
-  background: linear-gradient(
-    0deg,
-    hsl(0, 100%, 85%) 0%,
-    hsl(0, 0%, 100%) 100%
-  );
+  background: linear-gradient(0deg, hsl(0, 100%, 85%) 0%, hsl(0, 0%, 100%) 100%);
 }
 
 .archive-grave-crew {
-  background: linear-gradient(
-    0deg,
-    hsl(0, 0%, 100%) 0%,
-    hsl(22, 100%, 50%) 100%
-  );
+  background: linear-gradient(0deg, hsl(0, 0%, 100%) 0%, hsl(22, 100%, 50%) 100%);
 }
 
 .archive-sin__group-left,
@@ -1943,11 +1931,7 @@ td:first-child {
   grid-auto-rows: minmax(120px, auto);
   align-items: stretch;
   padding: 4vmax;
-  background: linear-gradient(
-    180deg,
-    hsl(0, 0%, 100%) 0%,
-    hsl(199, 15%, 36%) 100%
-  );
+  background: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(199, 15%, 36%) 100%);
 }
 
 .archive-leg-crew__group-left img,
@@ -2045,11 +2029,7 @@ td:first-child {
 }
 
 .archive-leg-tee {
-  background: linear-gradient(
-    180deg,
-    hsl(197, 96%, 58%) 0%,
-    hsl(275, 100%, 54%) 100%
-  );
+  background: linear-gradient(180deg, hsl(197, 96%, 58%) 0%, hsl(275, 100%, 54%) 100%);
 }
 
 .archive-leg-tee__group-left,
@@ -2106,7 +2086,6 @@ td:first-child {
 .archive-hand__group-right {
   flex: 33rem 2 1;
   display: flex;
-  align-items: center;
   gap: 2em;
 }
 
@@ -2142,11 +2121,7 @@ td:first-child {
 }
 
 .archive-hook {
-  background: linear-gradient(
-    180deg,
-    hsl(0, 0%, 100%) 0%,
-    hsl(0, 96%, 39%) 100%
-  );
+  background: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(0, 96%, 39%) 100%);
 }
 
 .archive-hook__group-left,
