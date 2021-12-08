@@ -1669,6 +1669,7 @@ td:first-child {
 
 .conversation .feature img {
   object-fit: cover;
+  height: inherit;
 }
 
 .conversation h4 {
