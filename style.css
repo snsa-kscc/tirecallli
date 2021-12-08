@@ -1710,13 +1710,15 @@ td:first-child {
   color: #1a1a1a;
 }
 
-.article__question {
+.article__question,
+.article__accentuated {
   color: dimgray;
   font-weight: normal;
   margin-top: 7vh;
 }
 
-.article__question--small-margin {
+.article__question--small-margin,
+.article__accentuated--small-margin {
   margin-top: 2rem;
 }
 
