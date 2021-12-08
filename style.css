@@ -557,7 +557,7 @@ footer nav {
   object-position: left;
 }
 
-.new-collection h4 {
+.new-collection div {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -565,6 +565,21 @@ footer nav {
   color: white;
   outline: 2px solid white;
   mix-blend-mode: color-dodge;
+}
+
+.new-collection h2 {
+  opacity: 0;
+  animation: fadeInOut ease-in-out 3s infinite alternate;
+}
+
+@keyframes fadeInOut {
+  100% {
+    opacity: 1;
+  }
+}
+
+.new-collection a {
+  color: white;
 }
 
 .feature {
@@ -787,6 +802,10 @@ main {
 
 .centered {
   text-align: center;
+}
+
+.exclusion {
+  mix-blend-mode: exclusion;
 }
 
 .inspiration__group {
