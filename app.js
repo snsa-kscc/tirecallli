@@ -92,4 +92,4 @@ if (spanContainers) {
   });
 }
 
-console.log("%c Hi mom! Made with ❤️ by @dvasadva for @tirecalli", "color: #ff0000; font-size: 20px;");
+console.log("%c Hi moooom! Made with ❤️ by @dvasadva for @tirecalli", "color: #ff0000; font-size: 20px;");
