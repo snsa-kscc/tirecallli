@@ -34,7 +34,7 @@ setTimeout(() => {
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,
-      touchMultiplier: 3,
+      touchMultiplier: 5,
       tablet: {
         breakpoint: 0,
         smooth: true,
