@@ -808,6 +808,16 @@ main {
   mix-blend-mode: exclusion;
 }
 
+.crypto-quote {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: var(--base-color);
+  text-align: end;
+  gap: 1.5em;
+  padding: 2em;
+}
+
 .inspiration__group {
   display: flex;
   justify-content: space-between;
