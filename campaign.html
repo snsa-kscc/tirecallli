@@ -32,6 +32,28 @@
             <h2>"Sometimes the best hiding place is the one that's in plain sight." - Stephanie Meyer</h2>
             <h3><a href="https://www.skilledsurvival.com/gray-man/" target="_blank" rel="noopener noreferrer">from the Gray man theory</a></h3>
         </section>
+        <section class="crypto-item crypto-item-jacket">
+            <img src="assets/img/campaign/hybrid-jacket/hybrid-jacket-close-up.webp" alt="">
+            <div class="crypto-item__copy text--white">
+                <h4><span class="nbr ltr">8</span>
+                    <span class="nbr ltr">25</span>
+                    <span class="nbr ltr">2</span>
+                    <span class="nbr ltr">18</span>
+                    <span class="nbr ltr">9</span>
+                    <span class="nbr ltr">4</span>
+                </h4>
+                <h4><span class="nbr ltr">10</span>
+                    <span class="nbr ltr">1</span>
+                    <span class="nbr ltr">3</span>
+                    <span class="nbr ltr">11</span>
+                    <span class="nbr ltr">5</span>
+                    <span class="nbr ltr">20</span>
+                </h4>
+            </div>
+        </section>
+        <section>
+            <img src="assets/img/campaign/basic-denim-overall-pant/basic-denim-overall-pant.webp" alt="">
+        </section>
         <section style="min-height: 100vh"></section>
         <section class="inspiration">
             <img src="assets/img/campaign/island-boy-girl-header.webp" alt="" />
@@ -625,6 +647,42 @@
             onUpdate: self => {
                 cryptoQuote.style.backgroundColor = `hsl( 220, 23%, ${8 + 90 * self.progress}%)`;
             }
+        });
+        ScrollTrigger.create({
+            trigger: ".crypto-item-jacket",
+            start: "top 15%",
+            onEnter: () => {
+                const randomnbr = document.querySelectorAll('.nbr');
+                let data = 0;
+                const letters = ["H", "Y", "B", "R", "I", "D", "J", "A", "C", "K", "E", "T"];
+
+                randomnbr.forEach((item) => {
+                    const change = Math.round(Math.random() * 100);
+                    item.setAttribute('data-change', change);
+                });
+
+                function select() {
+                    return Math.round(Math.random() * randomnbr.length + 1);
+                };
+
+                timer = setInterval(() => {
+                    document.querySelectorAll(`.nbr:nth-child(${select()})`).forEach((item) => {
+                        item.innerHTML = Math.round(Math.random() * 9);
+                        item.setAttribute('data-number', data);
+                    });
+                    data++;
+
+                    randomnbr.forEach((item, idx) => {
+                        if (parseInt(item.getAttribute('data-number')) > parseInt(item.getAttribute('data-change'))) {
+                            item.innerHTML = letters[idx];
+                            item.classList.remove('nbr');
+                        }
+                    });
+                }, 20);
+                setTimeout(() => {
+                    clearInterval(timer);
+                }, 5000);
+            },
         });
     </script>
 </body>

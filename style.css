@@ -818,6 +818,17 @@ main {
   padding: 2em;
 }
 
+.crypto-item {
+  position: relative;
+}
+
+.crypto-item__copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .inspiration__group {
   display: flex;
   justify-content: space-between;
