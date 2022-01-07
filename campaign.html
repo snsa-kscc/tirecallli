@@ -29,8 +29,10 @@
     </header>
     <main>
         <section class="crypto-quote" id="cryptoQuote">
-            <h2>"Sometimes the best hiding place is the one that's in plain sight." - Stephanie Meyer</h2>
-            <h3><a href="https://www.skilledsurvival.com/gray-man/" target="_blank" rel="noopener noreferrer">from the Gray man theory</a></h3>
+            <div class="crypto-quote__content">
+                <h4>"Sometimes the best hiding place is the one that's in plain sight." - Stephanie Meyer</h4>
+                <h3><a href="https://www.skilledsurvival.com/gray-man/" target="_blank" rel="noopener noreferrer">from the Gray man theory</a></h3>
+            </div>
         </section>
         <section class="crypto-item crypto-item-jacket">
             <img src="assets/img/campaign/hybrid-jacket/hybrid-jacket-close-up.webp" alt="">
@@ -642,10 +644,11 @@
     <script>
         ScrollTrigger.create({
             trigger: ".crypto-quote",
-            start: "top top",
-            end: "bottom center",
+            start: "top",
+            end: "bottom",
+            pin: true,
             onUpdate: self => {
-                cryptoQuote.style.backgroundColor = `hsl( 220, 23%, ${8 + 90 * self.progress}%)`;
+                cryptoQuote.style.backgroundColor = `hsl( 220, 23%, ${8 + 70 * self.progress}%)`;
             }
         });
         ScrollTrigger.create({
