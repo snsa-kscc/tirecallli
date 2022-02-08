@@ -43,7 +43,7 @@ ScrollTrigger.create({
     const letters = ["H", "Y", "B", "R", "I", "D", "J", "A", "C", "K", "E", "T"];
     const selector = ".crypto-item-jacket .crypto-item__copy--first";
 
-    handleCounter(randomnbr, letters, selector);
+    handleDecoder(randomnbr, letters, selector);
   },
 });
 gsap.to(".crypto-item-jacket__pics", {
@@ -64,7 +64,7 @@ ScrollTrigger.create({
     const letters = ["B", "A", "S", "I", "C", "D", "E", "N", "I", "M"];
     const selector = ".crypto-item-pants .crypto-item__copy--first";
 
-    handleCounter(randomnbr, letters, selector);
+    handleDecoder(randomnbr, letters, selector);
   },
 });
 ScrollTrigger.create({
@@ -75,11 +75,11 @@ ScrollTrigger.create({
     const letters = ["O", "V", "E", "R", "A", "L", "L", "P", "A", "N", "T"];
     const selector = ".crypto-item-pants .crypto-item__copy--second";
 
-    handleCounter(randomnbr, letters, selector);
+    handleDecoder(randomnbr, letters, selector);
   },
 });
 
-function handleCounter(randomnbr, letters, selector) {
+function handleDecoder(randomnbr, letters, selector) {
   let data = 0;
 
   randomnbr.forEach((item) => {
