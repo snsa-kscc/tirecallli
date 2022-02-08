@@ -32,8 +32,12 @@ gsap.to(rule, {
   },
   duration: 1,
 });
-gsap.to(".crypto-description img", {
-  scrollTrigger: { trigger: ".crypto-description", end: "+=200%", pin: ".crypto-description img", scrub: 0.5 },
+ScrollTrigger.matchMedia({
+  "(min-width: 800px)": () => {
+    gsap.to(".crypto-description img", {
+      scrollTrigger: { trigger: ".crypto-description", end: "+=200%", pin: ".crypto-description img", scrub: 0.5 },
+    });
+  },
 });
 ScrollTrigger.create({
   trigger: ".crypto-item-jacket__cta",
@@ -214,15 +218,15 @@ const params = {
     },
   },
 };
-// addEventListener("load", () => {
-//   const curtains = new Curtains({
-//     container: "canvas",
-//     pixelRatio: Math.min(1.5, window.devicePixelRatio),
-//   });
+addEventListener("load", () => {
+  const curtains = new Curtains({
+    container: "canvas",
+    pixelRatio: Math.min(1.5, window.devicePixelRatio),
+  });
 
-//   const plane = new Plane(curtains, planeElements[0], params);
+  const plane = new Plane(curtains, planeElements[0], params);
 
-//   plane.onRender(() => {
-//     plane.uniforms.time.value++;
-//   });
-// });
+  plane.onRender(() => {
+    plane.uniforms.time.value++;
+  });
+});
