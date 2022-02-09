@@ -13,6 +13,37 @@ if (sound) {
   });
 }
 
+const firstHeroItems = document.querySelectorAll(".first-hero > *");
+const secondHeroItems = document.querySelectorAll(".second-hero > *");
+
+if (firstHeroItems.length != 0) {
+  gsap.from(firstHeroItems, {
+    scrollTrigger: {
+      trigger: ".first-hero",
+      start: "top center",
+    },
+    opacity: 0,
+    yPercent: 30,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power2.out",
+  });
+}
+
+if (secondHeroItems.length != 0) {
+  gsap.from(secondHeroItems, {
+    scrollTrigger: {
+      trigger: ".second-hero",
+      start: "top center",
+    },
+    opacity: 0,
+    yPercent: 30,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power2.out",
+  });
+}
+
 let accordion = document.querySelector(".accordion");
 
 if (accordion) {
