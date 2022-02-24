@@ -691,12 +691,17 @@ footer nav {
   transform: translate(-50%, -50%);
   color: white;
   outline: 2px solid white;
-  mix-blend-mode: color-dodge;
+  /* mix-blend-mode: color-dodge; */
 }
 
 .new-collection h2 {
   opacity: 0;
   animation: fadeInOut ease-in-out 3s infinite alternate;
+  color: #ffd700;
+}
+
+.new-collection h4 {
+  color: #0057b7;
 }
 
 .new-collection a {
