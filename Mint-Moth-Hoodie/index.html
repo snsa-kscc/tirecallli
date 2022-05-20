@@ -46,19 +46,28 @@
                 <div class="product__item product__item--price">
                     <p>Price: 60 eur</p>
                 </div>
+                <div class="product__item product__item--discount-group">
+                    <p>Discount code:</p>
+                    <input id="input" type="text">
+                    <button id="button">Apply code</button>
+                </div>
+                <div class="product__item product__item--discount-success">
+                </div>
+                <div class="product__item product__item--discount-error">
+                </div>
                 <div class="product__item product__item--size-select">
                     <p>Select your size and add to basket</p>
                 </div>
                 <div class="product__item product__item--sizes">
-                    <button class="button button--size button--flex" onclick='window.location.href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8V2C6P9MQBXCJ";'>
+                    <button id="buttonM" class="button button--size button--flex" onclick='window.location.href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8V2C6P9MQBXCJ";'>
                         <span>M</span>
                     </button>
-                    <button class="button button--size button--flex" onclick='window.location.href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CDRNQ7AV44ZZS";'>
+                    <!-- <button class="button button--size button--flex" onclick='window.location.href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CDRNQ7AV44ZZS";'>
                         <span>L</span>
                     </button>
                     <button class="button button--size button--flex" onclick='window.location.href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KE9TBKVXG9QJS";'>
                         <span>XL</span>
-                    </button>
+                    </button> -->
                 </div>
                 <div class="product__item product__item--description">
                     <p>
@@ -148,6 +157,24 @@
         </div>
     </footer>
     <script src="../app.js" defer></script>
+    <script>
+        button.addEventListener('click', () => {
+            const value = input.value;
+            if (value === 'TC20') {
+                buttonM.addEventListener('click', () => {
+                    window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=25QLWGV9ULYCQ";
+                });
+                document.querySelector('.product__item--price').innerHTML = `<p>Price: ${60 - 60 * .2} eur</p>`;
+                document.querySelector('.product__item--discount-success').innerHTML = '<p>Yay, 20% discount rate successfully applied.</p>';
+                document.querySelector('.product__item--discount-error').innerHTML = '';
+
+            } else {
+                document.querySelector('.product__item--price').innerHTML = `<p>Price: 60 eur</p>`;
+                document.querySelector('.product__item--discount-error').innerHTML = '<p>Your code is invalid.</p>';
+                document.querySelector('.product__item--discount-success').innerHTML = '';
+            }
+        });
+    </script>
 </body>
 
 </html>

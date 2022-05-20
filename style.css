@@ -2562,6 +2562,18 @@ td:first-child {
   object-fit: cover;
 }
 
+input {
+  border: none;
+  border-bottom: 1px solid #000;
+  background: none;
+  outline: none;
+  font-size: 1.7rem;
+  font-family: inherit;
+  color: #000;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
 /* .first {
   display: flex;
   place-items: center;
