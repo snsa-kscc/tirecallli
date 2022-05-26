@@ -123,4 +123,20 @@ if (spanContainers) {
   });
 }
 
+const consentName = "tc_consent";
+
+const shouldShowPopup = () => !localStorage.getItem(consentName);
+const saveToStorage = () => localStorage.setItem(consentName, true);
+
+acceptBtn.addEventListener("click", () => {
+  saveToStorage();
+  consentPopup.classList.add("disabled");
+});
+
+if (shouldShowPopup()) {
+  setTimeout(() => {
+    consentPopup.classList.remove("disabled");
+  }, 2000);
+}
+
 console.log("%c Hi mom! Made with ❤️ by @dvasadva for @tirecalli", "color: #ff0000; font-size: 20px;");
