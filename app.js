@@ -103,7 +103,7 @@ setTimeout(() => {
       lastScroll = currentScroll;
     });
   }
-}, 800);
+}, 1000);
 
 let toggleButton = document.querySelector(".dropdown > li");
 let toggleItem = document.querySelector(".dropdown-menu");
