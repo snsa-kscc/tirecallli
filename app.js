@@ -1,3 +1,13 @@
+if (typeof ScrollSmoother != "undefined") {
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+  ScrollSmoother.create({
+    smooth: 1,
+    effects: true,
+    smoothTouch: 0.000001,
+  });
+}
+
 let vid = document.querySelector(".vid");
 let sound = document.querySelector(".sound");
 
@@ -93,7 +103,7 @@ setTimeout(() => {
       lastScroll = currentScroll;
     });
   }
-}, 500);
+}, 800);
 
 let toggleButton = document.querySelector(".dropdown > li");
 let toggleItem = document.querySelector(".dropdown-menu");

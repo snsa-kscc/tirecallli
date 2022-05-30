@@ -2591,6 +2591,10 @@ input {
   pointer-events: none;
 }
 
+#smooth-content {
+  display: grid;
+}
+
 /* .first {
   display: flex;
   place-items: center;
