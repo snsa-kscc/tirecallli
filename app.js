@@ -81,6 +81,7 @@ setTimeout(() => {
         smooth: true,
       },
     });
+    window.scrollTo(0, 0);
     locoScroll.on("scroll", () => {
       const currentScroll = Math.round(locoScroll.scroll.instance.scroll.y / 100);
 
