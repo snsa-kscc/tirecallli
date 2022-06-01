@@ -53,7 +53,7 @@
                 <li><a href="/new-life.html">New Life</a></li>
                 <li><a href="/death-moth.html">Death Moth</a></li>
                 <li><a href="/campaign.html">Campaign</a></li>
-                <li><a href="/conversation.html">Conversation</a></li>
+                <li><a href="/conversations.html">conversations</a></li>
                 <li><a href="/archive.html">Archive</a></li>
                 <li><a href="/about.html">About</a></li>
             </ul>
@@ -83,15 +83,15 @@
                 <div class="product__item product__item--price">
                     <p>Price: 50 eur</p>
                 </div>
-                <div class="product__item product__item--discount-group">
-                    <p>Discount code:</p>
-                    <input id="input" type="text">
-                    <button id="button">Apply code</button>
-                </div>
-                <div class="product__item product__item--discount-success">
-                </div>
-                <div class="product__item product__item--discount-error">
-                </div>
+                <!-- <div class="product__item product__item--discount-group">
+                            <p>Discount code:</p>
+                            <input id="input" type="text">
+                            <button id="button">Apply code</button>
+                        </div>
+                        <div class="product__item product__item--discount-success">
+                        </div>
+                        <div class="product__item product__item--discount-error">
+                        </div> -->
                 <div class="product__item product__item--size-select">
                     <p>Select your size and add to basket</p>
                 </div>
@@ -130,7 +130,6 @@
                                         <td>L</td>
                                         <td>XL</td>
                                     </tr>
-
                                     <tr>
                                         <td class="label">Shoulder</td>
                                         <td>47 / 18.5</td>
@@ -138,7 +137,6 @@
                                         <td>52 / 20.5</td>
                                         <td>53 / 20.9</td>
                                     </tr>
-
                                     <tr>
                                         <td class="label">Length</td>
                                         <td>67 / 26.4</td>
@@ -146,7 +144,6 @@
                                         <td>69 / 27.2</td>
                                         <td>70 / 27.6</td>
                                     </tr>
-
                                     <tr>
                                         <td class="label">Width</td>
                                         <td>53 / 20.9</td>
@@ -286,33 +283,36 @@
         <p>We use cookies and we hope you are OK with that.</p>
         <button id="acceptBtn">OK</button>
     </div>
-    <script src="../app.js" defer></script>
+    <script src="../app.js"></script>
     <script>
-        button.addEventListener('click', () => {
-            const value = input.value;
-            if (value === 'TC20') {
-                buttonS.addEventListener('click', () => {
-                    window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=T2KPMHQS2Z6W4";
-                });
-                buttonM.addEventListener('click', () => {
-                    window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=65EATS332L2JY";
-                });
-                buttonL.addEventListener('click', () => {
-                    window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2K8QRCVPSHTRJ";
-                });
-                buttonXL.addEventListener('click', () => {
-                    window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2ZR77HA54UWDL";
-                });
-                document.querySelector('.product__item--price').innerHTML = `<p>Price: ${50 - 50 * .2} eur</p>`;
-                document.querySelector('.product__item--discount-success').innerHTML = '<p>Yay, 20% discount rate successfully applied.</p>';
-                document.querySelector('.product__item--discount-error').innerHTML = '';
+        button = document.getElementById('button');
+        if (button != null) {
+            button.addEventListener('click', () => {
+                const value = input.value;
+                if (value === 'TC20') {
+                    buttonS.addEventListener('click', () => {
+                        window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=T2KPMHQS2Z6W4";
+                    });
+                    buttonM.addEventListener('click', () => {
+                        window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=65EATS332L2JY";
+                    });
+                    buttonL.addEventListener('click', () => {
+                        window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2K8QRCVPSHTRJ";
+                    });
+                    buttonXL.addEventListener('click', () => {
+                        window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2ZR77HA54UWDL";
+                    });
+                    document.querySelector('.product__item--price').innerHTML = `<p>Price: ${50 - 50 * .2} eur</p>`;
+                    document.querySelector('.product__item--discount-success').innerHTML = '<p>Yay, 20% discount rate successfully applied.</p>';
+                    document.querySelector('.product__item--discount-error').innerHTML = '';
 
-            } else {
-                document.querySelector('.product__item--price').innerHTML = `<p>Price: 50 eur</p>`;
-                document.querySelector('.product__item--discount-error').innerHTML = '<p>Your code is invalid.</p>';
-                document.querySelector('.product__item--discount-success').innerHTML = '';
-            }
-        });
+                } else {
+                    document.querySelector('.product__item--price').innerHTML = `<p>Price: 50 eur</p>`;
+                    document.querySelector('.product__item--discount-error').innerHTML = '<p>Your code is invalid.</p>';
+                    document.querySelector('.product__item--discount-success').innerHTML = '';
+                }
+            });
+        }
     </script>
 </body>
 

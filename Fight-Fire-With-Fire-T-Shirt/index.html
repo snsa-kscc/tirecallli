@@ -53,7 +53,7 @@
                 <li><a href="/new-life.html">New Life</a></li>
                 <li><a href="/death-moth.html">Death Moth</a></li>
                 <li><a href="/campaign.html">Campaign</a></li>
-                <li><a href="/conversation.html">Conversation</a></li>
+                <li><a href="/conversations.html">conversations</a></li>
                 <li><a href="/archive.html">Archive</a></li>
                 <li><a href="/about.html">About</a></li>
             </ul>
@@ -226,27 +226,30 @@
         <p>We use cookies and we hope you are OK with that.</p>
         <button id="acceptBtn">OK</button>
     </div>
-    <script src="../app.js" defer></script>
+    <script src="../app.js"></script>
     <script>
-        button.addEventListener('click', () => {
-            const value = input.value;
-            if (value === 'TC20') {
-                buttonL.addEventListener('click', () => {
-                    window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UNZAH8GXH6RFL";
-                });
-                buttonXL.addEventListener('click', () => {
-                    window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M6GGKZCBJC2LQ";
-                });
-                document.querySelector('.product__item--price').innerHTML = `<p>Price: ${35 - 35 * .2} eur</p>`;
-                document.querySelector('.product__item--discount-success').innerHTML = '<p>Yay, 20% discount rate successfully applied.</p>';
-                document.querySelector('.product__item--discount-error').innerHTML = '';
+        button = document.getElementById('button');
+        if (button != null) {
+            button.addEventListener('click', () => {
+                const value = input.value;
+                if (value === 'TC20') {
+                    buttonL.addEventListener('click', () => {
+                        window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UNZAH8GXH6RFL";
+                    });
+                    buttonXL.addEventListener('click', () => {
+                        window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M6GGKZCBJC2LQ";
+                    });
+                    document.querySelector('.product__item--price').innerHTML = `<p>Price: ${35 - 35 * .2} eur</p>`;
+                    document.querySelector('.product__item--discount-success').innerHTML = '<p>Yay, 20% discount rate successfully applied.</p>';
+                    document.querySelector('.product__item--discount-error').innerHTML = '';
 
-            } else {
-                document.querySelector('.product__item--price').innerHTML = `<p>Price: 35 eur</p>`;
-                document.querySelector('.product__item--discount-error').innerHTML = '<p>Your code is invalid.</p>';
-                document.querySelector('.product__item--discount-success').innerHTML = '';
-            }
-        });
+                } else {
+                    document.querySelector('.product__item--price').innerHTML = `<p>Price: 35 eur</p>`;
+                    document.querySelector('.product__item--discount-error').innerHTML = '<p>Your code is invalid.</p>';
+                    document.querySelector('.product__item--discount-success').innerHTML = '';
+                }
+            });
+        }
     </script>
 </body>
 

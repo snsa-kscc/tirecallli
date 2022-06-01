@@ -12,14 +12,14 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tirecalli.com/conversation">
+    <meta property="og:url" content="https://tirecalli.com/tena">
     <meta property="og:title" content="Tire Calligraphy - Conversation with Anja Santini-Mikulić">
     <meta property="og:description" content="">
     <meta property="og:image" content="">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tirecalli.com/conversation">
+    <meta property="twitter:url" content="https://tirecalli.com/tena">
     <meta property="twitter:title" content="Tire Calligraphy - Conversation with Anja Santini-Mikulić">
     <meta property="twitter:description" content="">
     <meta property="twitter:image" content="">
@@ -53,7 +53,7 @@
                 <li><a href="/new-life.html">New Life</a></li>
                 <li><a href="/death-moth.html">Death Moth</a></li>
                 <li><a href="/campaign.html">Campaign</a></li>
-                <li><a href="/conversation.html">Conversation</a></li>
+                <li><a href="/conversations.html">Conversations</a></li>
                 <li><a href="/archive.html">Archive</a></li>
                 <li><a href="/about.html">About</a></li>
             </ul>
@@ -210,8 +210,9 @@
         <p>We use cookies and we hope you are OK with that.</p>
         <button id="acceptBtn">OK</button>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap/dist/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger)
         gsap.from(".feature__description", { opacity: 0, duration: 1.5, ease: "power2.in", y: 50 })
@@ -226,7 +227,6 @@
             })
         });
     </script>
-    <script src="app.js" defer></script>
 </body>
 
 </html>
