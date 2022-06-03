@@ -222,7 +222,6 @@ a {
   color: var(--base-color);
   outline: none;
   cursor: pointer;
-  font-size: 18px;
   position: relative;
 }
 
@@ -406,7 +405,7 @@ a:hover::before {
 
 main {
   max-width: 192rem;
-  margin: 4.9em auto 0;
+  margin: 4.6em auto 0;
 }
 
 h1 {
@@ -710,6 +709,17 @@ footer nav {
 .vid {
   aspect-ratio: 16/9;
   min-height: 50vh;
+}
+
+.vid__squared {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .vid__squared {
+    width: 100%;
+  }
 }
 
 .hero {
@@ -1975,7 +1985,8 @@ td:first-child {
   font-size: clamp(1rem, 1vw, 1.4rem);
 }
 
-.conversation article {
+.conversation article,
+.legal {
   max-width: 110rem;
   margin: 0 auto;
   padding: 18vh 2rem 2vh;
