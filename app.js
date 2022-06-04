@@ -150,4 +150,39 @@ if (shouldShowPopup()) {
   }, 2000);
 }
 
+newsletterForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = newsletterForm.querySelector('input[name="email"]').value;
+  let fetchData = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: email,
+    }),
+  };
+  fetch("/.netlify/functions/subscribe", fetchData)
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.msg === "pending") {
+        formResponse.classList.add("visibility-shown");
+        formResponse.innerHTML = "Thanks, please check your email to confirm.";
+      } else if (data.msg === "Member Exists") {
+        formResponse.classList.add("visibility-shown");
+        formResponse.innerHTML = "You are already subscribed. Thank you for being a subscriber!";
+      } else {
+        formResponse.classList.add("visibility-shown");
+        formResponse.innerHTML = "We could not subscribe you. Please try again or use another email.";
+      }
+    })
+    .catch((err) => {
+      formResponse.classList.add("visibility-shown");
+      formResponse.innerHTML = "We could not subscribe you. Please try again or use another email.";
+    })
+    .finally(() => {
+      newsletterForm.reset();
+    });
+});
+
 console.log("%c Hi mom! Made with ❤️ by @dvasadva for @tirecalli", "color: #ff0000; font-size: 20px;");

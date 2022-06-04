@@ -488,13 +488,17 @@ h6 {
   mix-blend-mode: exclusion;
 }
 
-.show {
-  transform: translateY(0%);
-  opacity: 1;
-}
-
 .hidden {
   display: none;
+}
+
+.opacity-hidden {
+  opacity: 0;
+}
+
+.visibility-shown {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
 }
 
 .flex {
@@ -602,18 +606,31 @@ footer nav {
   display: block;
 }
 
-.footer__item:first-child img {
+.footer__section:first-child img {
   max-width: 25rem;
 }
 
-.footer__item:first-child svg {
+.footer__section:first-child svg {
   max-width: 5rem;
 }
 
-.footer__item {
+.footer__section {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-block-start: 1em;
+}
+
+.footer__section--block {
+  display: block;
+}
+
+.footer__group {
+  margin-top: 1em;
+}
+
+.footer__item {
+  margin-top: 1em;
 }
 
 .about h2 {
@@ -1758,6 +1775,11 @@ form {
   transition: all 1s ease;
   opacity: 0;
   color: white;
+}
+
+.show {
+  transform: translateY(0%);
+  opacity: 1;
 }
 
 .modal {
