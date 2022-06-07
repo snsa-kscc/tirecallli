@@ -1716,6 +1716,11 @@ footer nav {
   margin: 1em 0;
 }
 
+.card__image--squared img {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
 .upsell,
 .explore {
   margin: 3em clamp(0.5em, 4vw, 6em);
