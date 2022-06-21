@@ -79,7 +79,7 @@
                 <div class="product__item product__item--price">
                     <p>Price: 90 eur</p>
                 </div>
-                <!-- <div class="product__item product__item--discount-group">
+                <div class="product__item product__item--discount-group">
                     <p>Discount code:</p>
                     <input id="input" type="text">
                     <button id="button">Apply code</button>
@@ -87,7 +87,7 @@
                 <div class="product__item product__item--discount-success">
                 </div>
                 <div class="product__item product__item--discount-error">
-                </div> -->
+                </div>
                 <div class="product__item product__item--size-select">
                     <p>Select your size and add to basket</p>
                 </div>
@@ -295,7 +295,7 @@
         if (button != null) {
             button.addEventListener('click', () => {
                 const value = input.value;
-                if (value === 'TC20') {
+                if (value === 'TC60') {
                     buttonS.addEventListener('click', () => {
                         window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L6PT8T789AJNS";
                     });
@@ -308,12 +308,12 @@
                     buttonXL.addEventListener('click', () => {
                         window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Q6ABHSAASYYAW";
                     });
-                    document.querySelector('.product__item--price').innerHTML = `<p>Price: ${90 - 90 * .2} eur</p>`;
-                    document.querySelector('.product__item--discount-success').innerHTML = '<p>Yay, 20% discount rate successfully applied.</p>';
+                    document.querySelector('.product__item--price').innerHTML = `<p>Price: ${90 - 90 * .6} eur</p>`;
+                    document.querySelector('.product__item--discount-success').innerHTML = '<p>Yay, 60% discount rate successfully applied.</p>';
                     document.querySelector('.product__item--discount-error').innerHTML = '';
-
-                } else {
-                    document.querySelector('.product__item--price').innerHTML = `<p>Price: 40 eur</p>`;
+                }
+                else {
+                    document.querySelector('.product__item--price').innerHTML = `<p>Price: 90 eur</p>`;
                     document.querySelector('.product__item--discount-error').innerHTML = '<p>Your code is invalid.</p>';
                     document.querySelector('.product__item--discount-success').innerHTML = '';
                 }

@@ -241,15 +241,15 @@
         if (button != null) {
             button.addEventListener('click', () => {
                 const value = input.value;
-                if (value === 'TC20') {
+                if (value === 'TC60') {
                     buttonL.addEventListener('click', () => {
                         window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UNZAH8GXH6RFL";
                     });
                     buttonXL.addEventListener('click', () => {
                         window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M6GGKZCBJC2LQ";
                     });
-                    document.querySelector('.product__item--price').innerHTML = `<p>Price: ${35 - 35 * .2} eur</p>`;
-                    document.querySelector('.product__item--discount-success').innerHTML = '<p>Yay, 20% discount rate successfully applied.</p>';
+                    document.querySelector('.product__item--price').innerHTML = `<p>Price: ${35 - 35 * .6} eur</p>`;
+                    document.querySelector('.product__item--discount-success').innerHTML = '<p>Yay, 60% discount rate successfully applied.</p>';
                     document.querySelector('.product__item--discount-error').innerHTML = '';
 
                 } else {
