@@ -185,4 +185,9 @@ newsletterForm.addEventListener("submit", (e) => {
     });
 });
 
+logo.oncontextmenu = (e) => {
+  e.preventDefault();
+  window.location.href = "/brand-guidelines.html";
+};
+
 console.log("%c Hi mom! Made with ❤️ by @dvasadva for @tirecalli", "color: #ff0000; font-size: 20px;");

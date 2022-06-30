@@ -519,6 +519,10 @@ h6 {
   }
 }
 
+.bg-black {
+  background: black;
+}
+
 /* end of utils */
 
 nav ul {
