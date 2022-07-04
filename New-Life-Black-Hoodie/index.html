@@ -83,15 +83,6 @@
                 <div class="product__item product__item--price">
                     <p>Price: 200 eur</p>
                 </div>
-                <div class="product__item product__item--discount-group">
-                    <p>Discount code:</p>
-                    <input id="input" type="text">
-                    <button id="button">Apply code</button>
-                </div>
-                <div class="product__item product__item--discount-success">
-                </div>
-                <div class="product__item product__item--discount-error">
-                </div>
                 <div class="product__item product__item--size-select">
                     <p>Select your size and add to basket</p>
                 </div>
@@ -296,33 +287,6 @@
         <button id="acceptBtn">OK</button>
     </div>
     <script src="../app.js"></script>
-    <script>
-        button = document.getElementById('button');
-        if (button != null) {
-            button.addEventListener('click', () => {
-                const value = input.value;
-                if (value === 'TC60') {
-                    buttonS.addEventListener('click', () => {
-                        window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7Y4Q3VDKQECEL";
-                    });
-                    buttonM.addEventListener('click', () => {
-                        window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L7BZCCUD3RT26";
-                    });
-                    buttonL.addEventListener('click', () => {
-                        window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VJXWU2D7EWEHG";
-                    });
-                    document.querySelector('.product__item--price').innerHTML = `<p>Price: ${200 - 200 * .6} eur</p>`;
-                    document.querySelector('.product__item--discount-success').innerHTML = '<p>Yay, 60% discount rate successfully applied.</p>';
-                    document.querySelector('.product__item--discount-error').innerHTML = '';
-                }
-                else {
-                    document.querySelector('.product__item--price').innerHTML = `<p>Price: 200 eur</p>`;
-                    document.querySelector('.product__item--discount-error').innerHTML = '<p>Your code is invalid.</p>';
-                    document.querySelector('.product__item--discount-success').innerHTML = '';
-                }
-            });
-        }
-    </script>
 </body>
 
 </html>
