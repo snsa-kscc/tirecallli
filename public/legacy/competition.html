@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tire Calligraphy</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
+    <script is:inline>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
                     new Date().getTime(), event: 'gtm.js'
@@ -134,9 +138,9 @@
         <p>We use cookies and we hope you are OK with that.</p>
         <button id="acceptBtn">OK</button>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
-    <script>
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+    <script is:inline>
         gsap.registerPlugin(ScrollTrigger);
         gsap.from(".feature__description", { opacity: 0, duration: 1.5, ease: "power2.in", y: 50 });
         gsap.from(".feature img", { opacity: 0, duration: 1, y: -50 });
@@ -152,7 +156,7 @@
             });
         });
     </script>
-    <script src="app.js" defer></script>
+    <script is:inline src="/js/app.js" defer></script>
 </body>
 
 </html>
