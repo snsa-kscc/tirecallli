@@ -4,7 +4,10 @@
   "description": "Website for Tirecalligraphy fashion brand based in Zagreb, Croatia",
   "main": "app-campaign.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,8 @@
   "homepage": "https://github.com/snsa-kscc/tirecalli#readme",
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.75"
+  },
+  "devDependencies": {
+    "astro": "^1.6.2"
   }
 }

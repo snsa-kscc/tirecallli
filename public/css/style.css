@@ -1,6 +1,6 @@
 @font-face {
   font-family: "FoobarPro";
-  src: url("assets/fonts/FoobarproRegular.woff") format("woff");
+  src: url("/fonts/FoobarproRegular.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "JosefinSans";
-  src: url("assets/fonts/JosefinSansLight.woff") format("woff");
+  src: url("/fonts/JosefinSansLight.woff") format("woff");
   font-style: normal;
   font-weight: 100;
   text-rendering: optimizeLegibility;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "JosefinSans";
-  src: url("assets/fonts/JosefinSansLightItalic.woff") format("woff");
+  src: url("/fonts/JosefinSansLightItalic.woff") format("woff");
   font-style: italic;
   font-weight: 100;
   text-rendering: optimizeLegibility;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "JosefinSans";
-  src: url("assets/fonts/JosefinSansRegular.woff") format("woff");
+  src: url("/fonts/JosefinSansRegular.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: "JosefinSans";
-  src: url("assets/fonts/JosefinSansBold.woff") format("woff");
+  src: url("/fonts/JosefinSansBold.woff") format("woff");
   font-style: normal;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: "JosefinSans";
-  src: url("assets/fonts/JosefinSansBoldItalic.woff") format("woff");
+  src: url("/fonts/JosefinSansBoldItalic.woff") format("woff");
   font-style: italic;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -48,7 +48,7 @@
 
 @font-face {
   font-family: "VCR OSD Mono";
-  src: url("assets/fonts/VCROSDMono.woff") format("woff");
+  src: url("/fonts/VCROSDMono.woff") format("woff");
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
