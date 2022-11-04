@@ -1,37 +1,42 @@
+---
+export interface Props {
+  title?: string;
+  url?: string;
+  description?: string;
+}
+
+const {
+  title = "Tire Calligraphy - From The Community For The Community",
+  url = "https://tirecalli.com/",
+  description = "A contemporary apparel brand. From The Community For The Community. Proudly crafted in Zagreb, Croatia, oriented globally.",
+} = Astro.props as Props;
+---
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Primary Meta Tags -->
-  <title>Tire Calligraphy - From The Community For The Community</title>
-  <meta name="title" content="Tire Calligraphy - From The Community For The Community" />
-  <meta
-    name="description"
-    content="A contemporary apparel brand. From The Community For The Community. Proudly crafted in Zagreb, Croatia, oriented globally."
-  />
+  <title>{title}</title>
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tirecalli.com/" />
-  <meta property="og:title" content="Tire Calligraphy - From The Community For The Community" />
-  <meta
-    property="og:description"
-    content="A contemporary apparel brand. From The Community For The Community. Proudly crafted in Zagreb, Croatia, oriented globally."
-  />
+  <meta property="og:url" content={url} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
   <meta property="og:image" content="https://tirecalli.com/img/logo.webp" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://tirecalli.com/" />
-  <meta property="twitter:title" content="Tire Calligraphy - From The Community For The Community" />
-  <meta
-    property="twitter:description"
-    content="A contemporary apparel brand. From The Community For The Community. Proudly crafted in Zagreb, Croatia, oriented globally."
-  />
+  <meta property="twitter:url" content={url} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
   <meta property="twitter:image" content="https://tirecalli.com/img/logo.webp" />
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="/styles/global.css" />
   <!-- Google Tag Manager -->
   <script is:inline>
     (function (w, d, s, l, i) {
