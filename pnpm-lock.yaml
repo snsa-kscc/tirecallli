@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@mailchimp/mailchimp_marketing': ^3.0.75
+  '@mailchimp/mailchimp_marketing': ^3.0.80
   astro: ^1.6.2
 
 dependencies:

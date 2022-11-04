@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/snsa-kscc/tirecalli#readme",
   "dependencies": {
-    "@mailchimp/mailchimp_marketing": "^3.0.75"
+    "@mailchimp/mailchimp_marketing": "^3.0.80"
   },
   "devDependencies": {
     "astro": "^1.6.2"
