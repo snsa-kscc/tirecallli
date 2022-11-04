@@ -54,6 +54,14 @@
   text-rendering: optimizeLegibility;
 }
 
+@font-face {
+  font-family: "FontAwesome";
+  src: url("../fonts/fontawesome-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
 :root {
   --base-color: hsl(220, 23%, 8%);
   --text-color: hsl(0, 0%, 31%);
@@ -1935,6 +1943,9 @@ td:first-child {
 }
 
 .sound {
+  font-family: "FontAwesome";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   width: 40px;
   height: 40px;
   position: relative;
@@ -1950,6 +1961,10 @@ td:first-child {
   font-size: 40px;
   display: block;
   margin: auto;
+}
+
+.sound--icon::before {
+  content: "\f026";
 }
 
 .sound--wave {
