@@ -78,6 +78,7 @@
 
 html {
   font-size: 62.5%;
+  filter: invert(1);
 }
 
 body {
@@ -94,6 +95,7 @@ svg {
   display: block;
   width: 100%;
   overflow: hidden;
+  filter: invert(1);
 }
 
 video {
@@ -529,6 +531,14 @@ h6 {
 
 .bg-black {
   background: black;
+}
+
+.cart {
+  font-family: "FontAwesome";
+}
+
+.cart::before {
+  content: "\f07a";
 }
 
 /* end of utils */
