@@ -776,6 +776,7 @@ footer nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  padding: 3em 0 1em;
 }
 
 .product__aside {
@@ -785,7 +786,7 @@ footer nav {
 
 .product__info {
   flex: 1 1 30rem;
-  margin: 1em;
+  margin: 3em;
 }
 
 .product__figures {
@@ -1745,7 +1746,7 @@ footer nav {
 
 .upsell,
 .explore {
-  margin: 3em clamp(0.5em, 4vw, 6em);
+  margin: 3em clamp(3em, 4vw, 6em);
 }
 
 .explore__group {
