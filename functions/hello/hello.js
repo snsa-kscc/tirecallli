@@ -4,7 +4,7 @@ const fs = require("fs");
 const handler = async (event) => {
   try {
     const subject = event.queryStringParameters.name || "World";
-    fs.writeFile("helloworld.txt", subject, function (err) {
+    fs.writeFile("public/helloworld.txt", subject, function (err) {
       if (err) return console.log(err);
     });
     return {
