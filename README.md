@@ -7,7 +7,9 @@ Website for Tirecalligraphy fashion brand based in Zagreb, Croatia
 # test -> production
 
 controls -> autoplay na indexu
+
 sandbox env -> production env - paypal
+
 invert na html i na img
 
 ## 2DO
