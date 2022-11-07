@@ -1,0 +1,205 @@
+[
+	[
+		101,
+		{
+			"price": 500,
+			"name": "Hybrid Jacket - S"
+		}
+	],
+	[
+		102,
+		{
+			"price": 500,
+			"name": "Hybrid Jacket - M"
+		}
+	],
+	[
+		103,
+		{
+			"price": 500,
+			"name": "Hybrid Jacket - L"
+		}
+	],
+	[
+		104,
+		{
+			"price": 500,
+			"name": "Hybrid Jacket - XL"
+		}
+	],
+	[
+		201,
+		{
+			"price": 375,
+			"name": "Basic Denim Overall Pant - L"
+		}
+	],
+	[
+		301,
+		{
+			"price": 350,
+			"name": "Basic Denim Jacket - S"
+		}
+	],
+	[
+		302,
+		{
+			"price": 350,
+			"name": "Basic Denim Jacket - M"
+		}
+	],
+	[
+		303,
+		{
+			"price": 350,
+			"name": "Basic Denim Jacket - L"
+		}
+	],
+	[
+		304,
+		{
+			"price": 350,
+			"name": "Basic Denim Jacket - XL"
+		}
+	],
+	[
+		401,
+		{
+			"price": 200,
+			"name": "Black Quilted Jacket - S"
+		}
+	],
+	[
+		402,
+		{
+			"price": 200,
+			"name": "Black Quilted Jacket - M"
+		}
+	],
+	[
+		403,
+		{
+			"price": 200,
+			"name": "Black Quilted Jacket - L"
+		}
+	],
+	[
+		404,
+		{
+			"price": 200,
+			"name": "Black Quilted Jacket - XL"
+		}
+	],
+	[
+		501,
+		{
+			"price": 50,
+			"name": "Black TC Tote bag"
+		}
+	],
+	[
+		601,
+		{
+			"price": 65,
+			"name": "Reflective Calli Crewneck - L"
+		}
+	],
+	[
+		701,
+		{
+			"price": 35,
+			"name": "Fight Fire With Fire T-Shirt - L"
+		}
+	],
+	[
+		702,
+		{
+			"price": 35,
+			"name": "Fight Fire With Fire T-Shirt - XL"
+		}
+	],
+	[
+		801,
+		{
+			"price": 200,
+			"name": "New Life Black Hoodie - S"
+		}
+	],
+	[
+		802,
+		{
+			"price": 200,
+			"name": "New Life Black Hoodie - M"
+		}
+	],
+	[
+		803,
+		{
+			"price": 200,
+			"name": "New Life Black Hoodie - L"
+		}
+	],
+	[
+		901,
+		{
+			"price": 110,
+			"name": "New Life Gray T-Shirt TC21 - S"
+		}
+	],
+	[
+		902,
+		{
+			"price": 110,
+			"name": "New Life Gray T-Shirt TC21 - M"
+		}
+	],
+	[
+		903,
+		{
+			"price": 110,
+			"name": "New Life Gray T-Shirt TC21 - L"
+		}
+	],
+	[
+		904,
+		{
+			"price": 110,
+			"name": "New Life Gray T-Shirt TC21 - XL"
+		}
+	],
+	[
+		1001,
+		{
+			"price": 90,
+			"name": "New Life Black T-Shirt TC21 - S"
+		}
+	],
+	[
+		1002,
+		{
+			"price": 90,
+			"name": "New Life Black T-Shirt TC21 - M"
+		}
+	],
+	[
+		1003,
+		{
+			"price": 90,
+			"name": "New Life Black T-Shirt TC21 - L"
+		}
+	],
+	[
+		1004,
+		{
+			"price": 90,
+			"name": "New Life Black T-Shirt TC21 - XL"
+		}
+	],
+	[
+		1101,
+		{
+			"price": 60,
+			"name": "Mint Moth Hoodie - M"
+		}
+	]
+]

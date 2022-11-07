@@ -10,6 +10,9 @@ import Footer from "../components/Footer.astro";
     <Header />
     <main>
       <h4>ovo je cart</h4>
+      <p class="store-items" data-sku="201" data-qnt="1">jacket</p>
+      <p class="store-items" data-sku="301" data-qnt="2">pants</p>
+      <p class="store-items" data-sku="401" data-qnt="3">tee</p>
       <div id="paypal-button-container"></div>
     </main>
     <Footer />
@@ -19,6 +22,14 @@ import Footer from "../components/Footer.astro";
     ></script>
     <script is:inline src="/js/app.js"></script>
     <script is:inline>
+      const storeItems = document.querySelectorAll(".store-items");
+      const payload = []
+      storeItems.forEach( item => {
+        const singleObj = {}
+        singleObj['id'] = parseInt(item.dataset.sku)
+        singleObj['quantity'] = parseInt(item.dataset.qnt)
+        payload.push(singleObj)
+      })
       paypal
         .Buttons({
           createOrder: function () {
@@ -27,15 +38,7 @@ import Footer from "../components/Footer.astro";
               headers: {
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify({
-                items: [
-                  {
-                    id: 1,
-                    quantity: 2,
-                  },
-                  { id: 2, quantity: 3 },
-                ],
-              }),
+              body: JSON.stringify(payload),
             })
               .then((res) => {
                 if (res.ok) return res.json();
