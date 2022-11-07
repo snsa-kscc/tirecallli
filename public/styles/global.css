@@ -1731,7 +1731,7 @@ footer nav {
   grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
   column-gap: 3em;
   row-gap: 2em;
-  margin: 3em clamp(2em, 4vw, 5em);
+  padding: 4em clamp(2em, 9vw, 13em);
 }
 
 .card__image {
