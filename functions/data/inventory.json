@@ -100,21 +100,21 @@
 	[
 		601,
 		{
-			"price": 65,
+			"price": 45,
 			"name": "Reflective Calli Crewneck - L"
 		}
 	],
 	[
 		701,
 		{
-			"price": 35,
+			"price": 20,
 			"name": "Fight Fire With Fire T-Shirt - L"
 		}
 	],
 	[
 		702,
 		{
-			"price": 35,
+			"price": 20,
 			"name": "Fight Fire With Fire T-Shirt - XL"
 		}
 	],
@@ -198,7 +198,7 @@
 	[
 		1101,
 		{
-			"price": 60,
+			"price": 40,
 			"name": "Mint Moth Hoodie - M"
 		}
 	]
