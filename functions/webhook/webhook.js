@@ -1,5 +1,4 @@
 const { SLACK_WEBHOOK } = process.env;
-const fetch = require("node-fetch");
 
 exports.handler = async function (event, context) {
   try {
@@ -13,6 +12,7 @@ exports.handler = async function (event, context) {
     const response = await fetch(SLACK_WEBHOOK, options);
     return {
       statusCode: 200,
+      body: "success",
     };
   } catch (err) {
     return {
