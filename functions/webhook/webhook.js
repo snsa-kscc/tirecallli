@@ -1,4 +1,4 @@
-const { SLACK_WEBHOOK } = process.env;
+const { SLACK_URL } = process.env;
 
 exports.handler = async function (event, context) {
   try {
@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {
       },
       body: JSON.stringify({ text: "jkhkhk" }),
     };
-    const response = await fetch(SLACK_WEBHOOK, options);
+    const response = await fetch(SLACK_URL, options);
     return {
       statusCode: 200,
       body: "success",
