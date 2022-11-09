@@ -1,6 +1,7 @@
 const { SLACK_WEBHOOK } = process.env;
 
 exports.handler = async function (event, context) {
+  console.log(event.body);
   try {
     const options = {
       method: "POST",
@@ -10,6 +11,7 @@ exports.handler = async function (event, context) {
       body: JSON.stringify({ text: event.body }),
     };
     const response = await fetch(SLACK_WEBHOOK, options);
+    console.log(response);
     return {
       statusCode: 200,
     };
