@@ -1,7 +1,5 @@
 const { SLACK_WEBHOOK } = process.env;
 
-import fetch from "node-fetch";
-
 exports.handler = async function (event, context) {
   try {
     const options = {
@@ -19,7 +17,7 @@ exports.handler = async function (event, context) {
   } catch (err) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ msg: err.response.body.title }),
+      body: "error",
     };
   }
 };
