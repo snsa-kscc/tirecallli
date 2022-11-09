@@ -7,7 +7,7 @@ exports.handler = async function (event, context) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ text: "fgdgdgd" }),
+      body: JSON.stringify({ text: event.body }),
     };
     const response = await fetch(SLACK_WEBHOOK, options);
     return {
