@@ -7,9 +7,9 @@ exports.handler = async function (event, context) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ text: event.body }),
+      body: JSON.stringify({ text: "jkhkhk" }),
     };
-    const response = await fetch(SLACK_WEBHOOK, options);
+    const response = await fetch("https://hooks.slack.com/services/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", options);
     console.log(response);
     return {
       statusCode: 200,
