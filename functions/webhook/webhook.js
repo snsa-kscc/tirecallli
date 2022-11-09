@@ -10,6 +10,7 @@ exports.handler = async function (event, context) {
       body: JSON.stringify({ text: event.body }),
     };
     const response = await fetch(SLACK_WEBHOOK, options);
+    console.log(response);
     return {
       statusCode: 200,
       body: "success",
@@ -17,7 +18,7 @@ exports.handler = async function (event, context) {
   } catch (err) {
     return {
       statusCode: 400,
-      body: "error",
+      body: JSON.stringify({ msg: err }),
     };
   }
 };
