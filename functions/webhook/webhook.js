@@ -1,4 +1,5 @@
 const { SLACK_WEBHOOK } = process.env;
+const fetch = require("node-fetch");
 
 exports.handler = async function (event, context) {
   try {
@@ -10,7 +11,6 @@ exports.handler = async function (event, context) {
       body: JSON.stringify({ text: "fgdgdgd" }),
     };
     const response = await fetch(SLACK_WEBHOOK, options);
-    console.log(response);
     return {
       statusCode: 200,
     };
