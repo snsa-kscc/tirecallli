@@ -21,7 +21,7 @@ import { Rea } from "../components/Rea";
     <Footer />
     <script
       is:inline
-      src="https://www.paypal.com/sdk/js?client-id=Af1ohtvwXNwwIsDqriG76tdtT7Xju8PagK5m1mNmUxumkiE5wDiyL_uqWR7qZcX6ndvcu7UynDpq1hWW&currency=EUR"
+      src="https://www.paypal.com/sdk/js?client-id=Af1ohtvwXNwwIsDqriG76tdtT7Xju8PagK5m1mNmUxumkiE5wDiyL_uqWR7qZcX6ndvcu7UynDpq1hWW&currency=EUR&intent=authorize"
     ></script>
     <script is:inline src="/js/app.js"></script>
     <script is:inline>
@@ -55,7 +55,7 @@ import { Rea } from "../components/Rea";
               });
           },
           onApprove: function (data, actions) {
-            return actions.order.capture();
+              return actions.order.authorize();  // return actions.order.capture();
           },
         })
         .render("#paypal-button-container");

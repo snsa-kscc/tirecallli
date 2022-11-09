@@ -20,7 +20,7 @@ exports.handler = async function (event, context) {
   }, 0);
   request.prefer("return=representation");
   request.requestBody({
-    intent: "CAPTURE",
+    intent: "AUTHORIZE", // or capture
     purchase_units: [
       {
         amount: {
