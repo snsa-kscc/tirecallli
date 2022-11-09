@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {
       },
       body: JSON.stringify({ text: "jkhkhk" }),
     };
-    const response = await fetch("https://hooks.slack.com/services/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", options);
+    const response = await fetch("https://hooks.slack.com/services/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", options);
     console.log(response);
     return {
       statusCode: 200,
