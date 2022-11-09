@@ -1,5 +1,7 @@
 const { SLACK_WEBHOOK } = process.env;
 
+import fetch from "node-fetch";
+
 exports.handler = async function (event, context) {
   try {
     const options = {

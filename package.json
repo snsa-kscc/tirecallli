@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Website for Tirecalligraphy fashion brand based in Zagreb, Croatia",
   "main": "app-campaign.js",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
