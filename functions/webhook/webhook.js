@@ -2,6 +2,7 @@ const { SLACK_WEBHOOK } = process.env;
 
 exports.handler = async function (event, context) {
   const desc = event.body;
+  console.log(desc);
   try {
     const options = {
       method: "POST",
