@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Website for Tirecalligraphy fashion brand based in Zagreb, Croatia",
   "main": "app-campaign.js",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -25,6 +26,7 @@
     "@paypal/checkout-server-sdk": "^1.0.3",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
+    "node-fetch": "^3.2.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
