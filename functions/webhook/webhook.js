@@ -1,4 +1,4 @@
-const { WEBHOOK_URL } = process.env;
+const { SLACK_URL } = process.env;
 const fetch = require("node-fetch");
 
 exports.handler = async function (event, context) {
@@ -8,9 +8,9 @@ exports.handler = async function (event, context) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ text: "jkhkhk" }),
+      body: JSON.stringify({ text: event.body }),
     };
-    const response = await fetch(WEBHOOK_URL, options);
+    const response = await fetch(SLACK_URL, options);
     return {
       statusCode: 200,
       body: "success",
