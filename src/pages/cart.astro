@@ -2,7 +2,7 @@
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { Rea } from "../components/Rea";
+import { Button } from "../components/Button";
 ---
 
 <html>
@@ -11,11 +11,9 @@ import { Rea } from "../components/Rea";
     <Header />
     <main>
       <h4>ovo je cart</h4>
-      <Rea client:load />
-      <p>zamisli da je to cart, sad je hardkodiran, al radim da bude dinamican</p>
-      <!-- <p class="store-items" data-sku="701" data-qnt="1">fight fire with fire L - kom 1</p> -->
+      <Button client:load />
+      <p class="store-items" data-sku="701" data-qnt="1">fight fire with fire L - kom 1</p>
       <p class="store-items" data-sku="501" data-qnt="2">tote bag - kom 2</p>
-      <!-- <p class="store-items" data-sku="102" data-qnt="3">hibridni m - kom -3</p> -->
       <div id="paypal-button-container"></div>
     </main>
     <Footer />
@@ -26,13 +24,13 @@ import { Rea } from "../components/Rea";
     <script is:inline src="/js/app.js"></script>
     <script is:inline>
       const storeItems = document.querySelectorAll(".store-items");
-      const payload = []
-      storeItems.forEach( item => {
-        const singleObj = {}
-        singleObj['id'] = parseInt(item.dataset.sku)
-        singleObj['quantity'] = parseInt(item.dataset.qnt)
-        payload.push(singleObj)
-      })
+      const payload = [];
+      storeItems.forEach((item) => {
+        const singleObj = {};
+        singleObj["id"] = parseInt(item.dataset.sku);
+        singleObj["quantity"] = parseInt(item.dataset.qnt);
+        payload.push(singleObj);
+      });
       paypal
         .Buttons({
           createOrder: function () {
@@ -55,7 +53,7 @@ import { Rea } from "../components/Rea";
               });
           },
           onApprove: function (data, actions) {
-              return actions.order.authorize();  // return actions.order.capture();
+            return actions.order.authorize(); // return actions.order.capture();
           },
         })
         .render("#paypal-button-container");
