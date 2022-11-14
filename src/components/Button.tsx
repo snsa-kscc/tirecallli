@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 
-export function Button() {
-  const [count, setCount] = useState(0);
+type ButtonProps = {
+  id?: number;
+  size: string;
+};
+
+export function Button({ id, size }: ButtonProps) {
+  const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCart();
+
   return (
-    <div>
-      <p>hello from react</p>
-      <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-    </div>
+    <button className="button button--size button--flex" onClick={() => increaseCartQuantity(222)}>
+      <span>{size}</span>
+    </button>
   );
 }
