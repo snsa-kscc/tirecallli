@@ -2,7 +2,6 @@
 import Head from "../../components/Head.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
-import { ShoppingCartProvider } from "../../context/ShoppingCartContext";
 import { Button } from "../../components/Button";
 ---
 
@@ -51,12 +50,10 @@ import { Button } from "../../components/Button";
             <p>Select your size and add to basket</p>
           </div>
           <div class="product__item product__item--sizes">
-            <ShoppingCartProvider client:load>
-              <Button size="S" />
-              <Button size="M" />
-              <Button size="L" />
-              <Button client:load size="XL" />
-            </ShoppingCartProvider>
+            <Button client:load size="S" id={301} />
+            <Button client:load size="M" id={302} />
+            <Button client:load size="L" id={303} />
+            <Button client:load size="XL" id={304} />
           </div>
           <div class="product__item product__item--description">
             <p>
