@@ -2,6 +2,14 @@
 import Head from "../../components/Head.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import { Buttons } from "../../components/Buttons";
+
+const buttons = [
+  { id: 1001, size: "S" },
+  { id: 1002, size: "M" },
+  { id: 1003, size: "L" },
+  { id: 1004, size: "XL" },
+];
 ---
 
 <html>
@@ -40,54 +48,7 @@ import Footer from "../../components/Footer.astro";
             <p>Select your size and add to basket</p>
           </div>
           <div class="product__item product__item--sizes">
-            <button
-              id="buttonS"
-              class="button button--size button--flex"
-              onclick="window.location.href="
-              https:
-              www.paypal.com
-              cgi-bin
-              webscr?cmd="_s-xclick&hosted_button_id=XCBYMUXMPKRJC"
-              ;""
-            >
-              <span>S</span>
-            </button>
-            <button
-              id="buttonM"
-              class="button button--size button--flex"
-              onclick="window.location.href="
-              https:
-              www.paypal.com
-              cgi-bin
-              webscr?cmd="_s-xclick&hosted_button_id=VLCPHSASR72PG"
-              ;""
-            >
-              <span>M</span>
-            </button>
-            <button
-              id="buttonL"
-              class="button button--size button--flex"
-              onclick="window.location.href="
-              https:
-              www.paypal.com
-              cgi-bin
-              webscr?cmd="_s-xclick&hosted_button_id=PPVCC3VNKHNJJ"
-              ;""
-            >
-              <span>L</span>
-            </button>
-            <button
-              id="buttonXL"
-              class="button button--size button--flex"
-              onclick="window.location.href="
-              https:
-              www.paypal.com
-              cgi-bin
-              webscr?cmd="_s-xclick&hosted_button_id=V4REYKT87GD7U"
-              ;""
-            >
-              <span>XL</span>
-            </button>
+            <Buttons client:load items={buttons} />
           </div>
           <div class="product__item product__item--sizing-chart">
             <div class="btn-area">

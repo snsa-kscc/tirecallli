@@ -2,6 +2,14 @@
 import Head from "../../components/Head.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import { Buttons } from "../../components/Buttons";
+
+const buttons = [
+  { id: 101, size: "S" },
+  { id: 102, size: "M" },
+  { id: 103, size: "L" },
+  { id: 104, size: "XL" },
+];
 ---
 
 <html>
@@ -54,97 +62,9 @@ import Footer from "../../components/Footer.astro";
             <p>Select your size and add to basket</p>
           </div>
           <div class="product__item product__item--sizes">
-            <button
-              id="buttonS"
-              class="button button--size button--flex"
-              onclick="window.location.href="
-              https:
-              www.paypal.com
-              cgi-bin
-              webscr?cmd="_s-xclick&hosted_button_id=4VNKJ7RWWUWSE"
-              ;""
-            >
-              <span>S</span>
-            </button>
-            <button
-              id="buttonM"
-              class="button button--size button--flex"
-              onclick="window.location.href="
-              https:
-              www.paypal.com
-              cgi-bin
-              webscr?cmd="_s-xclick&hosted_button_id=KW9K6EE5HJ524"
-              ;""
-            >
-              <span>M</span>
-            </button>
-            <button
-              id="buttonL"
-              class="button button--size button--flex"
-              onclick="window.location.href="
-              https:
-              www.paypal.com
-              cgi-bin
-              webscr?cmd="_s-xclick&hosted_button_id=DDGKC9L8BUC8Y"
-              ;""
-            >
-              <span>L</span>
-            </button>
-            <button
-              id="buttonXL"
-              class="button button--size button--flex"
-              onclick="window.location.href="
-              https:
-              www.paypal.com
-              cgi-bin
-              webscr?cmd="_s-xclick&hosted_button_id=PZCYKAAHXWFAE"
-              ;""
-            >
-              <span>XL</span>
-            </button>
+            <Buttons client:load items={buttons} />
           </div>
-          <!-- <div class="product__item product__item--sizing-chart">
-                    <div class="btn-area">
-                        <label class="btn" for="open-pop">Sizing Chart</label>
-                    </div>
-                    <div class="pop-area">
-                        <input class="modal-state" id="open-pop" type="checkbox" />
-                        <div class="modal">
-                            <label class="modal_bg" for="open-pop"></label>
-                            <div class="modal_inner">
-                                <label class="modal_close" for="open-pop"></label>
-                                <table>
-                                    <tr>
-                                        <th colspan="3">Dobokh Parka</th>
-                                    </tr>
-                                    <tr>
-                                        <td>cm / in</td>
-                                        <td>XS / S</td>
-                                        <td>S / M</td>
-                                    </tr>
 
-                                    <tr>
-                                        <td class="label">Shoulder</td>
-                                        <td>59 / 23.2</td>
-                                        <td>63 / 24.8</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="label">Body</td>
-                                        <td>55 / 21.7</td>
-                                        <td>67 / 23.4</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="label">Length</td>
-                                        <td>80 / 31.5</td>
-                                        <td>82 / 32.3</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
           <div class="product__item product__item--description">
             <p>
               A hybrid item. A versatile servant of your expectations and needs when fighting the elements. Consists of two pieces; this being TC Basic Denim
@@ -155,7 +75,6 @@ import Footer from "../../components/Footer.astro";
               serve your style as an outer layer as well.
             </p>
             <p>Ofc, this item is neutral gender, crafted according to TC vision of universal wearability.</p>
-            <!-- <p class="mt">To pre-order size S, contact us using a form <a href=/about.html>here &rsaquo;.</a></p> -->
           </div>
           <div class="product__item product__item--accordion">
             <div class="accordion">
@@ -210,31 +129,6 @@ import Footer from "../../components/Footer.astro";
           </div>
         </section>
       </article>
-      <!-- <section class="explore">
-            <h2>Explore the Dobokh Parkha</h2>
-            <p class="explore__copy">A simplicity of a minimal black jacket.</p>
-            <p class="explore__copy">Adjusting the belt strap lets you play with the symmetry of the front side.</p>
-            <p class="explore__copy">Unzipping the sleeves enables additional wearing technique to emerge.</p>
-            <div class="explore__group">
-                <div class="explore__item">
-                    <img src="/img/campaign/black-dobokh-parka-with-hood-mens-front.webp" alt="tirecalli-picture" loading="lazy" />
-                </div>
-                <div class="explore__item">
-                    <p class="explore__copy--middle">
-                        Following the postulate of fluidity and flexibility the intention was set to create items which can be used for more than one purpose and
-                        situation.
-                    </p>
-                    <p class="explore__copy--middle">
-                        With a vision of neutral, universal items in mind,
-                        <span class="bold">199144</span> will spread through the seasons not constrained by time, location or fashion trends.
-                    </p>
-                    <p class="explore__copy--middle">Every item offered is a neutral gender item.</p>
-                </div>
-                <div class="explore__item">
-                    <img src="/img/campaign/girl-in-black-dobokh-parkha-back.webp" alt="tirecalli-picture" loading="lazy" />
-                </div>
-            </div>
-        </section> -->
       <section class="upsell">
         <h2>You might also like</h2>
         <div class="upsell__group">

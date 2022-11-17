@@ -182,6 +182,10 @@ button {
   font-weight: 500;
 }
 
+.button--size + .button--size {
+  margin-left: 0.6rem;
+}
+
 .button--size span {
   display: block;
   position: relative;

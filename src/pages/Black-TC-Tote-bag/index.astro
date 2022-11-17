@@ -2,6 +2,7 @@
 import Head from "../../components/Head.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import { Button } from "../../components/Button";
 ---
 
 <html>
@@ -34,17 +35,7 @@ import Footer from "../../components/Footer.astro";
             <p>Price: 50 eur</p>
           </div>
           <div class="product__item product__item--cta">
-            <button
-              class="button button--cta"
-              onclick="window.location.href="
-              https:
-              www.paypal.com
-              cgi-bin
-              webscr?cmd="_s-xclick&hosted_button_id=9MCZAY6CV5BLW"
-              ;""
-            >
-              <span>Add to basket</span>
-            </button>
+            <Button client:load id={501} />
           </div>
           <div class="product__item product__item--sizing-chart">
             <div class="btn-area">
@@ -64,17 +55,14 @@ import Footer from "../../components/Footer.astro";
                       <td>cm / in</td>
                       <td>Dimensions</td>
                     </tr>
-
                     <tr>
                       <td class="label">Depth</td>
                       <td>40 / 15.8</td>
                     </tr>
-
                     <tr>
                       <td class="label">Width</td>
                       <td>49 / 19.3</td>
                     </tr>
-
                     <tr>
                       <td class="label">Bottom</td>
                       <td>8 / 3.14</td>

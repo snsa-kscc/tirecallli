@@ -2,7 +2,14 @@
 import Head from "../../components/Head.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
-import { Button } from "../../components/Button";
+import { Buttons } from "../../components/Buttons";
+
+const buttons = [
+  { id: 301, size: "S" },
+  { id: 302, size: "M" },
+  { id: 303, size: "L" },
+  { id: 304, size: "XL" },
+];
 ---
 
 <html>
@@ -50,10 +57,7 @@ import { Button } from "../../components/Button";
             <p>Select your size and add to basket</p>
           </div>
           <div class="product__item product__item--sizes">
-            <Button client:load size="S" id={301} />
-            <Button client:load size="M" id={302} />
-            <Button client:load size="L" id={303} />
-            <Button client:load size="XL" id={304} />
+            <Buttons client:load items={buttons} />
           </div>
           <div class="product__item product__item--description">
             <p>

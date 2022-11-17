@@ -2,6 +2,9 @@
 import Head from "../../components/Head.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import { Buttons } from "../../components/Buttons";
+
+const buttons = [{ id: 201, size: "L" }];
 ---
 
 <html>
@@ -90,79 +93,8 @@ import Footer from "../../components/Footer.astro";
             <p>Select your size and add to basket</p>
           </div>
           <div class="product__item product__item--sizes">
-            <!-- <button id="buttonXS" class="button button--size button--flex" onclick='window.location.href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XH43D9X6MYV3J";'>
-                        <span>XS</span>
-                    </button> -->
-            <!-- <button id="buttonS" class="button button--size button--flex" onclick='window.location.href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ELGSGD7Y8NK5U";'>
-                                <span>S</span>
-                            </button> -->
-            <!-- <button id="buttonM" class="button button--size button--flex" onclick='window.location.href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KCZ3ZKN3896YQ";'>
-                                <span>M</span>
-                            </button> -->
-            <button
-              id="buttonL"
-              class="button button--size button--flex"
-              onclick="window.location.href="
-              https:
-              www.paypal.com
-              cgi-bin
-              webscr?cmd="_s-xclick&hosted_button_id=5ZENJ3PC49V82"
-              ;""
-            >
-              <span>L</span>
-            </button>
+            <Buttons client:load items={buttons} />
           </div>
-          <!-- <div class="product__item product__item--sizing-chart">
-                            <div class="btn-area">
-                                <label class="btn" for="open-pop">Sizing Chart</label>
-                            </div>
-                            <div class="pop-area">
-                                <input class="modal-state" id="open-pop" type="checkbox" />
-                                <div class="modal">
-                                    <label class="modal_bg" for="open-pop"></label>
-                                    <div class="modal_inner">
-                                        <label class="modal_close" for="open-pop"></label>
-                                        <table>
-                                            <tr>
-                                                <th colspan="6">Dobokh Pant</th>
-                                            </tr>
-                                            <tr>
-                                                <td>cm/in</td>
-                                                <td>XS</td>
-                                                <td>S</td>
-                                                <td>M</td>
-                                                <td>L</td>
-                                                <td>XL</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="label">Length</td>
-                                                <td>91/35.8</td>
-                                                <td>91/35.8</td>
-                                                <td>94/37</td>
-                                                <td>97/38.2</td>
-                                                <td>100/39.4</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="label">Waist</td>
-                                                <td>38/15</td>
-                                                <td>42/16.5</td>
-                                                <td>44/17.3</td>
-                                                <td>46/18.1</td>
-                                                <td>48/18.9</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="label">Crotch</td>
-                                                <td>33/13</td>
-                                                <td>35/13.8</td>
-                                                <td>37/14.6</td>
-                                                <td>38/15</td>
-                                                <td>38/15</td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
           <div class="product__item product__item--description">
             <p>
               A basic denim overall pant. At first glance. But if examined closely, when worn, additional styling techniques will emerge; playing with straps,

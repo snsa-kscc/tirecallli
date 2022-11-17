@@ -1,17 +1,12 @@
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { cartQuantityStore } from "./cartStore";
 
-type ButtonProps = {
-  id: number;
-  size?: string;
-};
-
 type CartItem = {
   id: number;
   quantity: number;
 };
 
-export function Button({ id, size }: ButtonProps) {
+export function Buttons({ items }) {
   const [cartItems, setCartItems] = useLocalStorage<CartItem[]>("shopping-cart", []);
   const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 1);
 
@@ -33,8 +28,12 @@ export function Button({ id, size }: ButtonProps) {
   }
 
   return (
-    <button data-item={id} className="button button--cta" onClick={() => increaseCartQuantity(id)}>
-      <span>Add to basket</span>
-    </button>
+    <>
+      {items.map((item) => (
+        <button key={item.id} data-item={item.id} className="button button--size button--flex" onClick={() => increaseCartQuantity(item.id)}>
+          <span>{item.size}</span>
+        </button>
+      ))}
+    </>
   );
 }

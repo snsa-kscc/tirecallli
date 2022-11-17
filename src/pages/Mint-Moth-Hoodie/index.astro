@@ -2,6 +2,9 @@
 import Head from "../../components/Head.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import { Buttons } from "../../components/Buttons";
+
+const buttons = [{ id: 1101, size: "M" }];
 ---
 
 <html>
@@ -35,24 +38,7 @@ import Footer from "../../components/Footer.astro";
             <p>Select your size and add to basket</p>
           </div>
           <div class="product__item product__item--sizes">
-            <button
-              id="buttonM"
-              class="button button--size button--flex"
-              onclick="window.location.href="
-              https:
-              www.paypal.com
-              cgi-bin
-              webscr?cmd="_s-xclick&hosted_button_id=8V2C6P9MQBXCJ"
-              ;""
-            >
-              <span>M</span>
-            </button>
-            <!-- <button class="button button--size button--flex" onclick='window.location.href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CDRNQ7AV44ZZS";'>
-                        <span>L</span>
-                    </button>
-                    <button class="button button--size button--flex" onclick='window.location.href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KE9TBKVXG9QJS";'>
-                        <span>XL</span>
-                    </button> -->
+            <Buttons client:load items={buttons} />
           </div>
           <div class="product__item product__item--description">
             <p>
