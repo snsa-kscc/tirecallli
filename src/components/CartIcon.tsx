@@ -1,5 +1,5 @@
 import { useStore } from "@nanostores/react";
-import { cartQuantityStore } from "./cartStore";
+import { cartQuantityStore } from "../store/cartStore";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
 type CartItem = {
@@ -8,5 +8,10 @@ type CartItem = {
 };
 
 export function CartIcon() {
-  return <p>{useStore(cartQuantityStore)}</p>;
+  const [cartItems, setCartItems] = useLocalStorage<CartItem[]>("shopping-cart", []);
+  const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0);
+
+  const total: any = useStore(cartQuantityStore);
+
+  return <>{total ? <p>{total}</p> : cartQuantity != 0 ? <p>{cartQuantity}</p> : <p></p>}</>;
 }

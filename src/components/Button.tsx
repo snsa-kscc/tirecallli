@@ -1,5 +1,5 @@
 import { useLocalStorage } from "../hooks/useLocalStorage";
-import { cartQuantityStore } from "./cartStore";
+import { addItemToStore } from "../store/cartStore";
 
 type ButtonProps = {
   id: number;
@@ -13,7 +13,6 @@ type CartItem = {
 
 export function Button({ id, size }: ButtonProps) {
   const [cartItems, setCartItems] = useLocalStorage<CartItem[]>("shopping-cart", []);
-  const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 1);
 
   function increaseCartQuantity(id: number) {
     setCartItems((currItems) => {
@@ -29,7 +28,7 @@ export function Button({ id, size }: ButtonProps) {
         });
       }
     });
-    cartQuantityStore.set(cartQuantity);
+    addItemToStore(cartItems);
   }
 
   return (

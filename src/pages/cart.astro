@@ -2,7 +2,6 @@
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { Button } from "../components/Button";
 ---
 
 <html>
@@ -11,7 +10,6 @@ import { Button } from "../components/Button";
     <Header />
     <main>
       <h4>ovo je cart</h4>
-      <Button client:load />
       <p class="store-items" data-sku="701" data-qnt="1">fight fire with fire L - kom 1</p>
       <p class="store-items" data-sku="501" data-qnt="2">tote bag - kom 2</p>
       <div id="paypal-button-container"></div>
