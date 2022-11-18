@@ -1,27 +1,27 @@
 [
   [
-    101,
+    102,
     {
       "price": 500,
       "name": "Hybrid Jacket - S"
     }
   ],
   [
-    102,
+    103,
     {
       "price": 500,
       "name": "Hybrid Jacket - M"
     }
   ],
   [
-    103,
+    104,
     {
       "price": 500,
       "name": "Hybrid Jacket - L"
     }
   ],
   [
-    104,
+    105,
     {
       "price": 500,
       "name": "Hybrid Jacket - XL"
@@ -31,60 +31,74 @@
     201,
     {
       "price": 375,
-      "name": "Basic Denim Overall Pant - L"
+      "name": "Basic Denim Overall Pant - XS"
     }
   ],
   [
-    301,
+    202,
     {
-      "price": 350,
-      "name": "Basic Denim Jacket - S"
+      "price": 375,
+      "name": "Basic Denim Overall Pant - S"
+    }
+  ],
+  [
+    204,
+    {
+      "price": 375,
+      "name": "Basic Denim Overall Pant - L"
     }
   ],
   [
     302,
     {
       "price": 350,
-      "name": "Basic Denim Jacket - M"
+      "name": "Basic Denim Jacket - S"
     }
   ],
   [
     303,
     {
       "price": 350,
-      "name": "Basic Denim Jacket - L"
+      "name": "Basic Denim Jacket - M"
     }
   ],
   [
     304,
     {
       "price": 350,
-      "name": "Basic Denim Jacket - XL"
+      "name": "Basic Denim Jacket - L"
     }
   ],
   [
-    401,
+    305,
     {
-      "price": 200,
-      "name": "Black Quilted Jacket - S"
+      "price": 350,
+      "name": "Basic Denim Jacket - XL"
     }
   ],
   [
     402,
     {
       "price": 200,
-      "name": "Black Quilted Jacket - M"
+      "name": "Black Quilted Jacket - S"
     }
   ],
   [
     403,
     {
       "price": 200,
-      "name": "Black Quilted Jacket - L"
+      "name": "Black Quilted Jacket - M"
     }
   ],
   [
     404,
+    {
+      "price": 200,
+      "name": "Black Quilted Jacket - L"
+    }
+  ],
+  [
+    405,
     {
       "price": 200,
       "name": "Black Quilted Jacket - XL"
@@ -98,105 +112,105 @@
     }
   ],
   [
-    601,
+    604,
     {
       "price": 45,
       "name": "Reflective Calli Crewneck - L"
     }
   ],
   [
-    701,
+    704,
     {
       "price": 20,
       "name": "Fight Fire With Fire T-Shirt - L"
     }
   ],
   [
-    702,
+    705,
     {
       "price": 20,
       "name": "Fight Fire With Fire T-Shirt - XL"
     }
   ],
   [
-    801,
+    802,
     {
       "price": 200,
       "name": "New Life Black Hoodie - S"
     }
   ],
   [
-    802,
+    803,
     {
       "price": 200,
       "name": "New Life Black Hoodie - M"
     }
   ],
   [
-    803,
+    804,
     {
       "price": 200,
       "name": "New Life Black Hoodie - L"
     }
   ],
   [
-    901,
+    902,
     {
       "price": 110,
       "name": "New Life Gray T-Shirt TC21 - S"
     }
   ],
   [
-    902,
+    903,
     {
       "price": 110,
       "name": "New Life Gray T-Shirt TC21 - M"
     }
   ],
   [
-    903,
+    904,
     {
       "price": 110,
       "name": "New Life Gray T-Shirt TC21 - L"
     }
   ],
   [
-    904,
+    905,
     {
       "price": 110,
       "name": "New Life Gray T-Shirt TC21 - XL"
     }
   ],
   [
-    1001,
+    1002,
     {
       "price": 90,
       "name": "New Life Black T-Shirt TC21 - S"
     }
   ],
   [
-    1002,
+    1003,
     {
       "price": 90,
       "name": "New Life Black T-Shirt TC21 - M"
     }
   ],
   [
-    1003,
+    1004,
     {
       "price": 90,
       "name": "New Life Black T-Shirt TC21 - L"
     }
   ],
   [
-    1004,
+    1005,
     {
       "price": 90,
       "name": "New Life Black T-Shirt TC21 - XL"
     }
   ],
   [
-    1101,
+    1103,
     {
       "price": 40,
       "name": "Mint Moth Hoodie - M"
