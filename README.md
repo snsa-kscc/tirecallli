@@ -14,9 +14,7 @@ invert na html i na img
 
 ## 2DO
 
-cart page empty conditiional rendering
-
-paypal success page
+cart page empty conditional rendering
 
 paypal button conditional rendering
 
