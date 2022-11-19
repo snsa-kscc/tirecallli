@@ -13,5 +13,5 @@ export function CartIcon() {
 
   const total: any = useStore(cartQuantityStore);
 
-  return <>{total ? <p>{total}</p> : cartQuantity != 0 ? <p>{cartQuantity}</p> : <p></p>}</>;
+  return <>{total || total == 0 ? <p>{total}</p> : cartQuantity != 0 ? <p>{cartQuantity}</p> : <p></p>}</>;
 }

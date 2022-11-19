@@ -14,7 +14,11 @@ invert na html i na img
 
 ## 2DO
 
-cart page tsx react
+cart page empty conditiional rendering
+
+paypal success page
+
+paypal button conditional rendering
 
 ## creds
 

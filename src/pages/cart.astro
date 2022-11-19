@@ -2,6 +2,7 @@
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { ShoppingCart } from "../components/ShoppingCart";
 ---
 
 <html>
@@ -9,8 +10,10 @@ import Footer from "../components/Footer.astro";
   <body>
     <Header />
     <main>
-      <h4>ovo je cart</h4>
-      <p class="store-items" data-sku="701" data-qnt="1">fight fire with fire L - kom 1</p>
+      <h4>ovo je component cart</h4>
+      <ShoppingCart client:only="react" />
+      <h4>ovo je inline cart</h4>
+      <p class="store-items" data-sku="704" data-qnt="1">fight fire with fire L - kom 1</p>
       <p class="store-items" data-sku="501" data-qnt="2">tote bag - kom 2</p>
       <div id="paypal-button-container"></div>
     </main>
@@ -32,12 +35,14 @@ import Footer from "../components/Footer.astro";
       paypal
         .Buttons({
           createOrder: function () {
+            const localStorageItems = localStorage.getItem("shopping-cart");
             return fetch("/.netlify/functions/paypal", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify(payload),
+              // body: JSON.stringify(payload),
+              body: localStorageItems,
             })
               .then((res) => {
                 if (res.ok) return res.json();
