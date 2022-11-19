@@ -16,8 +16,6 @@ invert na html i na img
 
 styling
 
-cart page empty conditional rendering
-
 ## creds
 
 sb-jetpq4948302@personal.example.com
