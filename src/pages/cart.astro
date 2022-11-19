@@ -10,59 +10,56 @@ import { ShoppingCart } from "../components/ShoppingCart";
   <body>
     <Header />
     <main>
-      <h4>ovo je component cart</h4>
       <ShoppingCart client:only="react" />
-      <h4>ovo je inline cart</h4>
-      <p class="store-items" data-sku="704" data-qnt="1">fight fire with fire L - kom 1</p>
-      <p class="store-items" data-sku="501" data-qnt="2">tote bag - kom 2</p>
-      <div id="paypal-button-container"></div>
     </main>
     <Footer />
+    <script is:inline src="/js/app.js"></script>
     <script
       is:inline
       src="https://www.paypal.com/sdk/js?client-id=Af1ohtvwXNwwIsDqriG76tdtT7Xju8PagK5m1mNmUxumkiE5wDiyL_uqWR7qZcX6ndvcu7UynDpq1hWW&currency=EUR&intent=authorize"
     ></script>
-    <script is:inline src="/js/app.js"></script>
     <script is:inline>
-      const storeItems = document.querySelectorAll(".store-items");
-      const payload = [];
-      storeItems.forEach((item) => {
-        const singleObj = {};
-        singleObj["id"] = parseInt(item.dataset.sku);
-        singleObj["quantity"] = parseInt(item.dataset.qnt);
-        payload.push(singleObj);
-      });
-      paypal
-        .Buttons({
-          createOrder: function () {
-            const localStorageItems = localStorage.getItem("shopping-cart");
-            return fetch("/.netlify/functions/paypal", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              // body: JSON.stringify(payload),
-              body: localStorageItems,
-            })
-              .then((res) => {
-                if (res.ok) return res.json();
-                return res.json().then((json) => Promise.reject(json));
+      // const storeItems = document.querySelectorAll(".store-items");
+      // const payload = [];
+      // storeItems.forEach((item) => {
+      //   const singleObj = {};
+      //   singleObj["id"] = parseInt(item.dataset.sku);
+      //   singleObj["quantity"] = parseInt(item.dataset.qnt);
+      //   payload.push(singleObj);
+      // });
+      setTimeout(() => {
+        paypal
+          .Buttons({
+            createOrder: function () {
+              const localStorageItems = localStorage.getItem("shopping-cart");
+              return fetch("/.netlify/functions/paypal", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                // body: JSON.stringify(payload),
+                body: localStorageItems,
               })
-              .then(({ id }) => {
-                return id;
-              })
-              .catch((e) => {
-                console.error(e.error);
+                .then((res) => {
+                  if (res.ok) return res.json();
+                  return res.json().then((json) => Promise.reject(json));
+                })
+                .then(({ id }) => {
+                  return id;
+                })
+                .catch((e) => {
+                  console.error(e.error);
+                });
+            },
+            onApprove: function (data, actions) {
+              return actions.order.authorize().then(function () {
+                localStorage.removeItem("shopping-cart");
+                actions.redirect("https://tirecalli.com/success"); // return actions.order.capture();
               });
-          },
-          onApprove: function (data, actions) {
-            return actions.order.authorize().then(function () {
-              localStorage.removeItem("shopping-cart");
-              actions.redirect("https://tirecalli.com/success"); // return actions.order.capture();
-            });
-          },
-        })
-        .render("#paypal-button-container");
+            },
+          })
+          .render("#paypal-button-container");
+      }, 200);
     </script>
   </body>
 </html>

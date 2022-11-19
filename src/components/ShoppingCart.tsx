@@ -16,6 +16,7 @@ export function ShoppingCart() {
 
   return (
     <>
+      <h2>Cart</h2>
       {cartItems.map((cartItem) => {
         const item = storeItems.find((i) => i.id === cartItem.id);
         return (
@@ -46,6 +47,7 @@ export function ShoppingCart() {
           return total + (item?.price || 0) * cartItem.quantity;
         }, 0)}
       </div>
+      <div id="paypal-button-container"></div>
     </>
   );
 }
