@@ -2667,6 +2667,11 @@ input {
   display: grid;
 }
 
+#paypal-button-container {
+  width: min-content;
+  margin: 0 auto;
+}
+
 /* .first {
   display: flex;
   place-items: center;

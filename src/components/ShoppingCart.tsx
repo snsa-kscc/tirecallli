@@ -1,4 +1,4 @@
-import styles from "./CartItem.module.css";
+import styles from "./Shoppingcart.module.css";
 import { increaseCartQuantity, decreaseCartQuantity, removeFromCart } from "../utils/utils";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import storeItems from "../data/inventory.json";
