@@ -6,15 +6,28 @@ Website for Tirecalligraphy fashion brand based in Zagreb, Croatia
 
 # test -> production
 
-controls -> autoplay na indexu
+- controls -> autoplay na indexu
 
-sandbox env -> production env - paypal
+- sandbox env -> production env - paypal
 
-invert na html i na img
+- invert na html i na img
+
+dfgokdfg
+dfkljgd;
 
 ## 2DO
 
-styling
+[] styling cart ikone
+[] styling toast konfirmacije
+
+[] success page
+
+[] empty cart
+
+[] stying cart pagea
+
+[] webhook paypal
+[] paypal capture or autorize
 
 ## creds
 
