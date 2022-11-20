@@ -17,18 +17,17 @@ export function ShoppingCart() {
   if (cartQuantity) {
     return (
       <>
-        <h2>Cart</h2>
+        <h2>Bag</h2>
         {cartItems.map((cartItem) => {
           const item = storeItems.find((i) => i.id === cartItem.id);
           return (
             <div key={cartItem.id}>
+              <img src={item.imgUrl} className={styles.pic} alt="tirecalli-picture" />
+              <div>{item.name}</div>
               <div>
-                {item.id} {item.name}
+                Item price: {item.price}€ {cartItem.quantity > 1 && <span>x quantity {cartItem.quantity}</span>}
               </div>
-              <div>
-                {item.price} {cartItem.quantity > 1 && <span>x {cartItem.quantity}</span>}
-              </div>
-              <div>{item.price * cartItem.quantity}</div>
+              <div>Item total: {item.price * cartItem.quantity}€</div>
               <button className={styles.btn} onClick={() => increaseCartQuantity(cartItem.id, setCartItems)}>
                 plus
               </button>
@@ -42,20 +41,31 @@ export function ShoppingCart() {
           );
         })}
         <div>
-          Total{" "}
+          Subtotal:{" "}
           {cartItems.reduce((total, cartItem) => {
             const item = storeItems.find((i) => i.id === cartItem.id);
             return total + (item?.price || 0) * cartItem.quantity;
           }, 0)}
+          €
+        </div>
+        <div>Delivery and Handling: 5€</div>
+        <div>
+          Total:{" "}
+          {cartItems.reduce((total, cartItem) => {
+            const item = storeItems.find((i) => i.id === cartItem.id);
+            return total + (item?.price || 0) * cartItem.quantity;
+          }, 5)}
+          €
         </div>
         <div id="paypal-button-container"></div>
       </>
     );
   }
   return (
-    <>
-      <p>Cart empty</p>
+    <div>
+      <p>Bag</p>
+      <p>There are no items in your bag.</p>
       <div className="hidden" id="paypal-button-container"></div>
-    </>
+    </div>
   );
 }
