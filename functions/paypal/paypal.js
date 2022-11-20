@@ -2,7 +2,7 @@ const products = require("../data/inventory.json");
 const paypal = require("@paypal/checkout-server-sdk");
 
 const { PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET } = process.env;
-const Environment = paypal.core.SandboxEnvironment;
+const Environment = paypal.core.LiveEnvironment;
 const paypalClient = new paypal.core.PayPalHttpClient(new Environment(PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET));
 
 // const storeItems = new Map([
