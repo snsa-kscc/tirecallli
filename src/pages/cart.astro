@@ -6,8 +6,29 @@ import { ShoppingCart } from "../components/ShoppingCart";
 ---
 
 <style is:global>
+  body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+
+  .bag {
+    gap: 6em;
+  }
+
+  .bag__summary {
+    text-align: end;
+  }
+
+  .bag__item + .bag__item {
+    margin-top: 4em;
+  }
+
   .btn + .btn {
     margin-left: 1rem;
+  }
+
+  .bag__item-quantity {
   }
 
   .pic {
