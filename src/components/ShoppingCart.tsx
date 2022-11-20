@@ -1,4 +1,3 @@
-import styles from "./ShoppingCart.module.css";
 import { increaseCartQuantity, decreaseCartQuantity, removeFromCart } from "../utils/utils";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import storeItems from "../data/inventory.json";
@@ -22,19 +21,19 @@ export function ShoppingCart() {
           const item = storeItems.find((i) => i.id === cartItem.id);
           return (
             <div key={cartItem.id}>
-              <img src={item.imgUrl} className={styles.pic} alt="tirecalli-picture" />
+              <img src={item.imgUrl} className="pic" alt="tirecalli-picture" />
               <div>{item.name}</div>
               <div>
                 Item price: {item.price}€ {cartItem.quantity > 1 && <span>x quantity {cartItem.quantity}</span>}
               </div>
               <div>Item total: {item.price * cartItem.quantity}€</div>
-              <button className={styles.btn} onClick={() => increaseCartQuantity(cartItem.id, setCartItems)}>
+              <button className="btn" onClick={() => increaseCartQuantity(cartItem.id, setCartItems)}>
                 plus
               </button>
-              <button className={styles.btn} onClick={() => decreaseCartQuantity(cartItem.id, setCartItems)}>
+              <button className="btn" onClick={() => decreaseCartQuantity(cartItem.id, setCartItems)}>
                 minus
               </button>
-              <button className={styles.btn} onClick={() => removeFromCart(cartItem.id, setCartItems)}>
+              <button className="btn" onClick={() => removeFromCart(cartItem.id, setCartItems)}>
                 remove
               </button>
             </div>

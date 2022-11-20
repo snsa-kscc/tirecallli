@@ -5,6 +5,19 @@ import Footer from "../components/Footer.astro";
 import { ShoppingCart } from "../components/ShoppingCart";
 ---
 
+<style is:global>
+  .btn + .btn {
+    margin-left: 1rem;
+  }
+
+  .pic {
+    max-width: 100px;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    object-position: center;
+  }
+</style>
+
 <html>
   <Head title="Tire Calligraphy - Bag" url="https://tirecalli.com/cart" />
   <body>
