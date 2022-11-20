@@ -2,7 +2,7 @@ const products = require("../data/inventory.json");
 const paypal = require("@paypal/checkout-server-sdk");
 
 const { PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET } = process.env;
-const Environment = paypal.core.LiveEnvironment;
+const Environment = paypal.core.SandboxEnvironment;
 const paypalClient = new paypal.core.PayPalHttpClient(new Environment(PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET));
 
 // const storeItems = new Map([
@@ -11,7 +11,6 @@ const paypalClient = new paypal.core.PayPalHttpClient(new Environment(PAYPAL_CLI
 // ]);
 
 const storeItems = new Map(products);
-
 exports.handler = async function (event, context) {
   const request = new paypal.orders.OrdersCreateRequest();
   const parsedEvent = JSON.parse(event.body);
@@ -80,7 +79,7 @@ exports.handler = async function (event, context) {
     };
   } catch (err) {
     return {
-      statusCode: 400,
+      statusCode: 500,
       body: JSON.stringify({ msg: err.response.body.title }),
     };
   }
