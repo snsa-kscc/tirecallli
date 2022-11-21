@@ -24,11 +24,15 @@ exports.handler = async function (event, context) {
       {
         amount: {
           currency_code: "EUR",
-          value: total,
+          value: total + 5,
           breakdown: {
             item_total: {
               currency_code: "EUR",
               value: total,
+            },
+            shipping: {
+              currency_code: "EUR",
+              value: "5.00",
             },
           },
         },
