@@ -78,7 +78,6 @@
 
 html {
   font-size: 62.5%;
-  filter: invert(1);
 }
 
 body {
@@ -95,7 +94,6 @@ svg {
   display: block;
   width: 100%;
   overflow: hidden;
-  filter: invert(1);
 }
 
 video {
