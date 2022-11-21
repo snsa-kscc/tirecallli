@@ -14,6 +14,7 @@ import { ShoppingCart } from "../components/ShoppingCart";
 
   .bag {
     gap: 6em;
+    margin-top: 2em;
   }
 
   .bag__summary {
@@ -24,11 +25,20 @@ import { ShoppingCart } from "../components/ShoppingCart";
     margin-top: 4em;
   }
 
-  .btn + .btn {
-    margin-left: 1rem;
+  .bag__item-quantity {
   }
 
-  .bag__item-quantity {
+  .button--size {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .button--size:last-child {
+    margin-left: auto;
+  }
+
+  .bag__buttons {
+    display: flex;
   }
 
   .pic {
@@ -36,6 +46,10 @@ import { ShoppingCart } from "../components/ShoppingCart";
     aspect-ratio: 4/5;
     object-fit: cover;
     object-position: center;
+  }
+
+  .paypal {
+    margin-top: 2em;
   }
 </style>
 
@@ -64,6 +78,12 @@ import { ShoppingCart } from "../components/ShoppingCart";
       setTimeout(() => {
         paypal
           .Buttons({
+            style: {
+              layout: "vertical",
+              color: "black",
+              shape: "rect",
+              label: "paypal",
+            },
             createOrder: function () {
               const localStorageItems = localStorage.getItem("shopping-cart");
               return fetch("/.netlify/functions/paypal", {

@@ -29,15 +29,17 @@ export function ShoppingCart() {
                     Item price: {item.price}€ {cartItem.quantity > 1 && <span className="bag__item-quantity">x quantity {cartItem.quantity}</span>}
                   </div>
                   <div>Item total: {item.price * cartItem.quantity}€</div>
-                  <button className="btn" onClick={() => increaseCartQuantity(cartItem.id, setCartItems)}>
-                    plus
-                  </button>
-                  <button className="btn" onClick={() => decreaseCartQuantity(cartItem.id, setCartItems)}>
-                    minus
-                  </button>
-                  <button className="btn" onClick={() => removeFromCart(cartItem.id, setCartItems)}>
-                    remove
-                  </button>
+                  <div className="bag__buttons">
+                    <button className="button button--size" onClick={() => increaseCartQuantity(cartItem.id, setCartItems)}>
+                      <span>+</span>
+                    </button>
+                    <button className="button button--size" onClick={() => decreaseCartQuantity(cartItem.id, setCartItems)}>
+                      <span>-</span>
+                    </button>
+                    <button className="button button--size" onClick={() => removeFromCart(cartItem.id, setCartItems)}>
+                      <span>remove</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             );
@@ -62,7 +64,7 @@ export function ShoppingCart() {
             }, 5)}
             €
           </div>
-          <div id="paypal-button-container"></div>
+          <div className="paypal" id="paypal-button-container"></div>
         </div>
       </div>
     );

@@ -30,8 +30,6 @@ Website for Tirecalligraphy fashion brand based in Zagreb, Croatia
 
 [] webhook paypal <-> slack
 
-[] paypal capture or autorize
-
 ---
 
 ## creds
