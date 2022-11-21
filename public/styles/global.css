@@ -2653,6 +2653,7 @@ input {
   padding: 10px;
   border: 2px solid;
   transition: all 0.7s ease-in-out;
+  z-index: 999;
 }
 
 .cookie-policy.disabled {

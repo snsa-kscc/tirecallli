@@ -18,10 +18,6 @@ Website for Tirecalligraphy fashion brand based in Zagreb, Croatia
 
 [] styling toast konfirmacije
 
-[] success page
-
-[] empty cart
-
 [] stying cart pagea
 
 ---

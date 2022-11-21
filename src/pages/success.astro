@@ -5,8 +5,18 @@ import Footer from "../components/Footer.astro";
 ---
 
 <style>
+  body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+
+  main {
+    padding-inline: 2em;
+  }
+
   h2 {
-    color: red;
+    margin-top: 1em;
   }
 </style>
 

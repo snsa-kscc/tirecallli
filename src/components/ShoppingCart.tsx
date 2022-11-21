@@ -70,8 +70,8 @@ export function ShoppingCart() {
     );
   }
   return (
-    <div>
-      <p>Bag</p>
+    <div className="empty">
+      <h2>Bag</h2>
       <p>There are no items in your bag.</p>
       <div className="hidden" id="paypal-button-container"></div>
     </div>
