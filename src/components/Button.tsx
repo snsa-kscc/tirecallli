@@ -4,7 +4,6 @@ import { cartQuantityStore } from "../store/cartStore";
 
 type ButtonProps = {
   id: number;
-  size?: string;
 };
 
 type CartItem = {
@@ -19,7 +18,7 @@ export function Button({ id }: ButtonProps) {
 
   return (
     <>
-      <button data-item={id} className="button button--cta" onClick={() => increaseCartQuantity(id, setCartItems)}>
+      <button className="button button--cta" onClick={() => increaseCartQuantity(id, setCartItems)}>
         <span>Add to bag</span>
       </button>
       <div className="item-added disabled">

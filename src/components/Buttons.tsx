@@ -17,7 +17,6 @@ export function Buttons({ items }) {
       {items.map((item) => (
         <button
           key={item.id}
-          data-item={item.id}
           className="button button--size button--flex"
           onClick={() => {
             increaseCartQuantity(item.id, setCartItems);
