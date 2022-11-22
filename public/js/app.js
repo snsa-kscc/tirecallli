@@ -84,18 +84,6 @@ setTimeout(() => {
     window.scrollTo(0, 0);
     locoScroll.on("scroll", () => {
       const currentScroll = Math.round(locoScroll.scroll.instance.scroll.y / 100);
-
-      if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-        body.classList.add("scroll-down");
-      } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
-        body.classList.remove("scroll-down");
-      }
-      lastScroll = currentScroll;
-    });
-  } else {
-    window.addEventListener("scroll", () => {
-      const currentScroll = Math.round(window.pageYOffset / 50);
-
       if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
         body.classList.add("scroll-down");
       } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
@@ -104,6 +92,15 @@ setTimeout(() => {
       lastScroll = currentScroll;
     });
   }
+  window.addEventListener("scroll", () => {
+    const currentScroll = Math.round(window.pageYOffset / 50);
+    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+      body.classList.add("scroll-down");
+    } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+      body.classList.remove("scroll-down");
+    }
+    lastScroll = currentScroll;
+  });
 }, 1000);
 
 let toggleButton = document.querySelector(".dropdown > li");

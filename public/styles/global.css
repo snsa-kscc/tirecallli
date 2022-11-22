@@ -535,12 +535,17 @@ h6 {
   background: black;
 }
 
-.cart {
+.cart,
+.trash {
   font-family: "FontAwesome";
 }
 
 .cart::before {
-  content: "\f07a";
+  content: "\f290";
+}
+
+.trash::before {
+  content: "\f1f8";
 }
 
 /* end of utils */
