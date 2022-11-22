@@ -15,10 +15,20 @@ export function Buttons({ items }) {
   return (
     <>
       {items.map((item) => (
-        <button key={item.id} data-item={item.id} className="button button--size button--flex" onClick={() => increaseCartQuantity(item.id, setCartItems)}>
+        <button
+          key={item.id}
+          data-item={item.id}
+          className="button button--size button--flex"
+          onClick={() => {
+            increaseCartQuantity(item.id, setCartItems);
+          }}
+        >
           <span>{item.size}</span>
         </button>
       ))}
+      <div className="item-added disabled">
+        <p>Item added into the bag.</p>
+      </div>
     </>
   );
 }

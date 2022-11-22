@@ -550,6 +550,10 @@ h6 {
 
 /* end of utils */
 
+.logo {
+  margin-right: auto;
+}
+
 nav ul {
   display: flex;
   list-style-type: none;
@@ -569,6 +573,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: baseline;
   text-transform: uppercase;
   gap: 1em;
   font-family: "FoobarPro", sans-serif;
@@ -601,6 +606,7 @@ header.active a {
 
 .burger {
   display: none;
+  padding-left: clamp(0.5rem, 8vw, 8rem);
 }
 
 .burger div {
@@ -614,7 +620,7 @@ header.active a {
   background: white;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 990px) {
   .burger {
     display: block;
   }
@@ -2662,6 +2668,25 @@ input {
 }
 
 .cookie-policy.disabled {
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.item-added {
+  position: fixed;
+  top: 13%;
+  right: 50px;
+  max-width: 80%;
+  background: white;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid;
+  transition: all 0.7s ease-in-out;
+  z-index: 999;
+}
+
+.item-added.disabled {
   opacity: 0;
   user-select: none;
   pointer-events: none;

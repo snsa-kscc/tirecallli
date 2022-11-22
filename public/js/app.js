@@ -103,16 +103,19 @@ setTimeout(() => {
   });
 }, 1000);
 
-let toggleButton = document.querySelector(".dropdown > li");
-let toggleItem = document.querySelector(".dropdown-menu");
+// let toggleButton = document.querySelector(".dropdown > li");
+// let toggleItem = document.querySelector(".dropdown-menu");
 
-if (toggleButton) {
-  toggleButton.addEventListener("click", () => {
-    toggleItem.classList.toggle("active");
-  });
-}
+// if (toggleButton) {
+//   toggleButton.addEventListener("click", () => {
+//     toggleItem.classList.toggle("active");
+//   });
+// }
 
 burger.addEventListener("click", () => {
+  const cart = document.querySelector(".flex--cart-icon");
+  cart.classList.toggle("hidden");
+  body.classList.toggle("overflow-hidden");
   header.classList.toggle("active");
   line1.classList.toggle("white");
   line2.classList.toggle("white");

@@ -13,5 +13,12 @@ export function CartIcon() {
 
   const total: any = useStore(cartQuantityStore);
 
-  return <>{total || total == 0 ? <p>{total}</p> : cartQuantity != 0 ? <p>{cartQuantity}</p> : <p></p>}</>;
+  return (
+    <div className="flex flex--cart-icon">
+      <a href="/cart">
+        <div className="cart"></div>
+      </a>
+      {total || total == 0 ? <p>{total}</p> : cartQuantity != 0 ? <p>{cartQuantity}</p> : <p></p>}
+    </div>
+  );
 }

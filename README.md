@@ -14,8 +14,6 @@ Website for Tirecalligraphy fashion brand based in Zagreb, Croatia
 
 ## 2DO
 
-[] styling cart ikone
-
 [] archive navbar
 
 [] styling toast konfirmacije

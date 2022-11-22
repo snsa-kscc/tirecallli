@@ -18,8 +18,13 @@ export function Button({ id }: ButtonProps) {
   cartQuantityStore.set(cartQuantity);
 
   return (
-    <button data-item={id} className="button button--cta" onClick={() => increaseCartQuantity(id, setCartItems)}>
-      <span>Add to basket</span>
-    </button>
+    <>
+      <button data-item={id} className="button button--cta" onClick={() => increaseCartQuantity(id, setCartItems)}>
+        <span>Add to bag</span>
+      </button>
+      <div className="item-added disabled">
+        <p>Item added into the bag.</p>
+      </div>
+    </>
   );
 }
