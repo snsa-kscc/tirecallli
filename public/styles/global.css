@@ -2673,27 +2673,17 @@ input {
   pointer-events: none;
 }
 
-.item-added {
-  position: fixed;
-  top: 13%;
-  right: 50px;
-  max-width: 80%;
-  background: white;
-  text-align: center;
-  padding: 10px;
-  border: 2px solid;
-  transition: all 0.7s ease-in-out;
-  z-index: 999;
-}
-
-.item-added.disabled {
-  opacity: 0;
-  user-select: none;
-  pointer-events: none;
-}
-
 #smooth-content {
   display: grid;
+}
+
+.bag-toast__container {
+  outline: 1px solid black;
+}
+
+.bag-toast__body {
+  color: black;
+  font-family: "JosefinSans", sans-serif;
 }
 
 /* .first {

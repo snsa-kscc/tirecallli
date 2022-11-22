@@ -9,19 +9,3 @@ Website for Tirecalligraphy fashion brand based in Zagreb, Croatia
 # test -> production
 
 - controls -> autoplay na indexu
-
----
-
-## 2DO
-
-[] styling toast konfirmacije
-
----
-
-## creds
-
-sb-jetpq4948302@personal.example.com
-)omfD%9g
-
-sb-g6ih34955583@business.example.com
-G_sg9n/L
