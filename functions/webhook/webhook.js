@@ -1,5 +1,5 @@
 const { SLACK_URL } = process.env;
-const fetch = require("node-fetch");
+//const fetch = require("node-fetch");
 
 exports.handler = async function (event, context) {
   try {
