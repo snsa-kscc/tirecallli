@@ -9,3 +9,5 @@ Website for Tirecalligraphy fashion brand based in Zagreb, Croatia
 # test -> production
 
 - controls -> autoplay na indexu
+
+- obrisati docs folder
