@@ -24,16 +24,16 @@ exports.handler = async function (event, context) {
       {
         amount: {
           currency_code: "EUR",
-          value: total + 5,
+          value: total,
           breakdown: {
             item_total: {
               currency_code: "EUR",
               value: total,
             },
-            shipping: {
-              currency_code: "EUR",
-              value: "5.00",
-            },
+            // shipping: {
+            //   currency_code: "EUR",
+            //   value: "5.00",
+            // },
           },
         },
         items: parsedEvent.map((item) => {
@@ -59,16 +59,6 @@ exports.handler = async function (event, context) {
                 currency_code: "EUR",
               },
             },
-            // {
-            //   id: "SHIP_456",
-            //   label: "Pickup in Zagreb, Cro",
-            //   type: "PICKUP",
-            //   selected: false,
-            //   amount: {
-            //     value: "0.00",
-            //     currency_code: "EUR",
-            //   },
-            // },
           ],
         },
       },

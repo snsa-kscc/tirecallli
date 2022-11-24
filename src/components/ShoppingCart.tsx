@@ -59,13 +59,15 @@ export function ShoppingCart() {
             }, 0)}
             €
           </div>
-          <div>Delivery and Handling: 5€</div>
+          <div>
+            Delivery and Handling: <s>5€</s> 0€
+          </div>
           <div className="bag__total">
             Total:{" "}
             {cartItems.reduce((total, cartItem) => {
               const item = storeItems.find((i) => i.id === cartItem.id);
               return total + (item?.price || 0) * cartItem.quantity;
-            }, 5)}
+            }, 0)}
             €
           </div>
           <div className="paypal" id="paypal-button-container"></div>
