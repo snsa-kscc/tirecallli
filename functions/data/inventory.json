@@ -2,119 +2,119 @@
   [
     102,
     {
-      "price": 300,
+      "price": 500,
       "name": "Hybrid Jacket - S"
     }
   ],
   [
     103,
     {
-      "price": 300,
+      "price": 500,
       "name": "Hybrid Jacket - M"
     }
   ],
   [
     104,
     {
-      "price": 300,
+      "price": 500,
       "name": "Hybrid Jacket - L"
     }
   ],
   [
     105,
     {
-      "price": 300,
+      "price": 500,
       "name": "Hybrid Jacket - XL"
     }
   ],
   [
     201,
     {
-      "price": 225,
+      "price": 375,
       "name": "Basic Denim Overall Pant - XS"
     }
   ],
   [
     202,
     {
-      "price": 225,
+      "price": 375,
       "name": "Basic Denim Overall Pant - S"
     }
   ],
   [
     204,
     {
-      "price": 225,
+      "price": 375,
       "name": "Basic Denim Overall Pant - L"
     }
   ],
   [
     205,
     {
-      "price": 225,
+      "price": 375,
       "name": "Basic Denim Overall Pant - XL"
     }
   ],
   [
     302,
     {
-      "price": 210,
+      "price": 350,
       "name": "Basic Denim Jacket - S"
     }
   ],
   [
     303,
     {
-      "price": 210,
+      "price": 350,
       "name": "Basic Denim Jacket - M"
     }
   ],
   [
     304,
     {
-      "price": 210,
+      "price": 350,
       "name": "Basic Denim Jacket - L"
     }
   ],
   [
     305,
     {
-      "price": 210,
+      "price": 350,
       "name": "Basic Denim Jacket - XL"
     }
   ],
   [
     402,
     {
-      "price": 120,
+      "price": 200,
       "name": "Black Quilted Jacket - S"
     }
   ],
   [
     403,
     {
-      "price": 120,
+      "price": 200,
       "name": "Black Quilted Jacket - M"
     }
   ],
   [
     404,
     {
-      "price": 120,
+      "price": 200,
       "name": "Black Quilted Jacket - L"
     }
   ],
   [
     405,
     {
-      "price": 120,
+      "price": 200,
       "name": "Black Quilted Jacket - XL"
     }
   ],
   [
     501,
     {
-      "price": 30,
+      "price": 50,
       "name": "Black TC Tote bag"
     }
   ],
@@ -135,42 +135,42 @@
   [
     902,
     {
-      "price": 60,
+      "price": 110,
       "name": "New Life Gray T-Shirt TC21 - S"
     }
   ],
   [
     903,
     {
-      "price": 60,
+      "price": 110,
       "name": "New Life Gray T-Shirt TC21 - M"
     }
   ],
   [
     904,
     {
-      "price": 60,
+      "price": 110,
       "name": "New Life Gray T-Shirt TC21 - L"
     }
   ],
   [
     1002,
     {
-      "price": 45,
+      "price": 90,
       "name": "New Life Black T-Shirt TC21 - S"
     }
   ],
   [
     1003,
     {
-      "price": 45,
+      "price": 90,
       "name": "New Life Black T-Shirt TC21 - M"
     }
   ],
   [
     1004,
     {
-      "price": 45,
+      "price": 90,
       "name": "New Life Black T-Shirt TC21 - L"
     }
   ],
