@@ -55,7 +55,7 @@ exports.handler = async function (event, context) {
               type: "SHIPPING",
               selected: true,
               amount: {
-                value: "5.00",
+                value: "0.00",
                 currency_code: "EUR",
               },
             },
