@@ -42,6 +42,13 @@
     }
   ],
   [
+    203,
+    {
+      "price": 375,
+      "name": "Basic Denim Overall Pant - M"
+    }
+  ],
+  [
     204,
     {
       "price": 375,
@@ -135,50 +142,22 @@
   [
     902,
     {
-      "price": 110,
+      "price": 60,
       "name": "New Life Gray T-Shirt TC21 - S"
     }
   ],
   [
     903,
     {
-      "price": 110,
+      "price": 60,
       "name": "New Life Gray T-Shirt TC21 - M"
     }
   ],
   [
     904,
     {
-      "price": 110,
+      "price": 60,
       "name": "New Life Gray T-Shirt TC21 - L"
-    }
-  ],
-  [
-    1002,
-    {
-      "price": 90,
-      "name": "New Life Black T-Shirt TC21 - S"
-    }
-  ],
-  [
-    1003,
-    {
-      "price": 90,
-      "name": "New Life Black T-Shirt TC21 - M"
-    }
-  ],
-  [
-    1004,
-    {
-      "price": 90,
-      "name": "New Life Black T-Shirt TC21 - L"
-    }
-  ],
-  [
-    1103,
-    {
-      "price": 40,
-      "name": "Mint Moth Hoodie - M"
     }
   ]
 ]

@@ -36,6 +36,12 @@
     "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
   },
   {
+    "id": 203,
+    "price": 375,
+    "name": "Basic Denim Overall Pant - M",
+    "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
+  },
+  {
     "id": 204,
     "price": 375,
     "name": "Basic Denim Overall Pant - L",
@@ -139,25 +145,25 @@
   },
   {
     "id": 902,
-    "price": 110,
+    "price": 60,
     "name": "New Life Gray T-Shirt TC21 - S",
     "imgUrl": "/img/New-Life-Gray-T-Shirt/man-in-new-life-gray-tshirt-front.webp"
   },
   {
     "id": 903,
-    "price": 110,
+    "price": 60,
     "name": "New Life Gray T-Shirt TC21 - M",
     "imgUrl": "/img/New-Life-Gray-T-Shirt/man-in-new-life-gray-tshirt-front.webp"
   },
   {
     "id": 904,
-    "price": 110,
+    "price": 60,
     "name": "New Life Gray T-Shirt TC21 - L",
     "imgUrl": "/img/New-Life-Gray-T-Shirt/man-in-new-life-gray-tshirt-front.webp"
   },
   {
     "id": 905,
-    "price": 110,
+    "price": 60,
     "name": "New Life Gray T-Shirt TC21 - XL",
     "imgUrl": "/img/New-Life-Gray-T-Shirt/man-in-new-life-gray-tshirt-front.webp"
   },
