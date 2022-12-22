@@ -548,6 +548,15 @@ h6 {
   content: "\f1f8";
 }
 
+.four-five-ratio {
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
+.aspect-ratio.aspect-ratio-revert {
+  aspect-ratio: revert;
+}
+
 /* end of utils */
 
 .logo {
@@ -2684,6 +2693,21 @@ input {
 .bag-toast__body {
   color: black;
   font-family: "JosefinSans", sans-serif;
+}
+
+.shop-section {
+  position: relative;
+}
+
+.shop-img {
+  height: 80vh;
+}
+
+.shop-text {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 20%;
 }
 
 /* .first {
