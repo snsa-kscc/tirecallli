@@ -1,103 +1,103 @@
 [
   {
     "id": 102,
-    "price": 500,
+    "price": 250,
     "name": "Hybrid Jacket - S",
     "imgUrl": "/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp"
   },
   {
     "id": 103,
-    "price": 500,
+    "price": 250,
     "name": "Hybrid Jacket - M",
     "imgUrl": "/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp"
   },
   {
     "id": 104,
-    "price": 500,
+    "price": 250,
     "name": "Hybrid Jacket - L",
     "imgUrl": "/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp"
   },
   {
     "id": 105,
-    "price": 500,
+    "price": 250,
     "name": "Hybrid Jacket - XL",
     "imgUrl": "/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp"
   },
   {
     "id": 201,
-    "price": 375,
+    "price": 175,
     "name": "Basic Denim Overall Pant - XS",
     "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
   },
   {
     "id": 202,
-    "price": 375,
+    "price": 175,
     "name": "Basic Denim Overall Pant - S",
     "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
   },
   {
     "id": 203,
-    "price": 375,
+    "price": 175,
     "name": "Basic Denim Overall Pant - M",
     "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
   },
   {
     "id": 204,
-    "price": 375,
+    "price": 175,
     "name": "Basic Denim Overall Pant - L",
     "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
   },
   {
     "id": 205,
-    "price": 375,
+    "price": 175,
     "name": "Basic Denim Overall Pant - XL",
     "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
   },
   {
     "id": 302,
-    "price": 350,
+    "price": 180,
     "name": "Basic Denim Jacket - S",
     "imgUrl": "/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp"
   },
   {
     "id": 303,
-    "price": 350,
+    "price": 180,
     "name": "Basic Denim Jacket - M",
     "imgUrl": "/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp"
   },
   {
     "id": 304,
-    "price": 350,
+    "price": 180,
     "name": "Basic Denim Jacket - L",
     "imgUrl": "/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp"
   },
   {
     "id": 305,
-    "price": 350,
+    "price": 180,
     "name": "Basic Denim Jacket - XL",
     "imgUrl": "/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp"
   },
   {
     "id": 402,
-    "price": 200,
+    "price": 80,
     "name": "Black Quilted Jacket - S",
     "imgUrl": "/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp"
   },
   {
     "id": 403,
-    "price": 200,
+    "price": 80,
     "name": "Black Quilted Jacket - M",
     "imgUrl": "/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp"
   },
   {
     "id": 404,
-    "price": 200,
+    "price": 80,
     "name": "Black Quilted Jacket - L",
     "imgUrl": "/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp"
   },
   {
     "id": 405,
-    "price": 200,
+    "price": 80,
     "name": "Black Quilted Jacket - XL",
     "imgUrl": "/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp"
   },
