@@ -2640,7 +2640,7 @@ td:first-child {
   grid-column: 1 / -2;
 }
 
-.products {
+.h-100 {
   display: grid;
   min-height: 100vh;
   grid-template-rows: 1fr auto;
