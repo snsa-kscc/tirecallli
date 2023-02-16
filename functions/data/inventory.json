@@ -28,20 +28,6 @@
     }
   ],
   [
-    202,
-    {
-      "price": 175,
-      "name": "Basic Denim Overall Pant - S"
-    }
-  ],
-  [
-    203,
-    {
-      "price": 175,
-      "name": "Basic Denim Overall Pant - M"
-    }
-  ],
-  [
     204,
     {
       "price": 175,
@@ -119,13 +105,6 @@
     }
   ],
   [
-    705,
-    {
-      "price": 20,
-      "name": "Fight Fire With Fire T-Shirt - XL"
-    }
-  ],
-  [
     902,
     {
       "price": 60,
@@ -137,6 +116,13 @@
     {
       "price": 60,
       "name": "New Life Gray T-Shirt TC21 - M"
+    }
+  ],
+  [
+    904,
+    {
+      "price": 60,
+      "name": "New Life Gray T-Shirt TC21 - L"
     }
   ]
 ]
