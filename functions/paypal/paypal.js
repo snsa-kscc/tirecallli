@@ -13,10 +13,12 @@ const paypalClient = new paypal.core.PayPalHttpClient(new Environment(PAYPAL_CLI
 const storeItems = new Map(products);
 exports.handler = async function (event, context) {
   const request = new paypal.orders.OrdersCreateRequest();
-  const parsedEvent = JSON.parse(event.body);
-  const total = parsedEvent.reduce((sum, item) => {
+  const { purchasedItems, discount } = JSON.parse(event.body);
+  const itemTotal = purchasedItems.reduce((sum, item) => {
     return sum + storeItems.get(item.id).price * item.quantity;
   }, 0);
+  const discountAmount = discount ? itemTotal * 0.1 : 0;
+  const total = itemTotal + 5 - discountAmount;
   request.prefer("return=representation");
   request.requestBody({
     intent: "AUTHORIZE", // or capture
@@ -24,25 +26,29 @@ exports.handler = async function (event, context) {
       {
         amount: {
           currency_code: "EUR",
-          value: total + 5,
+          value: total.toFixed(2),
           breakdown: {
             item_total: {
               currency_code: "EUR",
-              value: total,
+              value: itemTotal.toFixed(2),
             },
             shipping: {
               currency_code: "EUR",
               value: "5.00",
             },
+            discount: {
+              currency_code: "EUR",
+              value: discountAmount.toFixed(2),
+            },
           },
         },
-        items: parsedEvent.map((item) => {
+        items: purchasedItems.map((item) => {
           const storeItem = storeItems.get(item.id);
           return {
             name: storeItem.name,
             unit_amount: {
               currency_code: "EUR",
-              value: storeItem.price,
+              value: storeItem.price.toFixed(2),
             },
             quantity: item.quantity,
           };
