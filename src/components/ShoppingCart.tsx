@@ -147,9 +147,8 @@ export function ShoppingCart() {
           {discount && <div>Discount: {discountAmount}€</div>}
           <div className="bag__total">Total: {total}€</div>
           <div>
-            <form onSubmit={handleApplyDiscount}>
-              <label htmlFor="code">Discount code:</label>
-              <input type="text" id="code" />
+            <form onSubmit={handleApplyDiscount} className="discount-form">
+              <input type="text" id="code" placeholder="Discount code" className="discount-input" />
               <button type="submit">Apply</button>
             </form>
             {message && <p>{message}</p>}

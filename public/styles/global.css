@@ -2710,48 +2710,11 @@ input {
   left: 20%;
 }
 
-/* .first {
-  display: flex;
-  place-items: center;
-  margin-top: 9em;
-}
-
-.first p {
-  font-size: 2rem;
-}
-
-.second {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  gap: 7em;
-  margin: 15em 0;
-  padding: 0 2em;
-}
-
-.second__item--one {
-  grid-column: 1/2;
-}
-
-.second__item--two {
-  grid-column: 2/4;
-  display: flex;
-  flex-direction: column;
-  gap: 7em;
-}
-
-.second__inner--wrapper {
+.discount-form {
   display: flex;
 }
 
-.second__inner--wrapper > div:nth-child(2) {
-  margin: 0 2em;
+.discount-input {
+  width: 100%;
+  margin-right: 1em;
 }
-
-.second p {
-  font-size: 2.8rem;
-}
-
-p.accent {
-  font-size: 7rem;
-} */
