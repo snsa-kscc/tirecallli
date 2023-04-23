@@ -24,6 +24,7 @@
     "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@nanostores/react": "^0.4.0",
     "@paypal/checkout-server-sdk": "^1.0.3",
+    "@paypal/paypal-js": "^5.1.6",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "nanostores": "^0.7.1",

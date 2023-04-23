@@ -1,8 +1,10 @@
+import { loadScript } from "@paypal/paypal-js";
 import { increaseCartQuantity, decreaseCartQuantity, removeFromCart } from "../utils/utils";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import storeItems from "../data/inventory.json";
 import { cartQuantityStore } from "../store/cartStore";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { useState, useRef, useEffect } from "react";
 
 type CartItem = {
   id: number;
@@ -10,10 +12,99 @@ type CartItem = {
 };
 
 export function ShoppingCart() {
+  const [discount, setDiscount] = useState(false);
+  const [message, setMessage] = useState("");
   const [cartItems, setCartItems] = useLocalStorage<CartItem[]>("shopping-cart", []);
   const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0);
   const [parent, enableAnimations] = useAutoAnimate<any>();
   cartQuantityStore.set(cartQuantity);
+  const buttonContainerRef = useRef();
+  const buttonRef = useRef(null);
+
+  const createOrder = (data, actions) => {
+    const requestBody = {
+      purchasedItems: JSON.parse(localStorage.getItem("shopping-cart")),
+      discount,
+    };
+
+    return fetch("/.netlify/functions/paypal", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(requestBody),
+    })
+      .then((res) => {
+        if (res.ok) return res.json();
+        return res.json().then((json) => Promise.reject(json));
+      })
+      .then(({ id }) => {
+        return id;
+      })
+      .catch((e) => {
+        console.error(e.error);
+      });
+  };
+
+  const onApprove = (data, actions) => {
+    return actions.order.authorize().then(function () {
+      localStorage.removeItem("shopping-cart");
+      actions.redirect("https://tirecalli.com/success");
+    });
+  };
+
+  const handleApplyDiscount = (event) => {
+    event.preventDefault();
+    const userInput = event.target.elements.code.value;
+    if (userInput === "WELCOME10") {
+      setDiscount(true);
+    } else {
+      setDiscount(false);
+      setMessage("Your code is wrong!");
+    }
+  };
+
+  useEffect(() => {
+    const initPayPalButton = async () => {
+      const paypal = await loadScript({
+        "client-id": "AbJEWWb11uZPepCWJ-lcU4d3FS-AU96otqyvH5fNPAmamH8a5OLsMOOKgZJaAuXV5UIuq981mvcQdfVT",
+        currency: "EUR",
+        intent: "authorize",
+      });
+
+      buttonRef.current = paypal.Buttons({
+        style: {
+          layout: "vertical",
+          color: "black",
+          shape: "rect",
+          label: "paypal",
+        },
+        createOrder,
+        onApprove,
+      });
+
+      buttonRef.current.render(buttonContainerRef.current);
+    };
+
+    initPayPalButton();
+
+    return () => {
+      if (buttonRef.current) {
+        buttonRef.current.close();
+      }
+    };
+  }, [discount]);
+
+  const subtotal = cartItems.reduce((total, cartItem) => {
+    const item = storeItems.find((i) => i.id === cartItem.id);
+    return total + (item?.price || 0) * cartItem.quantity;
+  }, 0);
+
+  const deliveryAndHandling = 5;
+
+  const discountAmount = discount ? subtotal * 0.1 : 0;
+
+  const total = subtotal + deliveryAndHandling - discountAmount;
 
   if (cartQuantity) {
     return (
@@ -51,24 +142,19 @@ export function ShoppingCart() {
         </div>
         <div className="bag__group bag__summary">
           <h2>Summary</h2>
+          <div>Subtotal: {subtotal}€</div>
+          <div>Delivery and Handling: {deliveryAndHandling}€</div>
+          {discount && <div>Discount: {discountAmount}€</div>}
+          <div className="bag__total">Total: {total}€</div>
           <div>
-            Subtotal:{" "}
-            {cartItems.reduce((total, cartItem) => {
-              const item = storeItems.find((i) => i.id === cartItem.id);
-              return total + (item?.price || 0) * cartItem.quantity;
-            }, 0)}
-            €
+            <form onSubmit={handleApplyDiscount}>
+              <label htmlFor="code">Discount code:</label>
+              <input type="text" id="code" />
+              <button type="submit">Apply</button>
+            </form>
+            {message && <p>{message}</p>}
           </div>
-          <div>Delivery and Handling: 5€</div>
-          <div className="bag__total">
-            Total:{" "}
-            {cartItems.reduce((total, cartItem) => {
-              const item = storeItems.find((i) => i.id === cartItem.id);
-              return total + (item?.price || 0) * cartItem.quantity;
-            }, 5)}
-            €
-          </div>
-          <div className="paypal" id="paypal-button-container"></div>
+          <div className="paypal" ref={buttonContainerRef}></div>
         </div>
       </div>
     );
@@ -77,7 +163,7 @@ export function ShoppingCart() {
     <div className="empty">
       <h2>Bag</h2>
       <p>There are no items in your bag.</p>
-      <div className="hidden" id="paypal-button-container"></div>
+      <div className="paypal hidden" ref={buttonContainerRef}></div>
     </div>
   );
 }
