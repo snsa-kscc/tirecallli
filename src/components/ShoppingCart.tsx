@@ -68,11 +68,6 @@ export function ShoppingCart() {
             }, 5)}
             €
           </div>
-          <div>
-            <label>
-              is discount <input type="checkbox" name="is-discount" onClick={() => console.log("clicked")} />
-            </label>
-          </div>
           <div className="paypal" id="paypal-button-container"></div>
         </div>
       </div>
