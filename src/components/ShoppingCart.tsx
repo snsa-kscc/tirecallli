@@ -58,6 +58,7 @@ export function ShoppingCart() {
     const userInput = event.target.elements.code.value;
     if (userInput === "WELCOME10") {
       setDiscount(true);
+      setMessage("");
     } else {
       setDiscount(false);
       setMessage("Your code is wrong!");
@@ -151,7 +152,7 @@ export function ShoppingCart() {
               <input type="text" id="code" placeholder="Discount code" className="discount-input" />
               <button type="submit">Apply</button>
             </form>
-            {message && <p>{message}</p>}
+            {message && <p className="mt">{message}</p>}
           </div>
           <div className="paypal" ref={buttonContainerRef}></div>
         </div>
