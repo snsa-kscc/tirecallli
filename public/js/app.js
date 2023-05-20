@@ -57,13 +57,13 @@ if (secondHeroItems.length != 0) {
 let accordion = document.querySelector(".accordion");
 
 if (accordion) {
-  let detailsHeight = document.querySelector(".accordion-details__list").offsetHeight;
-  let sizeHeight = document.querySelector(".accordion-size__list").offsetHeight;
-  let shippingHeight = document.querySelector(".accordion__copy").offsetHeight;
+  let panel1Height = document.querySelector(".accordion-panel-1__list").offsetHeight;
+  let panel2Height = document.querySelector(".accordion-panel-2__list").offsetHeight;
+  let panel3Height = document.querySelector(".accordion__copy").offsetHeight;
   let style = document.createElement("style");
-  style.innerHTML = `input[name="panel"]:checked ~ .accordion__content--details {height: ${detailsHeight + 30}px;}
-    input[name="panel"]:checked ~ .accordion__content--size {height: ${sizeHeight + 30}px;}
-    input[name="panel"]:checked ~ .accordion__content--shipping {height: ${shippingHeight + 30}px;}`;
+  style.innerHTML = `input[name="panel"]:checked ~ .accordion__content--panel-1 {height: ${panel1Height + 30}px;}
+    input[name="panel"]:checked ~ .accordion__content--panel-2 {height: ${panel2Height + 30}px;}
+    input[name="panel"]:checked ~ .accordion__content--panel-3 {height: ${panel3Height + 30}px;}`;
   document.head.appendChild(style);
 }
 

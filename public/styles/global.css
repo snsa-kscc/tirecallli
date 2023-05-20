@@ -484,6 +484,10 @@ h6 {
   margin-top: 1em;
 }
 
+.mt-xl {
+  margin-top: 3em;
+}
+
 .block {
   display: block;
 }
@@ -677,10 +681,6 @@ footer nav {
   margin-top: 1em;
 }
 
-.about p {
-  margin-bottom: 1em;
-}
-
 .about h5 {
   margin-bottom: 1em;
 }
@@ -837,10 +837,11 @@ footer nav {
 .accordion label {
   position: relative;
   display: block;
-  padding: 1em;
+  padding: 1em 2em 1em 1em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   font-size: 1.5em;
   cursor: pointer;
+  pointer-events: auto;
   transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
 }
 
