@@ -2,9 +2,6 @@
 import Head from "../../components/Head.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
-import { Buttons } from "../../components/Buttons";
-
-const buttons = [{ id: 902, size: "S" }];
 ---
 
 <html>
@@ -39,13 +36,10 @@ const buttons = [{ id: 902, size: "S" }];
             <h2>TC21</h2>
           </div>
           <div class="product__item product__item--price">
-            <p>Price: <s>60€</s> 40€</p>
+            <p>Price: 60€</p>
           </div>
           <div class="product__item product__item--size-select">
-            <p>Select your size and add to bag</p>
-          </div>
-          <div class="product__item product__item--sizes">
-            <Buttons client:load items={buttons} />
+            <p>SOLD OUT</p>
           </div>
           <div class="product__item product__item--sizing-chart">
             <div class="btn-area">
