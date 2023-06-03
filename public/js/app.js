@@ -10,6 +10,7 @@ if (typeof ScrollSmoother != "undefined") {
 
 let vid = document.querySelector(".vid");
 let sound = document.querySelector(".sound");
+let teaser = document.querySelector(".teaser");
 
 if (teaser) {
   ScrollTrigger.create({
