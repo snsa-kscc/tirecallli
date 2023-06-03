@@ -2715,3 +2715,11 @@ input {
   width: 100%;
   margin-right: 1em;
 }
+
+.teaser {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  color: hsl(0, 0%, 95%);
+  padding: 2em;
+}

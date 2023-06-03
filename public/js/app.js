@@ -11,6 +11,18 @@ if (typeof ScrollSmoother != "undefined") {
 let vid = document.querySelector(".vid");
 let sound = document.querySelector(".sound");
 
+if (teaser) {
+  ScrollTrigger.create({
+    trigger: ".teaser",
+    start: "top",
+    end: "+=200%",
+    pin: true,
+    onUpdate: (self) => {
+      teaser.style.color = `hsl( 0, 0%, ${95 * (1 - self.progress)}%)`;
+    },
+  });
+}
+
 if (sound) {
   sound.addEventListener("click", () => {
     if (vid.muted) {
