@@ -113,35 +113,6 @@ function handleDecoder(randomnbr, letters, selector) {
     clearInterval(timer);
   }, 5000);
 }
-// galleryImages = document.querySelector(".crypto-girl");
-// rect = galleryImages.getBoundingClientRect();
-
-// posX = 0;
-// mouseX = 0;
-// posY = 0;
-// mouseY = 0;
-
-// gsap.to({}, 0.02, {
-//     repeat: -1,
-//     onRepeat: () => {
-//         posX += (mouseX - posX) / 30;
-//         posY += (mouseY - posY) / 20;
-
-//         gsap.set(galleryImages, {
-//             x: ((posX - rect.width / 2) / rect.width) * -150,
-//             y: ((posY - rect.height / 2) / rect.height) * -100,
-//         });
-//     },
-// });
-
-// document.addEventListener("mousemove", (e) => {
-//     mouseX = e.clientX - rect.left;
-//     mouseY = e.clientY - rect.top;
-// });
-
-// addEventListener("resize", () => {
-//     rect = galleryImages.getBoundingClientRect();
-// });
 let revealContainers = document.querySelectorAll(".crypto-item-pants__pic");
 revealContainers.forEach((container, idx) => {
   let image = container.querySelector("img");

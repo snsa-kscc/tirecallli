@@ -83,7 +83,8 @@ if (accordion) {
 const body = document.body;
 let lastScroll = 0;
 
-setTimeout(() => {
+// instead of setTimeout(() => {}, 1000);
+window.addEventListener("load", () => {
   if (typeof LocomotiveScroll != "undefined") {
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
@@ -106,7 +107,7 @@ setTimeout(() => {
     });
   }
   window.addEventListener("scroll", () => {
-    const currentScroll = Math.round(window.pageYOffset / 50);
+    const currentScroll = Math.round(window.scrollY / 50);
     if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
       body.classList.add("scroll-down");
     } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
@@ -114,16 +115,7 @@ setTimeout(() => {
     }
     lastScroll = currentScroll;
   });
-}, 1000);
-
-// let toggleButton = document.querySelector(".dropdown > li");
-// let toggleItem = document.querySelector(".dropdown-menu");
-
-// if (toggleButton) {
-//   toggleButton.addEventListener("click", () => {
-//     toggleItem.classList.toggle("active");
-//   });
-// }
+});
 
 burger.addEventListener("click", () => {
   const cart = document.querySelector(".flex--cart-icon");
@@ -189,7 +181,7 @@ newsletterForm.addEventListener("submit", (e) => {
         formResponse.innerHTML = "We could not subscribe you. Please try again or use another email.";
       }
     })
-    .catch((err) => {
+    .catch(() => {
       formResponse.classList.add("visibility-shown");
       formResponse.innerHTML = "We could not subscribe you. Please try again or use another email.";
     })
