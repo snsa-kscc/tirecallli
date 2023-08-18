@@ -2,7 +2,6 @@
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import "../styles/locomotive-scroll.min.css";
 ---
 
 <html>
@@ -11,10 +10,10 @@ import "../styles/locomotive-scroll.min.css";
     url="https://tirecalli.com/archive"
     description="Hoodies, crewnecks, T-shirts, special projects, limited editions, diy,… Six years of Tire Calli and counting - 2022, and then some."
   />
-  <body data-scroll-container>
+  <body>
     <Header />
     <main>
-      <section data-scroll-section class="archive-hero">
+      <section class="archive-hero">
         <img class="archive-hero__pic" src="/img/archive/tirecalligraphy-crew.jpg" alt="tirecalli-picture" />
         <h1 class="archive-hero__title">
           <div class="archive-hero__span-container-1">
@@ -25,13 +24,13 @@ import "../styles/locomotive-scroll.min.css";
           </div>
         </h1>
       </section>
-      <section data-scroll-section class="archive-heading">
-        <h1 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-14">19<span class="acc-font">91</span>44</h1>
+      <section class="archive-heading">
+        <h1>19<span class="acc-font">91</span>44</h1>
         <p class="text--lg">
           With a vision of neutral, universal items in mind, 199144 will spread through the seasons not constrained by time, location or fashion trends.
         </p>
       </section>
-      <section data-scroll-section class="archive-pink archive-item">
+      <section class="archive-pink archive-item">
         <div class="archive-pink__group-left">
           <h4>Reflective Calli Crewneck</h4>
           <div class="archive-pink__copy text--lg">
@@ -47,21 +46,16 @@ import "../styles/locomotive-scroll.min.css";
           </div>
         </div>
         <div class="archive-pink__group-right">
-          <img
-            data-scroll
-            data-scroll-speed="2"
-            src="/img/Reflective-Calli-Crewneck/girl-in-a-white-crewneck-with-reflectivew-detail.webp"
-            alt="tirecalli-picture"
-          />
-          <img data-scroll data-scroll-speed="2" src="/img/Reflective-Calli-Crewneck/white-reflective-crewneck-back-detail-dark.webp" alt="tirecalli-picture" />
-          <img data-scroll data-scroll-speed="1" src="/img/Reflective-Calli-Crewneck/tire-calligraphy-199144-embroidery.webp" alt="tirecalli-picture" />
-          <img data-scroll data-scroll-speed="1" src="/img/Reflective-Calli-Crewneck/white-reflective-crewneck-back-detail.webp" alt="tirecalli-picture" />
+          <img src="/img/Reflective-Calli-Crewneck/girl-in-a-white-crewneck-with-reflectivew-detail.webp" alt="tirecalli-picture" />
+          <img src="/img/Reflective-Calli-Crewneck/white-reflective-crewneck-back-detail-dark.webp" alt="tirecalli-picture" />
+          <img src="/img/Reflective-Calli-Crewneck/tire-calligraphy-199144-embroidery.webp" alt="tirecalli-picture" />
+          <img src="/img/Reflective-Calli-Crewneck/white-reflective-crewneck-back-detail.webp" alt="tirecalli-picture" />
         </div>
       </section>
-      <section data-scroll-section class="archive-pale archive-item">
+      <section class="archive-pale archive-item">
         <div class="archive-pale__group-left">
           <img src="/img/Fight-Fire-With-Fire-T-Shirt/white-tshirt-front-big.webp" alt="tirecalli-picture" />
-          <img data-scroll data-scroll-speed="2" src="/img/Fight-Fire-With-Fire-T-Shirt/girl-in-white-tshirt-side-detail.webp" alt="tirecalli-picture" />
+          <img src="/img/Fight-Fire-With-Fire-T-Shirt/girl-in-white-tshirt-side-detail.webp" alt="tirecalli-picture" />
         </div>
         <div class="archive-pale__group-right text--lg">
           <h4>Fight Fire With Fire</h4>
@@ -80,17 +74,17 @@ import "../styles/locomotive-scroll.min.css";
           </p>
         </div>
       </section>
-      <section data-scroll-section class="archive-heading">
-        <h1 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-14">In<span class="acc-font">kt/o</span>ber</h1>
+      <section class="archive-heading">
+        <h1>In<span class="acc-font">kt/o</span>ber</h1>
       </section>
-      <section data-scroll-section class="archive-sin archive-item">
+      <section class="archive-sin archive-item">
         <div class="archive-sin__group-left">
           <h4>Cardinal Sin Hoodie</h4>
           <img src="/img/archive/Cardinal-Sqoosh/girl-in-cardinal-hoodie.webp" alt="tirecalli-picture" />
-          <img data-scroll data-scroll-speed="2" src="/img/archive/Cardinal-Sqoosh/girl-in-cardinal-hoodie-front.webp" alt="tirecalli-picture" />
+          <img src="/img/archive/Cardinal-Sqoosh/girl-in-cardinal-hoodie-front.webp" alt="tirecalli-picture" />
         </div>
         <div class="archive-sin__group-right">
-          <img data-scroll data-scroll-speed="2" src="/img/archive/Cardinal-Sqoosh/girl-in-cardinal-hoodie-back.webp" alt="tirecalli-picture" />
+          <img src="/img/archive/Cardinal-Sqoosh/girl-in-cardinal-hoodie-back.webp" alt="tirecalli-picture" />
           <div class="archive-sin__copy text--lg">
             <p>The last piece from Skillcollector's Inktober 2018 Challenge.</p>
             <p>We played with words, meanings, colors, the silhouette. Available exclusively in store, in Zagreb, Croatia, at approved.</p>
@@ -98,7 +92,7 @@ import "../styles/locomotive-scroll.min.css";
           <img src="/img/archive/Cardinal-Sqoosh/girl-in-cardinal-hoodie-side.webp" alt="tirecalli-picture" />
         </div>
       </section>
-      <section data-scroll-section class="archive-leg-crew archive-item">
+      <section class="archive-leg-crew archive-item">
         <div class="archive-leg-crew__group-left">
           <img src="/img/archive/Inktober/nike-trail-shoes-detail.webp" alt="tirecalli-picture" />
           <img src="/img/archive/Inktober/girl-in-yellow-crewneck.webp" alt="tirecalli-picture" />
@@ -121,10 +115,10 @@ import "../styles/locomotive-scroll.min.css";
           </div>
         </div>
       </section>
-      <section data-scroll-section class="archive-leg-tee archive-item text--white">
+      <section class="archive-leg-tee archive-item text--white">
         <div class="archive-leg-tee__group-left">
           <img src="/img/archive/Inktober/tirecalligraphy_black_01.webp" alt="tirecalli-picture" />
-          <img data-scroll data-scroll-speed="2" src="/img/archive/Inktober/girl-in-black-t-shirt-brake-a-leg.webp" alt="tirecalli-picture" />
+          <img src="/img/archive/Inktober/girl-in-black-t-shirt-brake-a-leg.webp" alt="tirecalli-picture" />
         </div>
         <div class="archive-leg-tee__group-right">
           <h4>Break a Leg T Shirt</h4>
@@ -133,10 +127,10 @@ import "../styles/locomotive-scroll.min.css";
           </div>
         </div>
       </section>
-      <section data-scroll-section class="archive-grave-crew archive-item">
+      <section class="archive-grave-crew archive-item">
         <div class="archive-grave-crew__group-left">
           <img src="/img/archive/Inktober/tirecalligraphy_orange_06.webp" alt="tirecalli-picture" />
-          <h4 data-scroll data-scroll-speed="2">Beyond the Grave Hoodie</h4>
+          <h4>Beyond the Grave Hoodie</h4>
           <div class="archive-grave-crew__copy text--lg">
             <p>
               The second piece that we brought to life from Skillcollector's Inktober 2018 Challenge. This one was just screaming to be brought to life as a
@@ -148,15 +142,10 @@ import "../styles/locomotive-scroll.min.css";
         <div class="archive-grave-crew__group-right">
           <img src="/img/archive/Inktober/girl-in-safety-orange-beyond-the-grave-hoodie-back.webp" alt="tirecalli-picture" />
           <img src="/img/archive/Inktober/girl-in-safety-orange-beyond-the-grave-hoodie.webp" alt="tirecalli-picture" />
-          <img
-            data-scroll
-            data-scroll-speed="2"
-            src="/img/archive/Inktober/girl-in-safety-orange-beyond-the-grave-hoodie-detail.webp"
-            alt="tirecalli-picture"
-          />
+          <img src="/img/archive/Inktober/girl-in-safety-orange-beyond-the-grave-hoodie-detail.webp" alt="tirecalli-picture" />
         </div>
       </section>
-      <section data-scroll-section class="archive-grave-tee archive-item">
+      <section class="archive-grave-tee archive-item">
         <div class="archive-grave-tee__group-left">
           <h4>Beyond The Grave T-Shirt</h4>
         </div>
@@ -170,7 +159,7 @@ import "../styles/locomotive-scroll.min.css";
           </div>
         </div>
       </section>
-      <section data-scroll-section class="archive-grave-tee-limited archive-item">
+      <section class="archive-grave-tee-limited archive-item">
         <div class="archive-grave-tee-limited__group-left">
           <h4>Beyond The Grave Glitch T-Shirt - Limited</h4>
         </div>
@@ -183,15 +172,15 @@ import "../styles/locomotive-scroll.min.css";
           </div>
           <div class="archive-grave-tee-limited__pics">
             <img src="/img/archive/Inktober/tirecalligraphy_beyond_the_grave_glitch_04.webp" alt="tirecalli-picture" />
-            <img data-scroll data-scroll-speed="2" src="/img/archive/Inktober/tirecalligraphy_yoggie_glitch_02.webp" alt="tirecalli-picture" />
+            <img src="/img/archive/Inktober/tirecalligraphy_yoggie_glitch_02.webp" alt="tirecalli-picture" />
           </div>
         </div>
       </section>
-      <section data-scroll-section class="archive-hook archive-item">
+      <section class="archive-hook archive-item">
         <div class="archive-hook__group-left">
           <img src="/img/archive/Inktober/off-the-hook-detail.webp" alt="tirecalli-picture" />
           <img src="/img/archive/Inktober/girl-in-off-the-hook-white-hoodie.webp" alt="tirecalli-picture" />
-          <img data-scroll data-scroll-speed="4" src="/img/archive/Inktober/man-in-whit-off-the-hook-hoodie.webp" alt="tirecalli-picture" />
+          <img src="/img/archive/Inktober/man-in-whit-off-the-hook-hoodie.webp" alt="tirecalli-picture" />
         </div>
         <div class="archive-hook__group-right">
           <h4>Off The Hook Hoodie</h4>
@@ -201,13 +190,13 @@ import "../styles/locomotive-scroll.min.css";
           </div>
         </div>
       </section>
-      <section data-scroll-section class="archive-heading">
-        <h1 data-scroll data-scroll-direction="horizontal" data-scroll-speed="14">Tir<span class="acc-font">e/ca</span>lli</h1>
+      <section class="archive-heading">
+        <h1>Tir<span class="acc-font">e/ca</span>lli</h1>
       </section>
-      <section data-scroll-section class="archive-black-subheading archive-subheading">
+      <section class="archive-black-subheading archive-subheading">
         <h4>Tire Calli Black on Black Glossy</h4>
       </section>
-      <section data-scroll-section class="archive-black archive-item">
+      <section class="archive-black archive-item">
         <div class="archive-black__group-flex">
           <img src="/img/archive/Tire-Calli/girl-in-tire-calli-black-glossy-crewneck.webp" alt="tirecalli-picture" />
         </div>
@@ -222,10 +211,10 @@ import "../styles/locomotive-scroll.min.css";
           <img class="archive-black__grid-item-2" src="/img/archive/Tire-Calli/tire-calli-black-glossy-crewneck-back-detail.webp" alt="tirecalli-picture" />
         </div>
       </section>
-      <section data-scroll-section class="archive-black-subheading archive-subheading">
+      <section class="archive-black-subheading archive-subheading">
         <h4>Tire Calli Black on Black Matte</h4>
       </section>
-      <section data-scroll-section class="archive-black archive-item">
+      <section class="archive-black archive-item">
         <div class="archive-black__group-grid archive-black__group-grid--no-cols">
           <img src="/img/archive/Tire-Calli/tire-calli-black-matte-crewneck-back.webp" alt="tirecalli-picture" />
           <div class="archive-black__copy text--lg">
@@ -242,12 +231,12 @@ import "../styles/locomotive-scroll.min.css";
           <img src="/img/archive/Tire-Calli/tire-calli-black-matte-crewneck.webp" alt="tirecalli-picture" />
         </div>
       </section>
-      <section data-scroll-section class="archive-champ archive-item">
+      <section class="archive-champ archive-item">
         <div class="archive-champ__group-left">
           <img src="/img/archive/Tire-Calli/tire-calli-bikepolo-red-glossy-crewneck.webp" alt="tirecalli-picture" />
           <h4 class="mix-blend-mode--disabled">Tire Calli Champion Red</h4>
           <img src="/img/archive/Tire-Calli/tire-calli-bikepolo-red-glossy-crewneck-back.webp" alt="tirecalli-picture" />
-          <div data-scroll data-scroll-speed="1" class="archive-champ__copy text--lg">
+          <div class="archive-champ__copy text--lg">
             <p>
               It's because we liked the Black Glossy so much, we decided to treat the guys from the Mongrels United bikepolo team with something we found was
               special.
@@ -263,12 +252,12 @@ import "../styles/locomotive-scroll.min.css";
             </p>
           </div>
         </div>
-        <div data-scroll data-scroll-speed="2" class="archive-champ__group-right">
+        <div class="archive-champ__group-right">
           <img src="/img/archive/Tire-Calli/tire-calli-bikepolo-red-glossy-crewneck-detail.webp" alt="tirecalli-picture" />
           <img src="/img/archive/Tire-Calli/tire-calli-bikepolo-red-glossy-crewneck-front-detail.webp" alt="tirecalli-picture" />
         </div>
       </section>
-      <section data-scroll-section class="archive-white archive-item">
+      <section class="archive-white archive-item">
         <div class="archive-white__group-left">
           <h4>Tire Calli White T aka The Skidmark T</h4>
           <div class="archive-white__copy text--lg">
@@ -277,45 +266,33 @@ import "../styles/locomotive-scroll.min.css";
           </div>
         </div>
         <div class="archive-white__group-right">
-          <img
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="-1"
-            src="/img/archive/Tire-Calli/white-t-shirt-tire-calli-front.webp"
-            alt="tirecalli-picture"
-          />
+          <img src="/img/archive/Tire-Calli/white-t-shirt-tire-calli-front.webp" alt="tirecalli-picture" />
           <img src="/img/archive/tirecalligraphy-skidmark.jpg" alt="tirecalli-picture" />
-          <img
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="1"
-            src="/img/archive/Tire-Calli/white-t-shirt-tire-calli-back.webp"
-            alt="tirecalli-picture"
-          />
+          <img src="/img/archive/Tire-Calli/white-t-shirt-tire-calli-back.webp" alt="tirecalli-picture" />
         </div>
       </section>
-      <section data-scroll-section class="archive-reflective archive-item">
+      <section class="archive-reflective archive-item">
         <div class="archive-reflective__group-left">
-          <img data-scroll data-scroll-speed="1" src="/img/archive/Tire-Calli/tire-calli-reflective-t-shirt-back-dark.webp" alt="tirecalli-picture" />
-          <img data-scroll data-scroll-speed="1" src="/img/archive/Tire-Calli/tire-calli-reflective-t-shirt-back-light.webp" alt="tirecalli-picture" />
+          <img src="/img/archive/Tire-Calli/tire-calli-reflective-t-shirt-back-dark.webp" alt="tirecalli-picture" />
+          <img src="/img/archive/Tire-Calli/tire-calli-reflective-t-shirt-back-light.webp" alt="tirecalli-picture" />
           <img src="/img/archive/Tire-Calli/tire-calli-reflective-t-shirt-2.webp" alt="tirecalli-picture" />
         </div>
         <div class="archive-reflective__group-right">
           <h4>Tire Calli Reflective T-Shirt</h4>
         </div>
       </section>
-      <section data-scroll-section class="archive-heading">
-        <h1 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-16" class="max-content">
+      <section class="archive-heading">
+        <h1 class="max-content">
           From the comm<span class="acc-font">unity,</span>
         </h1>
-        <h1 data-scroll data-scroll-direction="horizontal" data-scroll-speed="16" class="max-content">
+        <h1 class="max-content">
           <span class="acc-font">for the comm</span>unity
         </h1>
       </section>
-      <section data-scroll-section class="archive-black-subheading archive-subheading">
+      <section class="archive-black-subheading archive-subheading">
         <h4>Black Polo Deathmoth OG T aka The Introvert T</h4>
       </section>
-      <section data-scroll-section class="archive-black archive-item">
+      <section class="archive-black archive-item">
         <div class="archive-black__group-flex text--white">
           <div class="archive-black__copy text--lg">
             <p>A T-Shirt we created for Bike Polo Zagreb and their fourth international bike polo tournament - Zagreb International 2016.</p>
@@ -327,16 +304,16 @@ import "../styles/locomotive-scroll.min.css";
           <img src="/img/archive/From-The-Comm-For-The-Comm/polo-deathmoth-black-t-shirt.webp" alt="tirecalli-picture" />
         </div>
       </section>
-      <section data-scroll-section class="archive-pale archive-item">
+      <section class="archive-pale archive-item">
         <div class="archive-pale__group-left">
           <img src="/img/archive/From-The-Comm-For-The-Comm/girl-in-pale-yellow-t-shirt-detail.webp" alt="tirecalli-picture" />
-          <img data-scroll data-scroll-speed="2" src="/img/archive/From-The-Comm-For-The-Comm/girl-in-pale-yellow-t-shirt.webp" alt="tirecalli-picture" />
+          <img src="/img/archive/From-The-Comm-For-The-Comm/girl-in-pale-yellow-t-shirt.webp" alt="tirecalli-picture" />
         </div>
         <div class="archive-pale__group-right">
           <h4>Deathmoth Pale Limited</h4>
         </div>
       </section>
-      <section data-scroll-section class="archive-pink archive-item">
+      <section class="archive-pink archive-item">
         <div class="archive-pink__group-left">
           <h4>Baby pink Polo Deathmoth</h4>
           <div class="archive-pink__copy text--lg">
@@ -349,14 +326,14 @@ import "../styles/locomotive-scroll.min.css";
           </div>
         </div>
         <div class="archive-pink__group-right">
-          <img data-scroll data-scroll-speed="2" src="/img/archive/From-The-Comm-For-The-Comm/pink-deathmoth-crewneck.webp" alt="tirecalli-picture" />
-          <img data-scroll data-scroll-speed="2" src="/img/archive/From-The-Comm-For-The-Comm/girl-in-pink-crewneck-close.webp" alt="tirecalli-picture" />
-          <img data-scroll data-scroll-speed="1" src="/img/archive/From-The-Comm-For-The-Comm/girl-in-pink-crewneck-detail.webp" alt="tirecalli-picture" />
+          <img src="/img/archive/From-The-Comm-For-The-Comm/pink-deathmoth-crewneck.webp" alt="tirecalli-picture" />
+          <img src="/img/archive/From-The-Comm-For-The-Comm/girl-in-pink-crewneck-close.webp" alt="tirecalli-picture" />
+          <img src="/img/archive/From-The-Comm-For-The-Comm/girl-in-pink-crewneck-detail.webp" alt="tirecalli-picture" />
         </div>
       </section>
-      <section data-scroll-section class="archive-hand archive-item">
+      <section class="archive-hand archive-item">
         <div class="archive-hand__group-left">
-          <h4 data-scroll data-scroll-speed="2">Sacred Geometry aka The Hand T</h4>
+          <h4>Sacred Geometry aka The Hand T</h4>
         </div>
         <div class="archive-hand__group-right">
           <div class="archive-hand__copy text--lg">
@@ -367,19 +344,14 @@ import "../styles/locomotive-scroll.min.css";
           </div>
           <div class="archive-hand__pics">
             <img src="/img/archive/From-The-Comm-For-The-Comm/sacred-geometry-bike-polo-t-shirt-front-detail.webp" alt="tirecalli-picture" />
-            <img
-              data-scroll
-              data-scroll-speed="2"
-              src="/img/archive/From-The-Comm-For-The-Comm/man-in-sacred-geometry-bike-polo-t-shirt.webp"
-              alt="tirecalli-picture"
-            />
+            <img src="/img/archive/From-The-Comm-For-The-Comm/man-in-sacred-geometry-bike-polo-t-shirt.webp" alt="tirecalli-picture" />
           </div>
         </div>
       </section>
-      <section data-scroll-section class="archive-heading">
-        <h1 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-14">Li<span class="acc-font">ci</span>tar</h1>
+      <section class="archive-heading">
+        <h1>Li<span class="acc-font">ci</span>tar</h1>
       </section>
-      <section data-scroll-section class="archive-heart archive-item">
+      <section class="archive-heart archive-item">
         <div class="archive-heart__group-left">
           <h4>Licitar OG T aka The Heart T</h4>
           <div class="archive-heart__copy text--lg">
@@ -398,7 +370,7 @@ import "../styles/locomotive-scroll.min.css";
           <img src="/img/archive/Licitar/licitar-t-shirt-stack.webp" alt="tirecalli-picture" />
         </div>
       </section>
-      <section data-scroll-section class="archive-grey archive-item">
+      <section class="archive-grey archive-item">
         <div class="archive-grey__group-left">
           <img src="/img/archive/Licitar/licitar-gray-crewneck-back.webp" alt="tirecalli-picture" />
           <img src="/img/archive/Licitar/licitar-gray-crewneck-detail.webp" alt="tirecalli-picture" />
@@ -406,16 +378,16 @@ import "../styles/locomotive-scroll.min.css";
         <div class="archive-grey__group-right">
           <img src="/img/archive/Licitar/girl-in-grey-licitar-crewneck.webp" alt="tirecalli-picture" />
           <h4>Heather grey Licitar</h4>
-          <div data-scroll data-scroll-speed="1" class="archive-grey__copy text--lg">
+          <div class="archive-grey__copy text--lg">
             <p>
               Being said that Licitar is our staple visual, it deserved to be presented in a long sleeve version. This heather grey crewneck is first, but just
               one of the many versions of Licitars to come. We are pretty sure about that.
             </p>
           </div>
-          <img data-scroll data-scroll-speed="2" src="/img/archive/Licitar/licitar-gray-crewneck-stack.webp" alt="tirecalli-picture" />
+          <img src="/img/archive/Licitar/licitar-gray-crewneck-stack.webp" alt="tirecalli-picture" />
         </div>
       </section>
-      <section data-scroll-section class="archive-white archive-item">
+      <section class="archive-white archive-item">
         <div class="archive-white__group-left">
           <h4>White Licitar aka The Heart Hoodie</h4>
           <div class="archive-white__copy text--lg">
@@ -423,13 +395,14 @@ import "../styles/locomotive-scroll.min.css";
           </div>
         </div>
         <div class="archive-white__group-right archive-white__group-right--equal">
-          <img data-scroll data-scroll-speed="2" src="/img/archive/Licitar/licitar-white-hoodie-back.webp" alt="tirecalli-picture" />
+          <img src="/img/archive/Licitar/licitar-white-hoodie-back.webp" alt="tirecalli-picture" />
           <img src="/img/archive/Licitar/girl-in-white-hoodie.webp" alt="tirecalli-picture" />
-          <img data-scroll data-scroll-speed="2" src="/img/archive/Licitar/licitar-white-hoodie.webp" alt="tirecalli-picture" />
+          <img src="/img/archive/Licitar/licitar-white-hoodie.webp" alt="tirecalli-picture" />
         </div>
       </section>
     </main>
-    <Footer isLocoScroll={true} />
+    <Footer />
     <script src="../js/app.js"></script>
+    <script src="../js/app-archive.js"></script>
   </body>
 </html>

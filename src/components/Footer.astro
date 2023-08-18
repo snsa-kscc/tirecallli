@@ -1,12 +1,4 @@
----
-export interface Props {
-  isLocoScroll?: boolean;
-}
-
-const { isLocoScroll = false } = Astro.props as Props;
----
-
-<footer data-scroll-section={isLocoScroll}>
+<footer>
   <div class="footer__section">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <path

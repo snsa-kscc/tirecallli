@@ -1,5 +1,6 @@
 import { gsap, ScrollTrigger } from "gsap/all";
 import LocomotiveScroll from "locomotive-scroll";
+import Lenis from "@studio-freight/lenis";
 
 let vid = document.querySelector(".vid");
 let sound = document.querySelector(".sound");
@@ -77,38 +78,14 @@ if (accordion) {
 const body = document.body;
 let lastScroll = 0;
 
-// instead of setTimeout(() => {}, 1000);
-window.addEventListener("load", () => {
-  if (location.pathname.startsWith("/archive")) {
-    const locoScroll = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container]"),
-      smooth: true,
-      touchMultiplier: 3,
-      tablet: {
-        breakpoint: 0,
-        smooth: true,
-      },
-    });
-    window.scrollTo(0, 0);
-    locoScroll.on("scroll", () => {
-      const currentScroll = Math.round(locoScroll.scroll.instance.scroll.y / 100);
-      if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-        body.classList.add("scroll-down");
-      } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
-        body.classList.remove("scroll-down");
-      }
-      lastScroll = currentScroll;
-    });
+window.addEventListener("scroll", () => {
+  const currentScroll = Math.round(window.scrollY / 50);
+  if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+    body.classList.add("scroll-down");
+  } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+    body.classList.remove("scroll-down");
   }
-  window.addEventListener("scroll", () => {
-    const currentScroll = Math.round(window.scrollY / 50);
-    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-      body.classList.add("scroll-down");
-    } else if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
-      body.classList.remove("scroll-down");
-    }
-    lastScroll = currentScroll;
-  });
+  lastScroll = currentScroll;
 });
 
 burger.addEventListener("click", () => {
@@ -188,5 +165,14 @@ logo.oncontextmenu = (e) => {
   e.preventDefault();
   window.location.href = "/brand-guidelines.html";
 };
+
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
 
 console.log("%c Hi mom! Made with ❤️ by @dvasadva for @tirecalli", "color: #ff0000; font-size: 20px;");
