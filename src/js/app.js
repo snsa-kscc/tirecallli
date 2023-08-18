@@ -1,5 +1,4 @@
 import { gsap, ScrollTrigger } from "gsap/all";
-import LocomotiveScroll from "locomotive-scroll";
 import Lenis from "@studio-freight/lenis";
 
 let vid = document.querySelector(".vid");

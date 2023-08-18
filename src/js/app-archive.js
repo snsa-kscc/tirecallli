@@ -1,1 +1,1 @@
-import { gsap, ScrollTrigger, CSSRulePlugin } from "gsap/all";
+import { gsap, ScrollTrigger } from "gsap/all";
