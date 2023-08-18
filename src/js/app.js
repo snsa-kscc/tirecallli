@@ -1,18 +1,12 @@
-if (typeof ScrollSmoother != "undefined") {
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-  ScrollSmoother.create({
-    smooth: 1,
-    effects: true,
-    smoothTouch: 0.000001,
-  });
-}
+import { gsap, ScrollTrigger } from "gsap/all";
+import LocomotiveScroll from "locomotive-scroll";
 
 let vid = document.querySelector(".vid");
 let sound = document.querySelector(".sound");
 let teaser = document.querySelector(".teaser");
 
 if (teaser) {
+  gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.create({
     trigger: ".teaser",
     start: "top",
@@ -85,7 +79,7 @@ let lastScroll = 0;
 
 // instead of setTimeout(() => {}, 1000);
 window.addEventListener("load", () => {
-  if (typeof LocomotiveScroll != "undefined") {
+  if (location.pathname == "/archive") {
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,

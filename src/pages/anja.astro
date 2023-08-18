@@ -157,10 +157,9 @@ import Footer from "../components/Footer.astro";
       </article>
     </main>
     <Footer />
-    <script is:inline src="https://unpkg.com/gsap/dist/gsap.min.js"></script>
-    <script is:inline src="https://unpkg.com/gsap/dist/ScrollTrigger.min.js"></script>
-    <script is:inline src="/js/app.js"></script>
-    <script is:inline>
+    <script src="../js/app.js"></script>
+    <script>
+      import { gsap, ScrollTrigger } from "gsap/all";
       gsap.registerPlugin(ScrollTrigger);
       gsap.from(".feature__description", { opacity: 0, duration: 1.5, ease: "power2.in", y: 50 });
       gsap.from(".feature img", { opacity: 0, duration: 1, y: -50 });

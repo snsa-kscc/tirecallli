@@ -1,3 +1,6 @@
+import { gsap, ScrollTrigger, CSSRulePlugin } from "gsap/all";
+import { Curtains, Plane } from "curtainsjs";
+
 gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.create({
   trigger: ".crypto-quote",
@@ -95,7 +98,7 @@ function handleDecoder(randomnbr, letters, selector) {
     return Math.round(Math.random() * randomnbr.length + 1);
   }
 
-  timer = setInterval(() => {
+  const timer = setInterval(() => {
     document.querySelectorAll(`${selector} .nbr:nth-child(${select()})`).forEach((item) => {
       item.innerHTML = Math.round(Math.random() * 9);
       item.setAttribute("data-number", data);
@@ -125,14 +128,14 @@ revealContainers.forEach((container, idx) => {
   tl.set(container, { autoAlpha: 1 });
   tl.from(container, idx + 1, {
     xPercent: -100,
-    ease: Power2.out,
+    ease: "power2.out",
   });
   tl.from(image, 0.7, {
     xPercent: 100,
     scale: 1.5,
     delay: -0.7,
     stagger: true,
-    ease: Power2.out,
+    ease: "power2.out",
   });
 });
 // CURTAINSJS
