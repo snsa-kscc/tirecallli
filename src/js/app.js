@@ -79,7 +79,7 @@ let lastScroll = 0;
 
 // instead of setTimeout(() => {}, 1000);
 window.addEventListener("load", () => {
-  if (location.pathname == "/archive") {
+  if (location.pathname == "/archive/" || "/archive") {
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,
