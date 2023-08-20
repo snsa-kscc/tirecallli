@@ -1,8 +1,7 @@
 import { gsap, ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
-const nodeList = document.querySelectorAll(".archive-heading h1");
-const headings = [...nodeList];
+const headings = [...document.querySelectorAll(".archive-heading h1")];
 
 const runningRightHeadings = headings.slice(0, 2).concat(headings.slice(4, 6));
 const runningLeftHeadings = headings.slice(2, 4);

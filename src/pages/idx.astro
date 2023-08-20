@@ -1,0 +1,29 @@
+---
+import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/base.css";
+---
+
+<html>
+  <Head />
+  <body>
+    <Header />
+    <main>
+      <section class="h-[80vh] bg-slate-400 first"></section>
+      <section class="min-h-[180vh] grid place-content-center second">
+        <h1 class="text-9xl">neki naslov</h1>
+        <h2 class="text-6xl">neki subnaslov</h2>
+        <p>ovaj transfer crna typo bijela pozadina u zuti typo i crna pozadina mi je kul</p>
+      </section>
+      <section class="teaser">
+        <div class="teaser__content">
+          <h2>TC23/4 coming soon</h2>
+        </div>
+      </section>
+    </main>
+    <Footer />
+    <script src="../js/app.js"></script>
+    <script src="../js/app-idx.js"></script>
+  </body>
+</html>
