@@ -49,7 +49,7 @@ function fadeInRandomly() {
 
 ScrollTrigger.create({
   trigger: textContainer,
-  start: "top center",
+  start: "top 60%",
   once: true,
   onEnter: () => fadeInRandomly(),
 });
