@@ -78,6 +78,18 @@ gsap.to(".offering", {
   },
 });
 
+gsap.to(".nature-camo", {
+  background: "#fff",
+  color: "#000",
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".nature-camo",
+    start: "top",
+    end: "+=15%",
+    scrub: true,
+  },
+});
+
 gsap.from(".paragraph-container p", {
   opacity: 0.2,
   scrollTrigger: {
