@@ -56,7 +56,7 @@
 
 @font-face {
   font-family: "FontAwesome";
-  src: url("../fonts/fontawesome-webfont.woff") format("woff");
+  src: url("/fonts/fontawesome-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   text-rendering: optimizeLegibility;
@@ -2722,4 +2722,30 @@ input {
   place-content: center;
   color: hsl(0, 0%, 95%);
   padding: 2em;
+}
+
+.invisibility {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 2em;
+}
+
+.invisibility span {
+  display: inline-block;
+}
+
+.offering {
+  min-height: 150vh;
+  display: flex;
+  padding: 2em;
+}
+
+.second {
+  min-height: 150vh;
+}
+
+.third span {
+  opacity: 0;
+  transition: all 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }

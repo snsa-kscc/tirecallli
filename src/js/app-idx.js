@@ -1,47 +1,34 @@
 import { gsap, ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".second", {
-  background: "#1c1c1c",
-  color: "#ccff00",
-  duration: 1,
-  scrollTrigger: {
-    trigger: ".second h1",
-    start: "top center",
-    end: "bottom 40%",
-    scrub: true,
-  },
-});
-
 const textContainer = document.querySelector(".text-container");
-const words = `
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Rutrum quisque non tellus orci ac auctor augue. Pharetra magna ac placerat vestibulum. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Aliquet enim tortor at auctor urna nunc. Porttitor eget dolor morbi non arcu risus quis varius quam. Tellus cras adipiscing enim eu.
-`
-  .trim()
-  .split(" ");
+const textContainerParagraph = document.querySelector(".text-container p");
+const textContainerParagraphText = document.querySelector(".text-container p").innerText;
+const words = textContainerParagraphText.trim().split(" ");
 
 words.forEach((word) => {
   const span = document.createElement("span");
-  span.textContent = word;
-  span.classList.add("mx-1", "transition", "duration-1000", "inline-block", "opacity-0");
+  span.textContent = `${word} `;
+  span.classList.add("inline-block", "opacity-0");
   textContainer.appendChild(span);
 });
+textContainer.removeChild(textContainerParagraph);
 
-const spans = document.querySelectorAll(".text-container span");
+const wordSpans = document.querySelectorAll(".text-container span");
 let fadedIndices = [];
 
 function fadeInRandomly() {
-  if (fadedIndices.length >= spans.length) {
+  if (fadedIndices.length >= wordSpans.length) {
     return;
   }
 
   let randomIndex = -1;
 
   while (fadedIndices.includes(randomIndex) || randomIndex === -1) {
-    randomIndex = Math.floor(Math.random() * spans.length);
+    randomIndex = Math.floor(Math.random() * wordSpans.length);
   }
 
-  spans[randomIndex].style.opacity = 1;
+  wordSpans[randomIndex].style.opacity = 1;
   fadedIndices.push(randomIndex);
 
   setTimeout(fadeInRandomly, 50);
@@ -52,4 +39,51 @@ ScrollTrigger.create({
   start: "top 60%",
   once: true,
   onEnter: () => fadeInRandomly(),
+});
+
+const invisibleHeading = document.querySelector(".invisibility h4");
+const chars = [...invisibleHeading.innerText];
+invisibleHeading.innerText = "";
+invisibleHeading.classList.remove("opacity-hidden");
+
+chars.forEach((char) => {
+  const span = document.createElement("span");
+  span.textContent = char === " " ? "\u00A0" : char;
+  span.classList.add("inline-block");
+  invisibleHeading.appendChild(span);
+});
+
+const charSpans = document.querySelectorAll(".invisibility span");
+
+gsap.from(charSpans, {
+  opacity: 0.2,
+  stagger: 0.1,
+  scrollTrigger: {
+    trigger: ".invisibility",
+    end: "+=200% center",
+    scrub: true,
+    pin: true,
+  },
+});
+
+gsap.to(".offering", {
+  background: "#1c1c1c",
+  color: "#f1f5f9",
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".offering p",
+    start: "top center",
+    end: "bottom 40%",
+    scrub: true,
+  },
+});
+
+gsap.from(".paragraph-container p", {
+  opacity: 0.2,
+  scrollTrigger: {
+    trigger: ".fifth",
+    end: "+=100%",
+    scrub: true,
+    pin: true,
+  },
 });
