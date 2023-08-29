@@ -1,7 +1,7 @@
 import { gsap, ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
-const invisibleHeading = document.querySelector(".invisibility h4");
+const invisibleHeading = document.querySelector(".invisibility h2");
 const chars = [...invisibleHeading.innerText];
 invisibleHeading.innerText = "";
 invisibleHeading.classList.remove("opacity-hidden");
@@ -16,7 +16,7 @@ chars.forEach((char) => {
 const charSpans = document.querySelectorAll(".invisibility span");
 
 gsap.from(charSpans, {
-  opacity: 0.2,
+  opacity: 0.03,
   stagger: 0.1,
   scrollTrigger: {
     trigger: ".invisibility",
