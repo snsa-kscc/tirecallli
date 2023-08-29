@@ -1,22 +1,10 @@
 import { gsap, ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
+
 import Lenis from "@studio-freight/lenis";
 
 let vid = document.querySelector(".vid");
 let sound = document.querySelector(".sound");
-let teaser = document.querySelector(".teaser");
-
-if (teaser) {
-  gsap.registerPlugin(ScrollTrigger);
-  ScrollTrigger.create({
-    trigger: ".teaser",
-    start: "top",
-    end: "+=200%",
-    pin: true,
-    onUpdate: (self) => {
-      teaser.style.color = `hsl( 0, 0%, ${95 * (1 - self.progress)}%)`;
-    },
-  });
-}
 
 if (sound) {
   sound.addEventListener("click", () => {
