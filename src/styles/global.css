@@ -2820,7 +2820,64 @@ input {
   padding: 2em 2em 3em;
 }
 
-.third span {
+.martial-arts {
+  margin: 6em 0;
+}
+
+.martial-arts__pic {
+  width: 70%;
+}
+
+@media (max-width: 767px) {
+  .martial-arts__pic {
+    width: 100%;
+  }
+}
+
+.martial-arts__pic--right {
+  margin-left: auto;
+}
+
+.martial-arts__pic img {
+  max-height: 120vh;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.martial-arts__copy {
+  margin: 8em 4em;
+}
+
+.martial-arts__copy span {
   opacity: 0;
-  transition: all 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.spotify {
+  margin: clamp(10em, 20vw, 18em) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4em;
+  align-items: end;
+}
+
+.spotify > div {
+  flex: 1 1 40rem;
+}
+
+.spotify__link-group {
+  position: relative;
+}
+
+.spotify__link-copy {
+  position: absolute;
+  text-align: right;
+  top: 20%;
+  right: 10%;
+  width: 70%;
+  color: #f1f5f9;
+}
+
+.spotify__link-copy a {
+  color: #f1f5f9;
 }

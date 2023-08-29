@@ -1,46 +1,6 @@
 import { gsap, ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
-const textContainer = document.querySelector(".text-container");
-const textContainerParagraph = document.querySelector(".text-container p");
-const textContainerParagraphText = document.querySelector(".text-container p").innerText;
-const words = textContainerParagraphText.trim().split(" ");
-
-words.forEach((word) => {
-  const span = document.createElement("span");
-  span.textContent = `${word} `;
-  span.classList.add("inline-block", "opacity-0");
-  textContainer.appendChild(span);
-});
-textContainer.removeChild(textContainerParagraph);
-
-const wordSpans = document.querySelectorAll(".text-container span");
-let fadedIndices = [];
-
-function fadeInRandomly() {
-  if (fadedIndices.length >= wordSpans.length) {
-    return;
-  }
-
-  let randomIndex = -1;
-
-  while (fadedIndices.includes(randomIndex) || randomIndex === -1) {
-    randomIndex = Math.floor(Math.random() * wordSpans.length);
-  }
-
-  wordSpans[randomIndex].style.opacity = 1;
-  fadedIndices.push(randomIndex);
-
-  setTimeout(fadeInRandomly, 50);
-}
-
-ScrollTrigger.create({
-  trigger: textContainer,
-  start: "top 60%",
-  once: true,
-  onEnter: () => fadeInRandomly(),
-});
-
 const invisibleHeading = document.querySelector(".invisibility h4");
 const chars = [...invisibleHeading.innerText];
 invisibleHeading.innerText = "";
@@ -90,12 +50,41 @@ gsap.to(".nature-camo", {
   },
 });
 
-gsap.from(".paragraph-container p", {
-  opacity: 0.2,
-  scrollTrigger: {
-    trigger: ".fifth",
-    end: "+=100%",
-    scrub: true,
-    pin: true,
-  },
+const textContainer = document.querySelector(".martial-arts__copy");
+const textContainerParagraph = document.querySelector(".martial-arts__copy p");
+const textContainerParagraphText = document.querySelector(".martial-arts__copy p").innerText;
+const words = textContainerParagraphText.trim().split(" ");
+
+words.forEach((word) => {
+  const span = document.createElement("span");
+  span.textContent = `${word} `;
+  textContainer.appendChild(span);
+});
+textContainer.removeChild(textContainerParagraph);
+
+const wordSpans = document.querySelectorAll(".martial-arts__copy span");
+let fadedIndices = [];
+
+function fadeInRandomly() {
+  if (fadedIndices.length >= wordSpans.length) {
+    return;
+  }
+
+  let randomIndex = -1;
+
+  while (fadedIndices.includes(randomIndex) || randomIndex === -1) {
+    randomIndex = Math.floor(Math.random() * wordSpans.length);
+  }
+
+  wordSpans[randomIndex].style.opacity = 1;
+  fadedIndices.push(randomIndex);
+
+  setTimeout(fadeInRandomly, 50);
+}
+
+ScrollTrigger.create({
+  trigger: textContainer,
+  start: "top 60%",
+  once: true,
+  onEnter: () => fadeInRandomly(),
 });
