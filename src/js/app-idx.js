@@ -6,11 +6,13 @@ const invisibleWords = invisibleHeading.innerText.trim().split(" ");
 invisibleHeading.innerText = "";
 invisibleHeading.classList.remove("opacity-hidden");
 
-invisibleWords.forEach((word) => {
+function generateSpan(word, container) {
   const span = document.createElement("span");
   span.textContent = `${word} `;
-  invisibleHeading.appendChild(span);
-});
+  container.appendChild(span);
+}
+
+invisibleWords.forEach((word) => generateSpan(word, invisibleHeading));
 
 const invisibleSpans = document.querySelectorAll(".invisibility span");
 
@@ -54,11 +56,7 @@ const textContainerParagraph = document.querySelector(".martial-arts__copy p");
 const textContainerParagraphText = document.querySelector(".martial-arts__copy p").innerText;
 const textContainerWords = textContainerParagraphText.trim().split(" ");
 
-textContainerWords.forEach((word) => {
-  const span = document.createElement("span");
-  span.textContent = `${word} `;
-  textContainer.appendChild(span);
-});
+textContainerWords.forEach((word) => generateSpan(word, textContainer));
 textContainer.removeChild(textContainerParagraph);
 
 const textContainerWordSpans = document.querySelectorAll(".martial-arts__copy span");
