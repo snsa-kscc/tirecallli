@@ -2731,10 +2731,6 @@ input {
   padding: 2em;
 }
 
-.invisibility span {
-  display: inline-block;
-}
-
 .offering {
   min-height: 120vh;
   display: flex;
@@ -2855,33 +2851,24 @@ input {
 
 .spotify {
   margin: clamp(10em, 20vw, 18em) 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4em;
-  align-items: end;
-}
-
-.spotify > div:first-child {
-  flex: 1 1 25%;
-}
-
-.spotify > div:last-child {
-  flex: 5 1 40rem;
-}
-
-.spotify__link-group {
   position: relative;
 }
 
 .spotify__link-copy {
   position: absolute;
-  text-align: right;
-  top: 20%;
-  right: 10%;
+  top: 15%;
+  left: 2%;
   width: 70%;
   color: #f1f5f9;
 }
 
 .spotify__link-copy a {
   color: #f1f5f9;
+}
+
+.spotify__link-img {
+  position: absolute;
+  width: 35%;
+  bottom: 2%;
+  right: 2%;
 }

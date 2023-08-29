@@ -1,21 +1,20 @@
 import { gsap, ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
-const invisibleHeading = document.querySelector(".invisibility h2");
-const chars = [...invisibleHeading.innerText];
+const invisibleHeading = document.querySelector(".invisibility h4");
+const invisibleWords = invisibleHeading.innerText.trim().split(" ");
 invisibleHeading.innerText = "";
 invisibleHeading.classList.remove("opacity-hidden");
 
-chars.forEach((char) => {
+invisibleWords.forEach((word) => {
   const span = document.createElement("span");
-  span.textContent = char === " " ? "\u00A0" : char;
-  span.classList.add("inline-block");
+  span.textContent = `${word} `;
   invisibleHeading.appendChild(span);
 });
 
-const charSpans = document.querySelectorAll(".invisibility span");
+const invisibleSpans = document.querySelectorAll(".invisibility span");
 
-gsap.from(charSpans, {
+gsap.from(invisibleSpans, {
   opacity: 0.03,
   stagger: 0.1,
   scrollTrigger: {
@@ -53,30 +52,30 @@ gsap.to(".nature-camo", {
 const textContainer = document.querySelector(".martial-arts__copy");
 const textContainerParagraph = document.querySelector(".martial-arts__copy p");
 const textContainerParagraphText = document.querySelector(".martial-arts__copy p").innerText;
-const words = textContainerParagraphText.trim().split(" ");
+const textContainerWords = textContainerParagraphText.trim().split(" ");
 
-words.forEach((word) => {
+textContainerWords.forEach((word) => {
   const span = document.createElement("span");
   span.textContent = `${word} `;
   textContainer.appendChild(span);
 });
 textContainer.removeChild(textContainerParagraph);
 
-const wordSpans = document.querySelectorAll(".martial-arts__copy span");
+const textContainerWordSpans = document.querySelectorAll(".martial-arts__copy span");
 let fadedIndices = [];
 
 function fadeInRandomly() {
-  if (fadedIndices.length >= wordSpans.length) {
+  if (fadedIndices.length >= textContainerWordSpans.length) {
     return;
   }
 
   let randomIndex = -1;
 
   while (fadedIndices.includes(randomIndex) || randomIndex === -1) {
-    randomIndex = Math.floor(Math.random() * wordSpans.length);
+    randomIndex = Math.floor(Math.random() * textContainerWordSpans.length);
   }
 
-  wordSpans[randomIndex].style.opacity = 1;
+  textContainerWordSpans[randomIndex].style.opacity = 1;
   fadedIndices.push(randomIndex);
 
   setTimeout(fadeInRandomly, 50);
