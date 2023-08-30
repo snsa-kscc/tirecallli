@@ -17,7 +17,7 @@ invisibleWords.forEach((word) => generateSpan(word, invisibleHeading));
 const invisibleSpans = document.querySelectorAll(".invisibility span");
 
 gsap.from(invisibleSpans, {
-  opacity: 0.03,
+  opacity: 0.01,
   stagger: 0.1,
   scrollTrigger: {
     trigger: ".invisibility",
@@ -35,6 +35,16 @@ gsap.to(".offering", {
     trigger: ".offering p",
     start: "top center",
     end: "bottom 40%",
+    scrub: true,
+  },
+});
+
+gsap.from(".camouflage__copy-group", {
+  opacity: 0.1,
+  scrollTrigger: {
+    trigger: ".camouflage__copy-group",
+    start: "top 70%",
+    end: "top 25%",
     scrub: true,
   },
 });
