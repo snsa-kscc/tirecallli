@@ -9,6 +9,7 @@ import Footer from "../components/Footer.astro";
     title="Tire Calligraphy - Shop"
     url="https://tirecalli.com/shop"
     description="199144 and New Life are a Tire Calligraphy ongoing experimental projects. We experiment with material, color, shapes and cuts. Every item is a neutral gender item."
+    isTransitioning={true}
   />
   <body class="h-100 one-nine-nine-four-four">
     <Header />
@@ -98,7 +99,7 @@ import Footer from "../components/Footer.astro";
         <a href="/Dobokh-Parkha/">
           <article>
             <div class="card__image">
-              <img src="/img/Dobokh-Parkha/girl-in-black-jacket-front.webp" alt="tirecalli-picture" />
+              <img transition:name="test" src="/img/Dobokh-Parkha/girl-in-black-jacket-front.webp" alt="tirecalli-picture" />
             </div>
             <h5>Dobokh Parkha</h5>
             <div class="card__description">
