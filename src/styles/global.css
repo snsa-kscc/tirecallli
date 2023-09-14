@@ -2838,17 +2838,31 @@ input {
   min-height: 100vh;
   display: grid;
   grid-template-rows: 1fr auto;
+  overflow: hidden;
 }
 
 .campaigns__wrapper {
   margin: 4.6em 0 0 auto;
-  padding: 2em;
+  padding: 6em;
+}
+
+@media (max-width: 767px) {
+  .campaigns__wrapper {
+    padding: 4em;
+  }
+}
+
+.campaign {
+  font-size: clamp(6rem, 15vw, 17rem);
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid var(--base-color);
 }
 
 .preview {
   position: absolute;
-  width: 25rem;
-  height: 25rem;
+  width: 60rem;
+  height: 40rem;
   overflow: hidden;
   pointer-events: none;
   transform-origin: center;
@@ -2859,7 +2873,7 @@ input {
 .preview__img {
   width: 100%;
   height: 100%;
-  background: url(/img/sprite.png);
+  background: url(/img/sprite.webp);
   background-size: cover;
   background-position: 0 0;
   pointer-events: none;
