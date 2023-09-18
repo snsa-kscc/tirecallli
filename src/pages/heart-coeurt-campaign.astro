@@ -2,6 +2,7 @@
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import HeartCoeurt from "../components/HeartCoeurt.svg?raw";
 ---
 
 <html>
@@ -21,19 +22,25 @@ import Footer from "../components/Footer.astro";
         muted
         playsinline></video>
       <div>
-        <section class="heart-coeurt-evo">
-          <h4>Licitar aka The Heart</h4>
-          <h2>The evolution of an idea to a concept</h2>
-          <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-logo.webp" alt="tirecalli-picture" />
-          <p class="text--lg">
-            ...from the idea, first sketches, Guildan blanks, to team members, road trips across Europe, broken mallets and wheel spokes, and tournaments
-            played... What was imagined as a logo for the first Croatian bike polo team (circa 2013) - from Bike Polo Zagreb days, still before Tire
-            Calligraphy; years later became well accepted and recognized as a TC staple design. One of many works from Matej Pašalić, aka Skillcollector, who
-            also coined the term “Tire Calligraphy, Mallet & Ball”. Because we wanted it to be local – hence the name, and most of all, we wanted it to have a
-            meaning, we decided to go with the <span class="bold">Heart</span> symbol. <span class="bold">Licitar</span>, shaped as a heart, is a world known
-            Croatian - and a souvenir from the city of Zagreb.
-          </p>
-          <img src="/img/archive/Licitar/licitar-white-t-shirt-front.webp" alt="tirecalli-picture" />
+        <section class="heart-evo">
+          <div class="heart-evo__group heart-evo__group--first">
+            <div class="heart-evo__copy">
+              <h2>The evolution of an idea to a concept</h2>
+              <p class="text--lg mt-xl">
+                ...from the idea, first sketches, Guildan blanks, to team members, road trips across Europe, broken mallets and wheel spokes, and tournaments
+                played... What was imagined as a logo for the first Croatian bike polo team (circa 2013) - from Bike Polo Zagreb days, still before Tire
+                Calligraphy; years later became well accepted and recognized as a TC staple design. One of many works from Matej Pašalić, aka Skillcollector,
+                who also coined the term “Tire Calligraphy, Mallet & Ball”. Because we wanted it to be local – hence the name, and most of all, we wanted it to
+                have a meaning, we decided to go with the <span class="bold">Heart</span> symbol. <span class="bold">Licitar</span>, shaped as a heart, is a
+                world known Croatian - and a souvenir from the city of Zagreb.
+              </p>
+            </div>
+            <div class="heart-evo__svg" set:html={HeartCoeurt} />
+          </div>
+          <div class="heart-evo__group heart-evo__group--second">
+            <h1>Licitar aka The Heart</h1>
+            <div data-speed="1"><img src="/img/archive/Licitar/licitar-white-t-shirt-front.webp" alt="tirecalli-picture" /></div>
+          </div>
         </section>
         <h2>From hardcourt bikepolo to Heartcourt Bikepolo Zagreb...</h2>
         <p class="text--lg">

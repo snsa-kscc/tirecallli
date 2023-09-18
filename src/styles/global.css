@@ -2883,6 +2883,37 @@ input {
   pointer-events: none;
 }
 
-.heart-coeurt-evo {
+.heart-evo {
   margin: 3em;
+}
+
+.heart-evo__group {
+}
+
+.heart-evo__group--first {
+  display: flex;
+  gap: 4em;
+}
+
+.heart-evo__copy {
+  flex: 1 1 45rem;
+}
+
+.heart-evo__group--second {
+  margin-top: 10em;
+}
+
+.heart-evo__svg {
+  width: 25%;
+  flex: 0 1 40rem;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
