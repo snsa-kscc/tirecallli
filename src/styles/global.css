@@ -2884,7 +2884,7 @@ input {
 }
 
 .heart-evo {
-  margin: 5em;
+  margin: 15em 5em;
 }
 
 .heart-evo__group--first {
@@ -2903,10 +2903,10 @@ input {
 }
 
 .heart-evo__group--second {
-  margin-top: 10em;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   align-items: end;
+  margin-top: 20em;
 }
 
 .heart-evo__group--second > h1 {
@@ -2922,7 +2922,7 @@ input {
 .heart-evo__group--third {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  margin-top: 10em;
+  margin-top: 20em;
 }
 
 .heart-evo__items {

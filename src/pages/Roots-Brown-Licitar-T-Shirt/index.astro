@@ -1,0 +1,221 @@
+---
+import Head from "../../components/Head.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { Buttons } from "../../components/Buttons";
+
+const buttons = [
+  { id: 101, size: "XS" },
+  { id: 102, size: "S" },
+  { id: 103, size: "M" },
+  { id: 104, size: "L" },
+  { id: 105, size: "XL" },
+];
+---
+
+<html>
+  <Head
+    title="Tire Calligraphy - Roots Brown Licitar T-Shirt"
+    url="https://tirecalli.com/basic-denim-overall-pant/"
+    description="A basic denim overall pant. At first glance."
+  />
+  <body>
+    <Header />
+    <main>
+      <article class="product">
+        <aside class="product__aside">
+          <div class="product__figures">
+            <a href="details.html#photo-1"><img src="/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant.webp" alt="tirecalli-picture" /></a>
+            <a href="details.html#photo-2"><img src="/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-back.webp" alt="tirecalli-picture" /></a>
+          </div>
+          <div class="product__figures">
+            <a href="details.html#photo-3"
+              ><img src="/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp" loading="lazy" alt="tirecalli-picture" />
+            </a>
+            <a href="details.html#photo-4"
+              ><img src="/img/Basic-Denim-Overall-Pant/basic-denim-overall-pant-back-pocket-detail.webp" loading="lazy" alt="tirecalli-picture" />
+            </a>
+          </div>
+          <div class="product__figures">
+            <a href="details.html#photo-5"
+              ><img src="/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-second-styling-detail.webp" loading="lazy" alt="tirecalli-picture" />
+            </a>
+            <a href="details.html#photo-6"
+              ><img src="/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-second-styling.webp" loading="lazy" alt="tirecalli-picture" />
+            </a>
+          </div>
+          <div class="product__figures">
+            <a href="details.html#photo-7"
+              ><img src="/img/Basic-Denim-Overall-Pant/basic-denim-overall-pant-second-styling.webp" loading="lazy" alt="tirecalli-picture" />
+            </a>
+            <a href="details.html#photo-8"
+              ><img src="/img/Basic-Denim-Overall-Pant/man-in-basic-denim-overall-pant-second-styling.webp" loading="lazy" alt="tirecalli-picture" />
+            </a>
+          </div>
+          <div class="product__figures">
+            <a href="details.html#photo-9"
+              ><img src="/img/Basic-Denim-Overall-Pant/basic-denim-overall-pant-second-styling-inner-pockets.webp" loading="lazy" alt="tirecalli-picture" />
+            </a>
+            <a href="details.html#photo-10"
+              ><img
+                src="/img/Basic-Denim-Overall-Pant/basic-denim-overall-pant-second-styling-inner-pockets-reveal.webp"
+                loading="lazy"
+                alt="tirecalli-picture"
+              />
+            </a>
+          </div>
+          <div class="product__figures">
+            <a href="details.html#photo-11"
+              ><img src="/img/Basic-Denim-Overall-Pant/basic-denim-overall-pant-second-styling-detail.webp" loading="lazy" alt="tirecalli-picture" />
+            </a>
+            <a href="details.html#photo-12"
+              ><img src="/img/Basic-Denim-Overall-Pant/basic-denim-overall-pant-strap-buckle-detail.webp" loading="lazy" alt="tirecalli-picture" />
+            </a>
+          </div>
+          <div class="product__figures">
+            <a href="details.html#photo-13"
+              ><img src="/img/Basic-Denim-Overall-Pant/man-in-basic-denim-overall-pant-2.webp" loading="lazy" alt="tirecalli-picture" />
+            </a>
+            <a href="details.html#photo-14"
+              ><img src="/img/Basic-Denim-Overall-Pant/basic-denim-overall-pant-strap-detail.webp" loading="lazy" alt="tirecalli-picture" />
+            </a>
+          </div>
+          <div class="product__figures">
+            <a href="details.html#photo-15"
+              ><img src="/img/Basic-Denim-Overall-Pant/man-in-basic-denim-overall-pant.webp" loading="lazy" alt="tirecalli-picture" />
+            </a>
+            <div></div>
+          </div>
+        </aside>
+        <section class="product__info">
+          <div class="product__item">
+            <h2>ROOTS BROWN LICITAR T-SHIRT</h2>
+          </div>
+          <div class="product__item product__item--price">
+            <p>Price: 175€</p>
+          </div>
+          <div class="product__item product__item--size-select">
+            <p>Select your size and add to bag</p>
+          </div>
+          <div class="product__item product__item--sizes">
+            <Buttons client:load items={buttons} />
+          </div>
+
+          <div class="product__item product__item--description">
+            <p class="mt">
+              A toned-down front embroidery detail, coming to real life only on the second or third glance. Or just one gentle touch. Located at front bottom, a
+              simple black and white, almost “yin-yang-esque” tiny Heart patch detail, as a counterpoint to the enlarged screen printed, screaming back piece
+              to.
+            </p>
+          </div>
+          <div class="product__item product__item--accordion">
+            <div class="accordion">
+              <div>
+                <input type="checkbox" name="panel" id="panel-1" />
+                <label for="panel-1">Details</label>
+                <div class="accordion__content accordion__content--panel-1">
+                  <ul class="accordion__list accordion-panel-1__list">
+                    <li>A gender-neutral cut</li>
+                    <li>Back design screen print application</li>
+                    <li>Front chest embroidery detail</li>
+                    <li>Front bottom patch detail</li>
+                    <li>Color: Roots Brown</li>
+                    <li>Material: 70% French terry heavy cotton (280 gram, 9.8 oz), 30% polyester</li>
+                    <li>Care: Machine-wash cold, warm (30°C)</li>
+                    <li>Proudly created in Croatia from local craftswomen and men</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="product__item product__item--accordion">
+          <div class="accordion">
+            <div>
+              <input type="checkbox" name="panel" id="panel-2" />
+              <label for="panel-2">Size & Fit</label>
+              <div class="accordion__content accordion__content--panel-2">
+                <ul class="accordion__list accordion-panel-2__list">
+                  <li>Relaxed fit</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product__item product__item--accordion">
+          <div class="accordion">
+            <div>
+              <input type="checkbox" name="panel" id="panel-3" />
+              <label for="panel-3">Shipping & Returns</label>
+              <div class="accordion__content accordion__content--panel-3">
+                <div class="accordion__copy">
+                  <p class="accordion__body">Standard shipping and 30-day returns.</p>
+                  <p class="accordion__body">Return policy exclusions apply.</p>
+                  <p class="accordion__body">
+                    <a href="/legal">Learn more.</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <section class="upsell">
+      <h2>You might also like</h2>
+      <div class="upsell__group">
+        <a href="/Hybrid-Jacket/">
+          <div class="upsell__item">
+            <img src="/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp" alt="tirecalli-picture" loading="lazy" />
+            <h5>Hybrid Jacket</h5>
+          </div>
+        </a>
+        <a href="/Basic-Denim-Jacket/">
+          <div class="upsell__item">
+            <img src="/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp" alt="tirecalli-picture" loading="lazy" />
+            <h5>Basic Denim Jacket</h5>
+          </div>
+        </a>
+        <a href="/Black-Quilted-Jacket/">
+          <div class="upsell__item">
+            <img src="/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp" alt="tirecalli-picture" loading="lazy" />
+            <h5>Black Quilted Jacket</h5>
+          </div>
+        </a>
+        <a href="/Pale-Lemon-Licitar-T-Shirt/">
+          <div class="upsell__item">
+            <img src="/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp" alt="tirecalli-picture" loading="lazy" />
+            <h5>Pale Lemon Licitar T-Shirt</h5>
+          </div>
+        </a>
+        <a href="/Pale-Lemon-Licitar-Tank-Top/">
+          <div class="upsell__item">
+            <img src="/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp" alt="tirecalli-picture" loading="lazy" />
+            <h5>Pale Lemon Licitar Tank Top</h5>
+          </div>
+        </a>
+        <a href="/Nude-Pink-Licitar-T-Shirt/">
+          <div class="upsell__item">
+            <img src="/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp" alt="tirecalli-picture" loading="lazy" />
+            <h5>Nude Pink Licitar T-Shirt</h5>
+          </div>
+        </a>
+        <a href="/Roots-Brown-Licitar-T-Shirt/">
+          <div class="upsell__item">
+            <img src="/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp" alt="tirecalli-picture" loading="lazy" />
+            <h5>Roots Brown Licitar T-Shirt</h5>
+          </div>
+        </a>
+        <a href="/Forrest-Brown-Licitar-Longsleeve-T/">
+          <div class="upsell__item">
+            <img src="/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp" alt="tirecalli-picture" loading="lazy" />
+            <h5>Forrest Brown Licitar Longsleeve T</h5>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <Footer />
+    <script src="../../js/app.js"></script>
+  </body>
+</html>
