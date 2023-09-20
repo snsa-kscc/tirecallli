@@ -25,3 +25,14 @@ originsImgs.forEach((img) => {
     },
   });
 });
+
+gsap.from(".heart-origins__title h4", {
+  xPercent: 115,
+  opacity: 0.1,
+  scrollTrigger: {
+    trigger: ".heart-origins__title h4",
+    start: "top 90%",
+    end: "top 30%",
+    scrub: true,
+  },
+});

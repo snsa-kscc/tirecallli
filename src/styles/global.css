@@ -2884,12 +2884,12 @@ input {
 }
 
 .heart-evo {
-  margin: 15em 5em;
+  margin: 15em 10em;
 }
 
 .heart-evo__group--first {
   display: flex;
-  gap: 4em;
+  gap: 10em;
 }
 
 .heart-evo__copy {
@@ -2931,6 +2931,26 @@ input {
 
 .heart-origins {
   margin: 5em;
+}
+
+.heart-origins__copy {
+  background: var(--accent-color);
+  color: white;
+  width: 75%;
+  margin: 7em 0 7em auto;
+  padding: 3em;
+  border-radius: 1em;
+}
+
+.heart-origins__title {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.heart-origins__copy a {
+  color: #e7e7e7;
 }
 
 @keyframes rotate {
