@@ -16,7 +16,7 @@ import Footer from "../components/Footer.astro";
       <section class="heart-intro">
         <img class="heart-intro__img" src="/img/heart-coeurt.webp" alt="tirecalli-picture" />
       </section>
-      <section class="heart-evo">
+      <section class="heart-evo heart--wrapper">
         <div class="heart--copy">
           <h2>The evolution of an idea to a concept</h2>
           <p class="mt-xl">
@@ -42,8 +42,8 @@ import Footer from "../components/Footer.astro";
           </p>
         </div>
       </section>
-      <section class="heart-origins">
-        <div class="flex">
+      <section class="heart-origins heart--wrapper">
+        <div class="heart--grid">
           <img src="/img/campaign/heart-coeurt/tc23-hear-coeurt-inspo.webp" alt="tirecalli-picture" />
           <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-inspo-5-glacier.webp" alt="tirecalli-picture" />
           <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-inspo-4.webp" alt="tirecalli-picture" />
@@ -62,7 +62,7 @@ import Footer from "../components/Footer.astro";
             outdoors was a major influence.
           </p>
         </div>
-        <div class="flex">
+        <div class="heart--spacer flex heart--flex">
           <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-inspo-2.webp" alt="tirecalli-picture" />
           <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-inspo-3.webp" alt="tirecalli-picture" />
         </div>
@@ -75,38 +75,44 @@ import Footer from "../components/Footer.astro";
           </p>
         </div>
       </section>
-      <video
-        class="vid vid--heart-coeurt"
-        src="https://res.cloudinary.com/snsa-kscc/video/upload/tc23-heart-coeurt-inspo-4-mountain-running.mp4"
-        loop
-        muted
-        playsinline></video>
-      <div class="flex">
-        <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-2-2.webp" alt="tirecalli-picture" />
-        <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt.webp" alt="tirecalli-picture" />
-      </div>
-      <div class="heart--copy">
-        <p>
-          And because we still like the #IYKYK approach and playing with words and meanings – emphasizing the relevant, we’re presenting you the concept of
-          <span class="bold">Heart Cœurt</span> (Cœur: Heart, French x Court: Playing field, English). Think about it not even as a time and a place, but as a
-          notion, a feeling of Flow, complete Focus and Commitment, being lost in the pureness of a moment of performance perfection. After starting from a
-          certain point (a place and in time), you will soon get lost in Your World. At that specific single point, you are creating your Playground.
-        </p>
-      </div>
-      <div class="flex">
-        <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-embroidery-detail-2.webp" alt="tirecalli-picture" />
-        <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-embroidery-detail.webp" alt="tirecalli-picture" />
-        <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-logo-wip.webp" alt="tirecalli-picture" />
-        <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-embroidery-machine.webp" alt="tirecalli-picture" />
-      </div>
-      <div class="heart--copy centered">
-        <p class="text--lg">We invite you to create your Playground.</p>
-        <h2>We invite you to Find Your Heart Cœurt</h2>
-        <p class="text--lg"><a href="/shop">Explore The Concept</a></p>
-      </div>
+      <section class="heart-coeurt heart--wrapper">
+        <video
+          class="vid vid--heart-coeurt"
+          src="https://res.cloudinary.com/snsa-kscc/video/upload/tc23-heart-coeurt-inspo-4-mountain-running.mp4"
+          loop
+          muted
+          autoplay
+          playsinline></video>
+        <div class="heart--spacer flex heart--flex heart--flex-right">
+          <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-2-2.webp" alt="tirecalli-picture" />
+          <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt.webp" alt="tirecalli-picture" />
+        </div>
+        <div class="heart--copy">
+          <p>
+            And because we still like the #IYKYK approach and playing with words and meanings – emphasizing the relevant, we’re presenting you the concept of
+            <span class="bold">Heart Cœurt</span> (Cœur: Heart, French x Court: Playing field, English). Think about it not even as a time and a place, but as a
+            notion, a feeling of Flow, complete Focus and Commitment, being lost in the pureness of a moment of performance perfection. After starting from a
+            certain point (a place and in time), you will soon get lost in Your World. At that specific single point, you are creating your Playground.
+          </p>
+        </div>
+      </section>
+      <section class="heart-embroidery heart--wrapper">
+        <div class="heart--grid">
+          <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-embroidery-detail-2.webp" alt="tirecalli-picture" />
+          <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-embroidery-detail.webp" alt="tirecalli-picture" />
+          <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-embroidery-machine.webp" alt="tirecalli-picture" />
+        </div>
+        <div class="mt">
+          <img class="heart-embroidery__img" src="/img/campaign/heart-coeurt/tc23-heart-coeurt-logo-wip.webp" alt="tirecalli-picture" />
+        </div>
+        <div class="heart--copy centered heart--spacer heart--auto">
+          <p class="text--lg">We invite you to create your Playground.</p>
+          <h2>We invite you to Find Your Heart Cœurt</h2>
+          <p class="text--lg"><a href="/shop">Explore The Concept</a></p>
+        </div>
+      </section>
     </main>
     <Footer />
     <script src="../js/app.js"></script>
-    <script src="../js/app-heart-coeurt.js"></script>
   </body>
 </html>

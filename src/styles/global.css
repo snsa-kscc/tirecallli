@@ -2884,27 +2884,64 @@ input {
   pointer-events: none;
 }
 
+.heart--wrapper {
+  margin: 15em 3em;
+}
+
+@media (max-width: 700px) {
+  .heart--wrapper {
+    margin: 7em 2em;
+  }
+}
+
 .heart--copy {
   max-width: 120rem;
   margin: 0 auto;
+}
+
+.heart--spacer {
+  margin: 15em 0;
+}
+
+@media (max-width: 700px) {
+  .heart--spacer {
+    margin: 6em 0;
+  }
+}
+
+.heart--auto {
+  margin-inline: auto;
+}
+
+.heart--flex {
+  max-width: 130rem;
+  margin-inline: auto;
+  max-height: 90vh;
+}
+
+.heart--flex-right {
+  margin-right: 0;
+}
+
+.heart--flex img {
+  object-fit: cover;
+}
+
+.heart--grid {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.heart--grid img {
+  max-height: 70vmin;
+  object-fit: cover;
 }
 
 .heart-intro__img {
   min-height: 40vh;
   max-height: 80vh;
   object-fit: cover;
-}
-
-.heart-evo,
-.heart-origins {
-  margin: 15em 3em;
-}
-
-@media (max-width: 700px) {
-  .heart-evo,
-  .heart-origins {
-    margin: 7em 2em;
-  }
 }
 
 .heart-evo__group {
@@ -2940,4 +2977,9 @@ input {
   display: grid;
   place-content: center;
   text-align: center;
+}
+
+.heart-embroidery__img {
+  max-height: 80vh;
+  object-fit: contain;
 }
