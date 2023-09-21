@@ -2,7 +2,6 @@
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import HeartCoeurt from "../components/HeartCoeurt.svg?raw";
 ---
 
 <html>
@@ -14,54 +13,51 @@ import HeartCoeurt from "../components/HeartCoeurt.svg?raw";
   <body>
     <Header />
     <main class="overflow-hidden">
+      <section class="heart-intro">
+        <img class="heart-intro__img" src="/img/heart-coeurt.webp" alt="tirecalli-picture" />
+      </section>
       <section class="heart-evo">
-        <div class="heart-evo__group heart-evo__group--first">
-          <div></div>
-          <div class="heart-evo__copy">
-            <h2>The evolution of an idea to a concept</h2>
-            <p class="text--md mt-xl">
-              ...from the idea, first sketches, Guildan blanks, to team members, road trips across Europe, broken mallets and wheel spokes, and tournaments
-              played... What was imagined as a logo for the first Croatian bike polo team (circa 2013) - from Bike Polo Zagreb days, still before Tire
-              Calligraphy; years later became well accepted and recognized as a TC staple design. One of many works from Matej Pašalić, aka Skillcollector, who
-              also coined the term “Tire Calligraphy, Mallet & Ball”. Because we wanted it to be local – hence the name, and most of all, we wanted it to have a
-              meaning, we decided to go with the <span class="bold">Heart</span> symbol. <span class="bold">Licitar</span>, shaped as a heart, is a world known
-              Croatian - and a souvenir from the city of Zagreb.
-            </p>
-          </div>
-          <div class="heart-evo__svg" set:html={HeartCoeurt} />
+        <div class="heart--copy">
+          <h2>The evolution of an idea to a concept</h2>
+          <p class="mt-xl">
+            ...from the idea, first sketches, Guildan blanks, to team members, road trips across Europe, broken mallets and wheel spokes, and tournaments
+            played... What was imagined as a logo for the first Croatian bike polo team (circa 2013) - from Bike Polo Zagreb days, still before Tire
+            Calligraphy; years later became well accepted and recognized as a TC staple design. One of many works from Matej Pašalić, aka Skillcollector, who
+            also coined the term “Tire Calligraphy, Mallet & Ball”. Because we wanted it to be local – hence the name, and most of all, we wanted it to have a
+            meaning, we decided to go with the <span class="bold">Heart</span> symbol. <span class="bold">Licitar</span>, shaped as a heart, is a world known
+            Croatian - and a souvenir from the city of Zagreb.
+          </p>
         </div>
-        <div class="heart-evo__group heart-evo__group--second">
+        <div class="heart-evo__group">
           <h1>Licitar aka The Heart</h1>
-          <div data-speed="1"><img src="/img/archive/Licitar/licitar-white-t-shirt-front.webp" alt="tirecalli-picture" /></div>
+          <div><img src="/img/archive/Licitar/licitar-white-t-shirt-front.webp" alt="tirecalli-picture" /></div>
         </div>
-        <div class="heart-evo__group heart-evo__group--third">
-          <div class="heart-evo__items">
-            <h2>From hardcourt bikepolo to Heartcourt Bikepolo Zagreb...</h2>
-            <p class="text--md mt-xl">
-              As the full name of the urban discipline is hardcourt bikepolo – played mostly on concrete surfaces in the urban setting of a City, and because we
-              always liked the notion of <span class="bold">#IYKYK</span>, we played with the name and with that, the meaning and importance of doing something
-              with your Heart, <span class="bold">going all out and full in with a strong belief</span>, whether it was a simple 3x3 pickup game of polo, a
-              finals game at the tournament, to organizing one and in the end, even starting a clothing label.
-            </p>
-          </div>
+        <div class="heart--copy">
+          <h2>From hardcourt bikepolo to Heartcourt Bikepolo Zagreb...</h2>
+          <p class="mt-xl">
+            As the full name of the urban discipline is hardcourt bikepolo – played mostly on concrete surfaces in the urban setting of a City, and because we
+            always liked the notion of <span class="bold">#IYKYK</span>, we played with the name and with that, the meaning and importance of doing something
+            with your Heart, <span class="bold">going all out and full in with a strong belief</span>, whether it was a simple 3x3 pickup game of polo, a finals
+            game at the tournament, to organizing one and in the end, even starting a clothing label.
+          </p>
         </div>
       </section>
       <section class="heart-origins">
         <div class="flex">
-          <img data-speed="0" src="/img/campaign/heart-coeurt/tc23-hear-coeurt-inspo.webp" alt="tirecalli-picture" />
-          <img data-speed="1" src="/img/campaign/heart-coeurt/tc23-heart-coeurt-inspo-5-glacier.webp" alt="tirecalli-picture" />
-          <img data-speed="2" src="/img/campaign/heart-coeurt/tc23-heart-coeurt-inspo-4.webp" alt="tirecalli-picture" />
+          <img src="/img/campaign/heart-coeurt/tc23-hear-coeurt-inspo.webp" alt="tirecalli-picture" />
+          <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-inspo-5-glacier.webp" alt="tirecalli-picture" />
+          <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-inspo-4.webp" alt="tirecalli-picture" />
         </div>
         <div class="heart-origins__title">
           <h4>Origins. From Heartcourt to Heart Cœurt</h4>
         </div>
-        <div class="heart-origins__copy">
-          <p class="text--md">
+        <div class="heart--copy">
+          <p>
             With the progression of our interests <a href="/about">from TC manifesto</a>, through time, which was invested in creating TC21 and TC22 offerings,
             getting to know the people we decided to work with, we concluded that <span class="bold">The Process</span> was appreciated greatly as much as the
             result, if not even more so.
           </p>
-          <p class="text--md mt">
+          <p class="mt">
             For TC23/4 we decided to take you back to our origins, and with that, us as well. We’re bringing The Heart back, but through a wider lens. The great
             outdoors was a major influence.
           </p>
@@ -70,12 +66,14 @@ import HeartCoeurt from "../components/HeartCoeurt.svg?raw";
           <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-inspo-2.webp" alt="tirecalli-picture" />
           <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-inspo-3.webp" alt="tirecalli-picture" />
         </div>
-        <p class="text--lg">
-          We have come to appreciate the time and most of all patience it takes to accomplish the goals, in everyday activities of sports and arts alike.
-          Running every single day for months to prepare a marathon or a 100k ultra, hitting the gym every day to prepare for the next climbing comp, landing
-          that new trick, sketching your tatt-flashes, or just creating and following through on a new habit which enables your growth… We need to put in the
-          hours, keep coming back, tweak and repeat; the goal is the fuel, but the mechanics of the process is what counts.
-        </p>
+        <div class="heart--copy">
+          <p>
+            We have come to appreciate the time and most of all patience it takes to accomplish the goals, in everyday activities of sports and arts alike.
+            Running every single day for months to prepare a marathon or a 100k ultra, hitting the gym every day to prepare for the next climbing comp, landing
+            that new trick, sketching your tatt-flashes, or just creating and following through on a new habit which enables your growth… We need to put in the
+            hours, keep coming back, tweak and repeat; the goal is the fuel, but the mechanics of the process is what counts.
+          </p>
+        </div>
       </section>
       <video
         class="vid vid--heart-coeurt"
@@ -87,21 +85,25 @@ import HeartCoeurt from "../components/HeartCoeurt.svg?raw";
         <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-2-2.webp" alt="tirecalli-picture" />
         <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt.webp" alt="tirecalli-picture" />
       </div>
-      <p class="text--lg">
-        And because we still like the #IYKYK approach and playing with words and meanings – emphasizing the relevant, we’re presenting you the concept of
-        <span class="bold">Heart Cœurt</span> (Cœur: Heart, French x Court: Playing field, English). Think about it not even as a time and a place, but as a
-        notion, a feeling of Flow, complete Focus and Commitment, being lost in the pureness of a moment of performance perfection. After starting from a
-        certain point (a place and in time), you will soon get lost in Your World. At that specific single point, you are creating your Playground.
-      </p>
+      <div class="heart--copy">
+        <p>
+          And because we still like the #IYKYK approach and playing with words and meanings – emphasizing the relevant, we’re presenting you the concept of
+          <span class="bold">Heart Cœurt</span> (Cœur: Heart, French x Court: Playing field, English). Think about it not even as a time and a place, but as a
+          notion, a feeling of Flow, complete Focus and Commitment, being lost in the pureness of a moment of performance perfection. After starting from a
+          certain point (a place and in time), you will soon get lost in Your World. At that specific single point, you are creating your Playground.
+        </p>
+      </div>
       <div class="flex">
         <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-embroidery-detail-2.webp" alt="tirecalli-picture" />
         <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-embroidery-detail.webp" alt="tirecalli-picture" />
         <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-logo-wip.webp" alt="tirecalli-picture" />
         <img src="/img/campaign/heart-coeurt/tc23-heart-coeurt-embroidery-machine.webp" alt="tirecalli-picture" />
       </div>
-      <p class="text--lg">We invite you to create your Playground.</p>
-      <h2>We invite you to Find Your Heart Cœurt</h2>
-      <p class="text--lg"><a href="/shop">Explore The Concept</a></p>
+      <div class="heart--copy centered">
+        <p class="text--lg">We invite you to create your Playground.</p>
+        <h2>We invite you to Find Your Heart Cœurt</h2>
+        <p class="text--lg"><a href="/shop">Explore The Concept</a></p>
+      </div>
     </main>
     <Footer />
     <script src="../js/app.js"></script>
