@@ -2936,12 +2936,17 @@ input {
 .heart--grid img {
   max-height: 70vmin;
   object-fit: cover;
+  border-radius: 4rem;
 }
 
 .heart-intro__img {
   min-height: 40vh;
   max-height: 80vh;
   object-fit: cover;
+}
+
+.heart-evo p {
+  columns: 2;
 }
 
 .heart-evo__group {
@@ -2955,6 +2960,10 @@ input {
 @media (max-width: 700px) {
   .heart-evo__group {
     margin: 7em 0;
+  }
+
+  .heart-evo p {
+    columns: auto;
   }
 }
 
