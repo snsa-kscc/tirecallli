@@ -489,6 +489,10 @@ h6 {
   gap: 1em;
 }
 
+.z--1 {
+  z-index: -1;
+}
+
 #canvas {
   position: fixed;
   inset: 0;

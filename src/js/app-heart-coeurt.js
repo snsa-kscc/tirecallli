@@ -33,19 +33,19 @@ gsap.to(".heart-evo__group h4:nth-of-type(2)", {
   },
 });
 
-gsap.from(".heart-evo__imgs", {
-  scale: 2,
-  transformOrigin: "50% 50%",
-  filter: "grayscale(100%)",
-  scrollTrigger: {
-    trigger: ".heart-evo__imgs",
-    scrub: true,
-    start: "top 20%",
-    end: "+=400%",
-    markers: true,
-    // pin: true,
-  },
-});
+// gsap.from(".heart-evo__imgs", {
+//   scale: 2,
+//   transformOrigin: "50% 50%",
+//   filter: "grayscale(100%)",
+//   scrollTrigger: {
+//     trigger: ".heart-evo__imgs",
+//     scrub: true,
+//     start: "top 20%",
+//     end: "+=400%",
+//     markers: true,
+//     // pin: true,
+//   },
+// });
 
 const heartInspoPics = [...document.querySelectorAll(".heart-origins__inspo img")];
 
@@ -89,6 +89,40 @@ gsap.fromTo(
   }
 );
 
+function handleTransition(elements, trigger) {
+  const elementsGroup = [...document.querySelectorAll(elements)];
+
+  const tl1 = gsap.timeline({
+    scrollTrigger: {
+      trigger,
+      start: "top 25%",
+      end: "+=300%",
+      scrub: true,
+      pin: true,
+    },
+  });
+
+  tl1.to(
+    elementsGroup[1],
+    {
+      xPercent: -90,
+      opacity: 0.2,
+    },
+    "<"
+  );
+
+  tl1.to(
+    elementsGroup[2],
+    {
+      xPercent: -50,
+      opacity: 1,
+    },
+    "<"
+  );
+}
+
+handleTransition(".heart-origins__group > *", ".heart-origins__group");
+
 gsap.fromTo(
   "main",
   {
@@ -106,6 +140,8 @@ gsap.fromTo(
     },
   }
 );
+
+handleTransition(".heart-coeurt__group > *", ".heart-coeurt__group");
 
 gsap.set("main", {
   background: "#fff",
