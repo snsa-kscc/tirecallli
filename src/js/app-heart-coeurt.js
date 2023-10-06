@@ -51,7 +51,7 @@ heartInspoPics.forEach((pic, idx) => {
     pic,
     {
       xPercent: idx * -90,
-      opacity: 0.8 / (idx * 1.1 + 1),
+      opacity: 1 / (idx * 1.1 + 1),
     },
     "<"
   );
@@ -74,3 +74,26 @@ gsap.fromTo(
     },
   }
 );
+
+gsap.fromTo(
+  "main",
+  {
+    background: "#fffbdc",
+    color: "#505050",
+  },
+  {
+    background: "#7c6f6a",
+    color: "#d8d8d8",
+    scrollTrigger: {
+      trigger: ".heart-coeurt__copy",
+      start: "top center",
+      end: "+=25% 45%",
+      scrub: true,
+    },
+  }
+);
+
+gsap.set("main", {
+  background: "#fff",
+  color: "#000",
+});
