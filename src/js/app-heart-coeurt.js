@@ -33,6 +33,20 @@ gsap.to(".heart-evo__group h4:nth-of-type(2)", {
   },
 });
 
+gsap.from(".heart-evo__imgs", {
+  scale: 2,
+  transformOrigin: "50% 50%",
+  filter: "grayscale(100%)",
+  scrollTrigger: {
+    trigger: ".heart-evo__imgs",
+    scrub: true,
+    start: "top 20%",
+    end: "+=400%",
+    markers: true,
+    // pin: true,
+  },
+});
+
 const heartInspoPics = [...document.querySelectorAll(".heart-origins__inspo img")];
 
 const tl = gsap.timeline({

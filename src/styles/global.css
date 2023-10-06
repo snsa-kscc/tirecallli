@@ -3000,6 +3000,16 @@ input {
   }
 }
 
+.heart-evo__imgs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1em;
+}
+
+.heart-evo__imgs img {
+  border-radius: 2rem;
+}
+
 .heart-origins__title {
   min-height: 100vh;
   display: grid;
@@ -3009,7 +3019,9 @@ input {
 
 .heart-embroidery__img {
   max-height: 80vh;
-  object-fit: contain;
+  max-width: fit-content;
+  margin: 0 auto;
+  border-radius: 2rem;
 }
 
 .displacement {
