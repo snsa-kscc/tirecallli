@@ -54,7 +54,7 @@ const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".heart-origins__inspo",
     start: "top 25%",
-    end: "+=300%",
+    end: "+=200%",
     scrub: true,
     pin: true,
   },
@@ -97,7 +97,7 @@ function handleTransition(elements, trigger) {
     scrollTrigger: {
       trigger,
       start: "top 25%",
-      end: "+=300%",
+      end: "+=200%",
       scrub: true,
       pin: true,
     },
