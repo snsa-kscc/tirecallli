@@ -40,8 +40,8 @@ gsap.from(".heart-evo__imgs", {
   scrollTrigger: {
     trigger: ".heart-evo__imgs",
     scrub: true,
-    start: "top 20%",
-    end: "+1000 top",
+    start: "top top",
+    end: "450 top",
     onLeave: () => {
       ScrollTrigger.refresh();
     },
@@ -66,7 +66,7 @@ heartInspoPics.forEach((pic, idx) => {
     pic,
     {
       xPercent: idx * -90,
-      opacity: 1 / (idx * 1.1 + 1),
+      opacity: 1 / (idx * 0.16 + 1),
     },
     "<"
   );
