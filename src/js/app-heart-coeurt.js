@@ -1,6 +1,6 @@
-import { gsap, ScrollTrigger, Flip } from "gsap/all";
+import { gsap, ScrollTrigger } from "gsap/all";
 
-gsap.registerPlugin(ScrollTrigger, Flip);
+gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".displacement", {
   r: 720,
@@ -33,19 +33,20 @@ gsap.to(".heart-evo__group h4:nth-of-type(2)", {
   },
 });
 
-// gsap.from(".heart-evo__imgs", {
-//   scale: 2,
-//   transformOrigin: "50% 50%",
-//   filter: "grayscale(100%)",
-//   scrollTrigger: {
-//     trigger: ".heart-evo__imgs",
-//     scrub: true,
-//     start: "top 20%",
-//     end: "+=400%",
-//     markers: true,
-//     // pin: true,
-//   },
-// });
+gsap.from(".heart-evo__imgs", {
+  width: "300vw",
+  filter: "grayscale(1)",
+  duration: 2,
+  scrollTrigger: {
+    trigger: ".heart-evo__imgs",
+    scrub: true,
+    start: "top 20%",
+    end: "+1000 top",
+    onLeave: () => {
+      ScrollTrigger.refresh();
+    },
+  },
+});
 
 const heartInspoPics = [...document.querySelectorAll(".heart-origins__inspo img")];
 
@@ -92,7 +93,7 @@ gsap.fromTo(
 function handleTransition(elements, trigger) {
   const elementsGroup = [...document.querySelectorAll(elements)];
 
-  const tl1 = gsap.timeline({
+  const tl = gsap.timeline({
     scrollTrigger: {
       trigger,
       start: "top 25%",
@@ -102,7 +103,7 @@ function handleTransition(elements, trigger) {
     },
   });
 
-  tl1.to(
+  tl.to(
     elementsGroup[1],
     {
       xPercent: -90,
@@ -111,7 +112,7 @@ function handleTransition(elements, trigger) {
     "<"
   );
 
-  tl1.to(
+  tl.to(
     elementsGroup[2],
     {
       xPercent: -50,

@@ -120,7 +120,9 @@ function main() {
     window.location.href = "/brand-guidelines.html";
   };
 
-  const lenis = new Lenis();
+  const lenis = new Lenis({
+    lerp: 0.09,
+  });
 
   function raf(time) {
     lenis.raf(time);

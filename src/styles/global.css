@@ -3008,6 +3008,11 @@ input {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1em;
+  margin: 30vh 0;
+  width: 100vw;
+  height: min-content;
+  flex: none;
+  filter: grayscale(0);
 }
 
 .heart-evo__imgs img {
