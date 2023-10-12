@@ -4,13 +4,7 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { Buttons } from "../../components/Buttons";
 
-const buttons = [
-  { id: 101, size: "XS" },
-  { id: 102, size: "S" },
-  { id: 103, size: "M" },
-  { id: 104, size: "L" },
-  { id: 105, size: "XL" },
-];
+const buttons = [{ id: 103, size: "M" }];
 ---
 
 <html>
@@ -92,7 +86,7 @@ const buttons = [
             <h2>ASH BROWN LICITAR LONGSLEEVE T</h2>
           </div>
           <div class="product__item product__item--price">
-            <p>Price: 80€</p>
+            <p>Price: 75€</p>
           </div>
           <div class="product__item product__item--size-select">
             <p>Select your size and add to bag</p>
@@ -100,13 +94,14 @@ const buttons = [
           <div class="product__item product__item--sizes">
             <Buttons client:load items={buttons} />
           </div>
-
           <div class="product__item product__item--description">
-            <p class="mt">
-              A toned-down front embroidery detail, coming to real life only on the second or third glance. Or just one gentle touch. Located at front bottom, a
-              simple black and white, almost “yin-yang-esque” tiny Heart patch detail, as a counterpoint to the enlarged screen printed, screaming back piece.
-              <p>Raglan sleeves for a relaxed look.</p>
+            <p class="mt">A toned-down front embroidery detail, coming to real life only on the second or third glance.</p>
+            <p>Or just one gentle touch.</p>
+            <p>
+              Located at front bottom, a simple black and white, almost “yin-yang-esque” tiny Heart patch detail, as a counterpoint to the enlarged screen
+              printed, screaming back piece.
             </p>
+            <p>Raglan sleeves for a relaxed look.</p>
           </div>
           <div class="product__item product__item--accordion">
             <div class="accordion">
@@ -120,7 +115,7 @@ const buttons = [
                     <li>Back design screen print application</li>
                     <li>Front chest embroidery detail</li>
                     <li>Front bottom patch detail</li>
-                    <li>Color: Ash Brown</li>
+                    <li>Color: Forrest Brown</li>
                     <li>Material: 100% Cotton (220 gram, 7 oz)</li>
                     <li>Care: Machine-wash cold, warm (30°C)</li>
                     <li>Proudly created in Croatia from local craftswomen and men</li>

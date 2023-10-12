@@ -5,7 +5,6 @@ import Footer from "../../components/Footer.astro";
 import { Buttons } from "../../components/Buttons";
 
 const buttons = [
-  { id: 101, size: "XS" },
   { id: 102, size: "S" },
   { id: 103, size: "M" },
   { id: 104, size: "L" },
@@ -100,11 +99,12 @@ const buttons = [
           <div class="product__item product__item--sizes">
             <Buttons client:load items={buttons} />
           </div>
-
           <div class="product__item product__item--description">
-            <p class="mt">
-              A toned-down front embroidery detail, coming to real life only on the second or third glance. Or just one gentle touch. Located at front bottom, a
-              simple black and white, almost “yin-yang-esque” tiny Heart patch detail, as a counterpoint to the enlarged screen printed, screaming back piece.
+            <p class="mt">A toned-down front embroidery detail, for a calm, premium look. Coming to real life only on the second or third glance.</p>
+            <p>Or just one gentle touch.</p>
+            <p>
+              Located at front bottom, a simple black and white, almost “yin-yang-esque” tiny Heart patch detail, as a counterpoint to the enlarged screen
+              printed, screaming back piece.
             </p>
           </div>
           <div class="product__item product__item--accordion">
