@@ -802,6 +802,11 @@ footer nav {
   margin: 1.5em 0;
 }
 
+.product__figures img {
+  height: 100%;
+  object-fit: cover;
+}
+
 /* accordion */
 
 .accordion input[name="panel"] {
