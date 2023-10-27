@@ -1,200 +1,134 @@
 [
   {
-    "id": 102,
-    "price": 250,
-    "name": "Hybrid Jacket - S",
-    "imgUrl": "/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp"
-  },
-  {
-    "id": 103,
-    "price": 250,
-    "name": "Hybrid Jacket - M",
-    "imgUrl": "/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp"
-  },
-  {
-    "id": 104,
-    "price": 250,
-    "name": "Hybrid Jacket - L",
-    "imgUrl": "/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp"
-  },
-  {
-    "id": 105,
-    "price": 250,
-    "name": "Hybrid Jacket - XL",
-    "imgUrl": "/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp"
-  },
-  {
-    "id": 201,
-    "price": 175,
-    "name": "Basic Denim Overall Pant - XS",
-    "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
-  },
-  {
-    "id": 202,
-    "price": 175,
-    "name": "Basic Denim Overall Pant - S",
-    "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
-  },
-  {
-    "id": 203,
-    "price": 175,
-    "name": "Basic Denim Overall Pant - M",
-    "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
-  },
-  {
-    "id": 204,
-    "price": 175,
-    "name": "Basic Denim Overall Pant - L",
-    "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
-  },
-  {
-    "id": 205,
-    "price": 175,
-    "name": "Basic Denim Overall Pant - XL",
-    "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
-  },
-  {
-    "id": 302,
-    "price": 180,
-    "name": "Basic Denim Jacket - S",
-    "imgUrl": "/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp"
-  },
-  {
-    "id": 303,
-    "price": 180,
-    "name": "Basic Denim Jacket - M",
-    "imgUrl": "/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp"
-  },
-  {
-    "id": 304,
-    "price": 180,
-    "name": "Basic Denim Jacket - L",
-    "imgUrl": "/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp"
-  },
-  {
-    "id": 305,
-    "price": 180,
-    "name": "Basic Denim Jacket - XL",
-    "imgUrl": "/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp"
-  },
-  {
-    "id": 402,
-    "price": 80,
-    "name": "Black Quilted Jacket - S",
-    "imgUrl": "/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp"
-  },
-  {
-    "id": 403,
-    "price": 80,
-    "name": "Black Quilted Jacket - M",
-    "imgUrl": "/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp"
-  },
-  {
-    "id": 404,
-    "price": 80,
-    "name": "Black Quilted Jacket - L",
-    "imgUrl": "/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp"
-  },
-  {
-    "id": 405,
-    "price": 80,
-    "name": "Black Quilted Jacket - XL",
-    "imgUrl": "/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp"
-  },
-  {
-    "id": 501,
+    "id": 100,
     "price": 50,
     "name": "Black TC Tote bag",
     "imgUrl": "/img/Black-TC-Tote-bag/girl-in-grey-tshirt-with-tote-bag-and-laptop.webp"
   },
   {
+    "id": 203,
+    "price": 250,
+    "name": "Hybrid Jacket - L",
+    "imgUrl": "/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp"
+  },
+  {
+    "id": 204,
+    "price": 250,
+    "name": "Hybrid Jacket - XL",
+    "imgUrl": "/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp"
+  },
+  {
+    "id": 303,
+    "price": 180,
+    "name": "Basic Denim Jacket - L",
+    "imgUrl": "/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp"
+  },
+  {
+    "id": 304,
+    "price": 180,
+    "name": "Basic Denim Jacket - XL",
+    "imgUrl": "/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp"
+  },
+  {
+    "id": 403,
+    "price": 80,
+    "name": "Black Quilted Jacket - L",
+    "imgUrl": "/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp"
+  },
+  {
+    "id": 404,
+    "price": 80,
+    "name": "Black Quilted Jacket - XL",
+    "imgUrl": "/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp"
+  },
+  {
+    "id": 502,
+    "price": 70,
+    "name": "Nude Pink Licitar T-Shirt - M",
+    "imgUrl": "/img/Nude-Pink-Licitar-T-Shirt/man-in-nude-pink-licitar-t-shirt-back.webp"
+  },
+  {
+    "id": 503,
+    "price": 70,
+    "name": "Nude Pink Licitar T-Shirt - L",
+    "imgUrl": "/img/Nude-Pink-Licitar-T-Shirt/man-in-nude-pink-licitar-t-shirt-back.webp"
+  },
+  {
+    "id": 601,
+    "price": 70,
+    "name": "Sand Brown Licitar T-Shirt - S",
+    "imgUrl": "/img/Sand-Brown-Licitar-T-Shirt/girl-in-sand-brown-licitar-t-shirt-back.webp"
+  },
+  {
+    "id": 602,
+    "price": 70,
+    "name": "Sand Brown Licitar T-Shirt - M",
+    "imgUrl": "/img/Sand-Brown-Licitar-T-Shirt/girl-in-sand-brown-licitar-t-shirt-back.webp"
+  },
+  {
+    "id": 603,
+    "price": 70,
+    "name": "Sand Brown Licitar T-Shirt - L",
+    "imgUrl": "/img/Sand-Brown-Licitar-T-Shirt/girl-in-sand-brown-licitar-t-shirt-back.webp"
+  },
+  {
     "id": 604,
-    "price": 45,
-    "name": "Reflective Calli Crewneck - L",
-    "imgUrl": "/img/Reflective-Calli-Crewneck/girl-in-a-white-crewneck-with-reflectivew-detail.webp"
+    "price": 70,
+    "name": "Sand Brown Licitar T-Shirt - XL",
+    "imgUrl": "/img/Sand-Brown-Licitar-T-Shirt/girl-in-sand-brown-licitar-t-shirt-back.webp"
+  },
+  {
+    "id": 701,
+    "price": 60,
+    "name": "Pale Lemon Licitar T-Shirt - S",
+    "imgUrl": "/img/Pale-Lemon-Licitar-T-shirt/man-in-pale-lemon-licitar-t-shirt-back.webp"
+  },
+  {
+    "id": 702,
+    "price": 60,
+    "name": "Pale Lemon Licitar T-Shirt - M",
+    "imgUrl": "/img/Pale-Lemon-Licitar-T-shirt/man-in-pale-lemon-licitar-t-shirt-back.webp"
+  },
+  {
+    "id": 703,
+    "price": 60,
+    "name": "Pale Lemon Licitar T-Shirt - L",
+    "imgUrl": "/img/Pale-Lemon-Licitar-T-shirt/man-in-pale-lemon-licitar-t-shirt-back.webp"
   },
   {
     "id": 704,
-    "price": 20,
-    "name": "Fight Fire With Fire T-Shirt - L",
-    "imgUrl": "/img/Fight-Fire-With-Fire-T-Shirt/girl-in-white-tshirt-front.webp"
+    "price": 60,
+    "name": "Pale Lemon Licitar T-Shirt - XL",
+    "imgUrl": "/img/Pale-Lemon-Licitar-T-shirt/man-in-pale-lemon-licitar-t-shirt-back.webp"
   },
   {
-    "id": 705,
-    "price": 20,
-    "name": "Fight Fire With Fire T-Shirt - XL",
-    "imgUrl": "/img/Fight-Fire-With-Fire-T-Shirt/girl-in-white-tshirt-front.webp"
+    "id": 801,
+    "price": 60,
+    "name": "Pale Lemon Licitar Tank Top - S",
+    "imgUrl": "/img/Pale-Lemon-Licitar-T-shirt/girl-in-pale-lemon-licitar-t-shirt-back.webp"
   },
   {
     "id": 802,
-    "price": 90,
-    "name": "New Life Black Hoodie - S",
-    "imgUrl": "/img/New-Life-Black-Hoodie/girl-in-black-new-life-hoodie-front.webp"
+    "price": 60,
+    "name": "Pale Lemon Licitar Tank Top - M",
+    "imgUrl": "/img/Pale-Lemon-Licitar-T-shirt/girl-in-pale-lemon-licitar-t-shirt-back.webp"
   },
   {
     "id": 803,
-    "price": 90,
-    "name": "New Life Black Hoodie - M",
-    "imgUrl": "/img/New-Life-Black-Hoodie/girl-in-black-new-life-hoodie-front.webp"
+    "price": 60,
+    "name": "Pale Lemon Licitar Tank Top - L",
+    "imgUrl": "/img/Pale-Lemon-Licitar-T-shirt/girl-in-pale-lemon-licitar-t-shirt-back.webp"
   },
   {
     "id": 804,
-    "price": 90,
-    "name": "New Life Black Hoodie - L",
-    "imgUrl": "/img/New-Life-Black-Hoodie/girl-in-black-new-life-hoodie-front.webp"
+    "price": 60,
+    "name": "Pale Lemon Licitar Tank Top - XL",
+    "imgUrl": "/img/Pale-Lemon-Licitar-T-shirt/girl-in-pale-lemon-licitar-t-shirt-back.webp"
   },
   {
     "id": 902,
-    "price": 60,
-    "name": "New Life Gray T-Shirt TC21 - S",
-    "imgUrl": "/img/New-Life-Gray-T-Shirt/gray-tshirt-new-life-mens-2.webp"
-  },
-  {
-    "id": 903,
-    "price": 60,
-    "name": "New Life Gray T-Shirt TC21 - M",
-    "imgUrl": "/img/New-Life-Gray-T-Shirt/gray-tshirt-new-life-mens-2.webp"
-  },
-  {
-    "id": 904,
-    "price": 60,
-    "name": "New Life Gray T-Shirt TC21 - L",
-    "imgUrl": "/img/New-Life-Gray-T-Shirt/gray-tshirt-new-life-mens-2.webp"
-  },
-  {
-    "id": 905,
-    "price": 60,
-    "name": "New Life Gray T-Shirt TC21 - XL",
-    "imgUrl": "/img/New-Life-Gray-T-Shirt/gray-tshirt-new-life-mens-2.webp"
-  },
-  {
-    "id": 1002,
-    "price": 90,
-    "name": "New Life Black T-Shirt TC21 - S",
-    "imgUrl": "/img/New-Life-Black-T-Shirt/man-in-new-life-black-tshirt-front.webp"
-  },
-  {
-    "id": 1003,
-    "price": 90,
-    "name": "New Life Black T-Shirt TC21 - M",
-    "imgUrl": "/img/New-Life-Black-T-Shirt/man-in-new-life-black-tshirt-front.webp"
-  },
-  {
-    "id": 1004,
-    "price": 90,
-    "name": "New Life Black T-Shirt TC21 - L",
-    "imgUrl": "/img/New-Life-Black-T-Shirt/man-in-new-life-black-tshirt-front.webp"
-  },
-  {
-    "id": 1005,
-    "price": 90,
-    "name": "New Life Black T-Shirt TC21 - XL",
-    "imgUrl": "/img/New-Life-Black-T-Shirt/man-in-new-life-black-tshirt-front.webp"
-  },
-  {
-    "id": 1103,
-    "price": 40,
-    "name": "Mint Moth Hoodie - M",
-    "imgUrl": "/img/Mint-Moth-Hoodie/girl-in-mint-hoodie.webp"
+    "price": 75,
+    "name": "Ash Brown Licitar Longsleeve T - M",
+    "imgUrl": "/img/Ash-Brown-Licitar-T-Shirt/girl-in-ash-brown-licitar-longsleeve-t-shirt-side-detail.webp"
   }
 ]

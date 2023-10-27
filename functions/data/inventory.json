@@ -1,51 +1,156 @@
 [
   [
-    104,
+    100,
+    {
+      "price": 50,
+      "name": "Black TC Tote bag"
+    }
+  ],
+  [
+    203,
     {
       "price": 250,
       "name": "Hybrid Jacket - L"
     }
   ],
   [
-    105,
+    204,
     {
       "price": 250,
       "name": "Hybrid Jacket - XL"
     }
   ],
   [
-    304,
+    303,
     {
       "price": 180,
       "name": "Basic Denim Jacket - L"
     }
   ],
   [
-    305,
+    304,
     {
       "price": 180,
       "name": "Basic Denim Jacket - XL"
     }
   ],
   [
-    404,
+    403,
     {
       "price": 80,
       "name": "Black Quilted Jacket - L"
     }
   ],
   [
-    405,
+    404,
     {
       "price": 80,
       "name": "Black Quilted Jacket - XL"
     }
   ],
   [
-    501,
+    502,
     {
-      "price": 50,
-      "name": "Black TC Tote bag"
+      "price": 70,
+      "name": "Nude Pink Licitar T-Shirt - M"
+    }
+  ],
+  [
+    503,
+    {
+      "price": 70,
+      "name": "Nude Pink Licitar T-Shirt - L"
+    }
+  ],
+  [
+    601,
+    {
+      "price": 70,
+      "name": "Sand Brown Licitar T-Shirt - S"
+    }
+  ],
+  [
+    602,
+    {
+      "price": 70,
+      "name": "Sand Brown Licitar T-Shirt - M"
+    }
+  ],
+  [
+    603,
+    {
+      "price": 70,
+      "name": "Sand Brown Licitar T-Shirt - L"
+    }
+  ],
+  [
+    604,
+    {
+      "price": 70,
+      "name": "Sand Brown Licitar T-Shirt - XL"
+    }
+  ],
+  [
+    701,
+    {
+      "price": 60,
+      "name": "Pale Lemon Licitar T-Shirt - S"
+    }
+  ],
+  [
+    702,
+    {
+      "price": 60,
+      "name": "Pale Lemon Licitar T-Shirt - M"
+    }
+  ],
+  [
+    703,
+    {
+      "price": 60,
+      "name": "Pale Lemon Licitar T-Shirt - L"
+    }
+  ],
+  [
+    704,
+    {
+      "price": 60,
+      "name": "Pale Lemon Licitar T-Shirt - XL"
+    }
+  ],
+  [
+    801,
+    {
+      "price": 60,
+      "name": "Pale Lemon Licitar Tank Top - S"
+    }
+  ],
+  [
+    802,
+    {
+      "price": 60,
+      "name": "Pale Lemon Licitar Tank Top - M"
+    }
+  ],
+  [
+    803,
+    {
+      "price": 60,
+      "name": "Pale Lemon Licitar Tank Top - L"
+    }
+  ],
+  [
+    804,
+    {
+      "price": 60,
+      "name": "Pale Lemon Licitar Tank Top - XL"
+    }
+  ],
+  [
+    902,
+    {
+      "price": 75,
+      "name": "Ash Brown Licitar Longsleeve T - M"
     }
   ]
 ]
