@@ -2658,6 +2658,14 @@ input {
   pointer-events: none;
 }
 
+.cookie-policy p {
+  margin-bottom: 0.5em;
+}
+
+.cookie-policy button {
+  margin-inline: 1em;
+}
+
 #smooth-content {
   display: grid;
 }

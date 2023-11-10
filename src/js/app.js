@@ -63,12 +63,17 @@ if (spanContainers) {
   });
 }
 
-const consentName = "tc_consent";
+const consentName = "tc_modal";
 
 const shouldShowPopup = () => !localStorage.getItem(consentName);
 const saveToStorage = () => localStorage.setItem(consentName, true);
 
 acceptBtn.addEventListener("click", () => {
+  saveToStorage();
+  consentPopup.classList.add("disabled");
+});
+
+rejectBtn.addEventListener("click", () => {
   saveToStorage();
   consentPopup.classList.add("disabled");
 });
