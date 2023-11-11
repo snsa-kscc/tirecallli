@@ -66,11 +66,9 @@ if (spanContainers) {
 const consentName = "tc_consent";
 const newsletterName = "tc_newsletter";
 
-function setLocalStorageItem(name, popup, button) {
-  button.addEventListener("click", () => {
-    localStorage.setItem(name, true);
-    popup.classList.add("disabled");
-  });
+function setLocalStorageItem(name, popup) {
+  localStorage.setItem(name, true);
+  popup.classList.add("disabled");
 }
 
 function showPopup(name, element, duration) {
@@ -81,13 +79,20 @@ function showPopup(name, element, duration) {
   }
 }
 
-setLocalStorageItem(consentName, consentPopup, acceptBtn);
-setLocalStorageItem(consentName, consentPopup, rejectBtn);
-showPopup(consentName, consentPopup, 2000);
+acceptBtn.addEventListener("click", () => {
+  setLocalStorageItem(consentName, consentPopup);
+});
+rejectBtn.addEventListener("click", () => {
+  setLocalStorageItem(consentName, consentPopup);
+});
 
-setTimeout(() => {
+showPopup(consentName, consentPopup, 2000);
+showPopup(newsletterName, newsletterPopup, 5000);
+
+newsletterPopup.addEventListener("click", () => {
+  setLocalStorageItem(newsletterName, newsletterPopup);
   newsletterModal.showModal();
-}, 3000);
+});
 
 modalClose.addEventListener("click", () => {
   newsletterModal.close();
