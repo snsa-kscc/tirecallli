@@ -14,6 +14,7 @@
       <input type="email" name="email" placeholder="Email" required />
       <button type="submit">Subscribe</button>
     </form>
+    <p class="footer__item opacity-hidden" id="loadingIndicator"></p>
     <p class="footer__item opacity-hidden" id="formResponse"></p>
   </div>
   <div class="footer__section">
@@ -34,6 +35,16 @@
     </nav>
   </div>
 </footer>
+<dialog id="newsletterModal">
+  <p>Be first to know, get updated on collections and inspiration.</p>
+  <p>Sign up and get 10% off your first purchase.</p>
+  <form id="modalNewsletterForm" class="footer__group">
+    <input type="email" name="email" placeholder="Email" required />
+    <button type="submit">Subscribe</button>
+  </form>
+  <p class="footer__item opacity-hidden" id="modalLoadingIndicator"></p>
+  <p class="footer__item opacity-hidden" id="modalFormResponse"></p>
+</dialog>
 <div id="consentPopup" class="cookie-policy disabled">
   <p>We use cookies and we hope you are OK with that.</p>
   <button id="acceptBtn">OK</button>

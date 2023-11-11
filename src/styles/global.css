@@ -587,6 +587,14 @@ header.active a {
   color: white;
 }
 
+dialog {
+  padding: 2em;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .burger {
   display: none;
   padding-left: clamp(0.5rem, 8vw, 8rem);

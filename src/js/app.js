@@ -63,10 +63,10 @@ if (spanContainers) {
   });
 }
 
-const consentName = "tc_modal";
+const popupName = "tc_popup";
 
-const shouldShowPopup = () => !localStorage.getItem(consentName);
-const saveToStorage = () => localStorage.setItem(consentName, true);
+const shouldShowPopup = () => !localStorage.getItem(popupName);
+const saveToStorage = () => localStorage.setItem(popupName, true);
 
 acceptBtn.addEventListener("click", () => {
   saveToStorage();
@@ -84,40 +84,69 @@ if (shouldShowPopup()) {
   }, 2000);
 }
 
-newsletterForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const email = newsletterForm.querySelector('input[name="email"]').value;
-  let fetchData = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      email: email,
-    }),
-  };
-  fetch("/.netlify/functions/subscribe", fetchData)
-    .then((res) => res.json())
-    .then((data) => {
-      if (data.msg === "pending") {
-        formResponse.classList.add("visibility-shown");
-        formResponse.innerHTML = "Thanks, please check your email to confirm.";
-      } else if (data.msg === "Member Exists") {
-        formResponse.classList.add("visibility-shown");
-        formResponse.innerHTML = "You are already subscribed. Thank you for being a subscriber!";
-      } else {
-        formResponse.classList.add("visibility-shown");
-        formResponse.innerHTML = "We could not subscribe you. Please try again or use another email.";
-      }
-    })
-    .catch(() => {
-      formResponse.classList.add("visibility-shown");
-      formResponse.innerHTML = "We could not subscribe you. Please try again or use another email.";
-    })
-    .finally(() => {
-      newsletterForm.reset();
-    });
-});
+const getVisits = localStorage.getItem("tc_visits");
+if (!getVisits) {
+  localStorage.setItem("tc_visits", 0);
+} else {
+  localStorage.setItem("tc_visits", parseInt(getVisits) + 1);
+}
+
+if (localStorage.getItem("tc_visits") % 10 == 0 || localStorage.getItem("tc_visits") == 0) {
+  setTimeout(() => {
+    newsletterModal.showModal();
+  }, 7000);
+}
+
+function handleSubmit(form, loading, response) {
+  function removeLoadingIndicator() {
+    loading.innerHTML = "";
+    loading.classList.remove("visibility-shown");
+  }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    loading.classList.add("visibility-shown");
+    loading.innerHTML = "Loading...";
+    const email = form.querySelector('input[name="email"]').value;
+    let fetchData = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+      }),
+    };
+    fetch("/.netlify/functions/subscribe", fetchData)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.msg === "pending") {
+          removeLoadingIndicator();
+          response.classList.add("visibility-shown");
+          response.innerHTML = "Thanks, please check your email to confirm.";
+        } else if (data.msg === "Member Exists") {
+          removeLoadingIndicator();
+          response.classList.add("visibility-shown");
+          response.innerHTML = "You are already subscribed. Thank you for being a subscriber!";
+        } else {
+          removeLoadingIndicator();
+          response.classList.add("visibility-shown");
+          response.innerHTML = "We could not subscribe you. Please try again or use another email.";
+        }
+      })
+      .catch(() => {
+        removeLoadingIndicator();
+        response.classList.add("visibility-shown");
+        response.innerHTML = "We could not subscribe you. Please try again or use another email.";
+      })
+      .finally(() => {
+        form.reset();
+      });
+  });
+}
+
+handleSubmit(newsletterForm, loadingIndicator, formResponse);
+handleSubmit(modalNewsletterForm, modalLoadingIndicator, modalFormResponse);
 
 logo.oncontextmenu = (e) => {
   e.preventDefault();
