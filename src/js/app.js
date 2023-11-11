@@ -63,43 +63,33 @@ if (spanContainers) {
   });
 }
 
-const popupName = "tc_popup";
+const consentName = "tc_consent";
+const newsletterName = "tc_newsletter";
 
-const shouldShowPopup = () => !localStorage.getItem(popupName);
-const saveToStorage = () => localStorage.setItem(popupName, true);
-
-acceptBtn.addEventListener("click", () => {
-  saveToStorage();
-  consentPopup.classList.add("disabled");
-});
-
-rejectBtn.addEventListener("click", () => {
-  saveToStorage();
-  consentPopup.classList.add("disabled");
-});
-
-if (shouldShowPopup()) {
-  setTimeout(() => {
-    consentPopup.classList.remove("disabled");
-  }, 2000);
+function setLocalStorageItem(name, popup, button) {
+  button.addEventListener("click", () => {
+    localStorage.setItem(name, true);
+    popup.classList.add("disabled");
+  });
 }
 
-const getVisits = localStorage.getItem("tc_visits");
-if (!getVisits) {
-  localStorage.setItem("tc_visits", 0);
-} else {
-  localStorage.setItem("tc_visits", parseInt(getVisits) + 1);
+function showPopup(name, element, duration) {
+  if (!localStorage.getItem(name)) {
+    setTimeout(() => {
+      element.classList.remove("disabled");
+    }, duration);
+  }
 }
 
-if (localStorage.getItem("tc_visits") % 1 == 0 || localStorage.getItem("tc_visits") == 0) {
-  setTimeout(() => {
-    newsletterModal.style.display = "grid";
-    newsletterModal.showModal();
-  }, 1000);
-}
+setLocalStorageItem(consentName, consentPopup, acceptBtn);
+setLocalStorageItem(consentName, consentPopup, rejectBtn);
+showPopup(consentName, consentPopup, 2000);
+
+setTimeout(() => {
+  newsletterModal.showModal();
+}, 3000);
 
 modalClose.addEventListener("click", () => {
-  newsletterModal.style.display = "none";
   newsletterModal.close();
 });
 

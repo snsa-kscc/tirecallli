@@ -369,6 +369,10 @@ a:hover::before {
   font-size: 2.4rem;
 }
 
+.text--sm {
+  font-size: 1rem;
+}
+
 .text--white {
   color: white;
 }
@@ -592,10 +596,6 @@ dialog {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  align-items: center;
-  gap: 1em;
-  width: min(85%, 90rem);
 }
 
 dialog form {
@@ -606,14 +606,26 @@ dialog button {
   padding: 1rem;
 }
 
-.dialog__item--content {
+.dialog__item {
   padding: 2em;
 }
 
+.dialog__item--image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog__item--image svg {
+  max-width: 5rem;
+}
+
 .dialog__item--image img {
-  aspect-ratio: 1;
-  object-fit: cover;
-  height: 100%;
+  max-width: 25rem;
+}
+
+.dialog__item--content {
+  text-align: center;
 }
 
 .close-modal {
