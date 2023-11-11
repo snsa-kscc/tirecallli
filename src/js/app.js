@@ -97,6 +97,10 @@ if (localStorage.getItem("tc_visits") % 10 == 0 || localStorage.getItem("tc_visi
   }, 7000);
 }
 
+modalClose.addEventListener("click", () => {
+  newsletterModal.close();
+});
+
 function handleSubmit(form, loading, response) {
   function removeLoadingIndicator() {
     loading.innerHTML = "";

@@ -595,6 +595,23 @@ dialog {
   transform: translate(-50%, -50%);
 }
 
+dialog form {
+  width: 100%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.4em;
+  color: white;
+  background: black;
+}
+
+.close-modal:focus-visible {
+  outline: none;
+}
+
 .burger {
   display: none;
   padding-left: clamp(0.5rem, 8vw, 8rem);
