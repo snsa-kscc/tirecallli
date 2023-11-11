@@ -36,15 +36,20 @@
   </div>
 </footer>
 <dialog id="newsletterModal">
-  <button id="modalClose" class="close-modal">x</button>
-  <p>Be first to know, get updated on collections and inspiration.</p>
-  <p>Sign up and get 10% off your first purchase.</p>
-  <form id="modalNewsletterForm" class="footer__group">
-    <input type="email" name="email" placeholder="Email" required />
-    <button type="submit">Subscribe</button>
-  </form>
-  <p class="footer__item opacity-hidden" id="modalLoadingIndicator"></p>
-  <p class="footer__item opacity-hidden" id="modalFormResponse"></p>
+  <div class="dialog__item dialog__item--content">
+    <p>Be first to know, get updated on collections and inspiration.</p>
+    <p>Sign up and get 10% off your first purchase.</p>
+    <form id="modalNewsletterForm" class="footer__group">
+      <input type="email" name="email" placeholder="Email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="footer__item opacity-hidden" id="modalLoadingIndicator"></p>
+    <p class="footer__item opacity-hidden" id="modalFormResponse"></p>
+  </div>
+  <div class="dialog__item dialog__item--image">
+    <button id="modalClose" class="close-modal"></button>
+    <img src="/img/tirecalligraphy-tc23-collection-inspo-spotify-playlist.webp" alt="tirecalli-picture" />
+  </div>
 </dialog>
 <div id="consentPopup" class="cookie-policy disabled">
   <p>We use cookies and we hope you are OK with that.</p>

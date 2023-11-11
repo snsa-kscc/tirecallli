@@ -91,10 +91,10 @@ if (!getVisits) {
   localStorage.setItem("tc_visits", parseInt(getVisits) + 1);
 }
 
-if (localStorage.getItem("tc_visits") % 10 == 0 || localStorage.getItem("tc_visits") == 0) {
+if (localStorage.getItem("tc_visits") % 1 == 0 || localStorage.getItem("tc_visits") == 0) {
   setTimeout(() => {
     newsletterModal.showModal();
-  }, 7000);
+  }, 1000);
 }
 
 modalClose.addEventListener("click", () => {
@@ -131,17 +131,17 @@ function handleSubmit(form, loading, response) {
         } else if (data.msg === "Member Exists") {
           removeLoadingIndicator();
           response.classList.add("visibility-shown");
-          response.innerHTML = "You are already subscribed. Thank you for being a subscriber!";
+          response.innerHTML = "You are already subscribed. Thank you!";
         } else {
           removeLoadingIndicator();
           response.classList.add("visibility-shown");
-          response.innerHTML = "We could not subscribe you. Please try again or use another email.";
+          response.innerHTML = "We could not subscribe you. Try again or use another email.";
         }
       })
       .catch(() => {
         removeLoadingIndicator();
         response.classList.add("visibility-shown");
-        response.innerHTML = "We could not subscribe you. Please try again or use another email.";
+        response.innerHTML = "We could not subscribe you. Try again or use another email.";
       })
       .finally(() => {
         form.reset();
