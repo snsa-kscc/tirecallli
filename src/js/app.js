@@ -93,11 +93,13 @@ if (!getVisits) {
 
 if (localStorage.getItem("tc_visits") % 1 == 0 || localStorage.getItem("tc_visits") == 0) {
   setTimeout(() => {
+    newsletterModal.style.display = "grid";
     newsletterModal.showModal();
   }, 1000);
 }
 
 modalClose.addEventListener("click", () => {
+  newsletterModal.style.display = "none";
   newsletterModal.close();
 });
 
