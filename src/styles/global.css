@@ -3055,7 +3055,8 @@ input {
   border-radius: 4rem;
 }
 
-.heart-intro__img {
+.heart-intro__img,
+.cyber-intro__img {
   min-height: 40vh;
   max-height: 80vh;
   object-fit: cover;
