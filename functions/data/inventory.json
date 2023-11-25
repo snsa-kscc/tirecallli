@@ -7,6 +7,13 @@
     }
   ],
   [
+    202,
+    {
+      "price": 150,
+      "name": "Hybrid Jacket - M"
+    }
+  ],
+  [
     203,
     {
       "price": 150,
@@ -21,6 +28,13 @@
     }
   ],
   [
+    302,
+    {
+      "price": 105,
+      "name": "Basic Denim Jacket - M"
+    }
+  ],
+  [
     303,
     {
       "price": 105,
@@ -32,6 +46,13 @@
     {
       "price": 105,
       "name": "Basic Denim Jacket - XL"
+    }
+  ],
+  [
+    402,
+    {
+      "price": 50,
+      "name": "Black Quilted Jacket - M"
     }
   ],
   [
