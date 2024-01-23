@@ -741,7 +741,6 @@ footer nav {
 .video {
   position: relative;
   background: var(--base-color);
-  padding: 6vmax;
 }
 
 .video--flex {
@@ -936,7 +935,6 @@ footer nav {
 }
 
 .crypto-intro {
-  margin: 8vmax 0;
   padding: 5em 0;
   display: flex;
   width: 300%;
