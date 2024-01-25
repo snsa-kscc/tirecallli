@@ -756,38 +756,26 @@ footer nav {
 
 /* end of components */
 
-.new-collection {
-  height: 100vh;
+.hero-collection {
   position: relative;
 }
 
-.new-collection img {
-  height: 100%;
+.hero-collection img {
+  min-height: 60vh;
+  max-height: 80vh;
   object-fit: cover;
-  object-position: left;
 }
 
-.new-collection > div {
+.hero-collection > div {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.hero-collection h2 {
   color: white;
-  outline: 2px solid white;
-}
-
-.new-collection h2 {
-  opacity: 0;
-  animation: fadeInOut ease-in-out 3s infinite alternate;
-  color: #ffd700;
-}
-
-.new-collection h4 {
-  color: #0057b7;
-}
-
-.new-collection a {
-  color: white;
+  text-align: center;
 }
 
 .vid {
