@@ -758,6 +758,12 @@ footer nav {
 
 .hero-collection {
   position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-collection h6 {
+  font-weight: normal;
 }
 
 .hero-collection img {
@@ -768,14 +774,9 @@ footer nav {
 
 .hero-collection > div {
   position: absolute;
-  top: 50%;
+  bottom: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.hero-collection h2 {
-  color: white;
-  text-align: center;
+  transform: translate(-50%);
 }
 
 .vid {
