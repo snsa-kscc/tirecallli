@@ -96,6 +96,23 @@ export function ShoppingCart() {
     };
   }, [discount]);
 
+  const eligibleItems = [502, 503, 601, 602, 603, 604, 702, 703, 704, 802, 803, 804, 902];
+  const sortedItems = cartItems
+    .filter((item) => eligibleItems.includes(item.id))
+    .sort((a, b) => {
+      const itemA = storeItems.find((i) => i.id === a.id);
+      const itemB = storeItems.find((i) => i.id === b.id);
+      return itemB.price - itemA.price;
+    });
+
+  const valentineDiscount = sortedItems.reduce((acc, item, index) => {
+    if (index === 0) {
+      return acc + storeItems.find((i) => i.id === item.id).price * 0.3 * (item.quantity - 1);
+    } else {
+      return acc + storeItems.find((i) => i.id === item.id).price * 0.3 * item.quantity;
+    }
+  }, 0);
+
   const subtotal = cartItems.reduce((total, cartItem) => {
     const item = storeItems.find((i) => i.id === cartItem.id);
     return total + (item?.price || 0) * cartItem.quantity;
@@ -103,7 +120,7 @@ export function ShoppingCart() {
 
   const deliveryAndHandling = 5;
 
-  const discountAmount = discount ? subtotal * 0.1 : 0;
+  const discountAmount = (discount ? (subtotal - valentineDiscount) * 0.1 : 0) + valentineDiscount;
 
   const total = subtotal + deliveryAndHandling - discountAmount;
 
@@ -145,7 +162,7 @@ export function ShoppingCart() {
           <h2>Summary</h2>
           <div>Subtotal: {subtotal}€</div>
           <div>Delivery and Handling: {deliveryAndHandling}€</div>
-          {discount && <div>Discount: {discountAmount}€</div>}
+          <div>Discount: {discountAmount}€</div>
           <div className="bag__total">Total: {total}€</div>
           <div>
             <form onSubmit={handleApplyDiscount} className="discount-form">
