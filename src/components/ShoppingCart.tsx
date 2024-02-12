@@ -160,10 +160,10 @@ export function ShoppingCart() {
         </div>
         <div className="bag__group bag__summary">
           <h2>Summary</h2>
-          <div>Subtotal: {subtotal}€</div>
-          <div>Delivery and Handling: {deliveryAndHandling}€</div>
-          <div>Discount: {discountAmount}€</div>
-          <div className="bag__total">Total: {total}€</div>
+          <div>Subtotal: {subtotal.toFixed(2)}€</div>
+          <div>Delivery and Handling: {deliveryAndHandling.toFixed(2)}€</div>
+          <div>Discount: {discountAmount.toFixed(2)}€</div>
+          <div className="bag__total">Total: {total.toFixed(2)}€</div>
           <div>
             <form onSubmit={handleApplyDiscount} className="discount-form">
               <input type="text" id="code" placeholder="Discount code" className="discount-input" />
