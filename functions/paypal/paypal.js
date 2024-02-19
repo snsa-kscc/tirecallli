@@ -15,24 +15,10 @@ exports.handler = async function (event, context) {
   const request = new paypal.orders.OrdersCreateRequest();
   const { purchasedItems, discount } = JSON.parse(event.body);
 
-  const eligibleItems = [502, 503, 601, 602, 603, 604, 702, 703, 704, 802, 803, 804, 902];
-  const sortedItems = purchasedItems
-    .filter((item) => eligibleItems.includes(item.id))
-    .sort((a, b) => {
-      return storeItems.get(b.id).price - storeItems.get(a.id).price;
-    });
-  const valentineDiscount = sortedItems.reduce((acc, item, index) => {
-    if (index === 0) {
-      return acc + storeItems.get(item.id).price * 0.3 * (item.quantity - 1);
-    } else {
-      return acc + storeItems.get(item.id).price * 0.3 * item.quantity;
-    }
-  }, 0);
-
   const itemTotal = purchasedItems.reduce((sum, item) => {
     return sum + storeItems.get(item.id).price * item.quantity;
   }, 0);
-  const discountAmount = (discount ? (itemTotal - valentineDiscount) * 0.1 : 0) + valentineDiscount;
+  const discountAmount = discount ? itemTotal * 0.1 : 0;
   const total = itemTotal + 5 - discountAmount;
   request.prefer("return=representation");
   request.requestBody({
