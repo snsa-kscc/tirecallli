@@ -13,13 +13,16 @@ const paypalClient = new paypal.core.PayPalHttpClient(new Environment(PAYPAL_CLI
 const storeItems = new Map(products);
 exports.handler = async function (event, context) {
   const request = new paypal.orders.OrdersCreateRequest();
-  const { purchasedItems, discount } = JSON.parse(event.body);
+  const { purchasedItems, discount, appliedDiscountCode } = JSON.parse(event.body);
 
   const itemTotal = purchasedItems.reduce((sum, item) => {
     return sum + storeItems.get(item.id).price * item.quantity;
   }, 0);
-  const discountAmount = discount ? itemTotal * 0.1 : 0;
+
+  const discountPercentage = discount ? (appliedDiscountCode === "TCRIMAC30" || appliedDiscountCode === "TCJUICE30" ? 0.3 : 0.1) : 0;
+  const discountAmount = discountPercentage * itemTotal;
   const total = itemTotal + 5 - discountAmount;
+
   request.prefer("return=representation");
   request.requestBody({
     intent: "AUTHORIZE", // or capture

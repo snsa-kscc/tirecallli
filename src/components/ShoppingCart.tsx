@@ -13,6 +13,7 @@ type CartItem = {
 
 export function ShoppingCart() {
   const [discount, setDiscount] = useState(false);
+  const [appliedDiscountCode, setAppliedDiscountCode] = useState("");
   const [message, setMessage] = useState("");
   const [cartItems, setCartItems] = useLocalStorage<CartItem[]>("shopping-cart", []);
   const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0);
@@ -25,6 +26,7 @@ export function ShoppingCart() {
     const requestBody = {
       purchasedItems: JSON.parse(localStorage.getItem("shopping-cart")),
       discount,
+      appliedDiscountCode,
     };
 
     return fetch("/.netlify/functions/paypal", {
@@ -56,7 +58,8 @@ export function ShoppingCart() {
   const handleApplyDiscount = (event) => {
     event.preventDefault();
     const userInput = event.target.elements.code.value;
-    if (userInput === "WELCOME10") {
+    if (userInput === "WELCOME10" || userInput === "TCRIMAC30" || userInput === "TCJUICE30") {
+      setAppliedDiscountCode(userInput);
       setDiscount(true);
       setMessage("");
     } else {
@@ -94,7 +97,7 @@ export function ShoppingCart() {
         buttonRef.current.close();
       }
     };
-  }, [discount]);
+  }, [discount, appliedDiscountCode]);
 
   const subtotal = cartItems.reduce((total, cartItem) => {
     const item = storeItems.find((i) => i.id === cartItem.id);
@@ -103,7 +106,8 @@ export function ShoppingCart() {
 
   const deliveryAndHandling = 5;
 
-  const discountAmount = discount ? subtotal * 0.1 : 0;
+  const discountPercentage = discount ? (appliedDiscountCode === "TCRIMAC30" || appliedDiscountCode === "TCJUICE30" ? 0.3 : 0.1) : 0;
+  const discountAmount = discountPercentage * subtotal;
 
   const total = subtotal + deliveryAndHandling - discountAmount;
 
