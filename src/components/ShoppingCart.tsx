@@ -104,7 +104,7 @@ export function ShoppingCart() {
     return total + (item?.price || 0) * cartItem.quantity;
   }, 0);
 
-  const deliveryAndHandling = 5;
+  const deliveryAndHandling = 10;
 
   const discountPercentage = discount ? (appliedDiscountCode === "TCRIMAC30" || appliedDiscountCode === "TCJUICE30" ? 0.3 : 0.1) : 0;
   const discountAmount = discountPercentage * subtotal;

@@ -21,7 +21,7 @@ exports.handler = async function (event, context) {
 
   const discountPercentage = discount ? (appliedDiscountCode === "TCRIMAC30" || appliedDiscountCode === "TCJUICE30" ? 0.3 : 0.1) : 0;
   const discountAmount = discountPercentage * itemTotal;
-  const total = itemTotal + 5 - discountAmount;
+  const total = itemTotal + 10 - discountAmount;
 
   request.prefer("return=representation");
   request.requestBody({
@@ -38,7 +38,7 @@ exports.handler = async function (event, context) {
             },
             shipping: {
               currency_code: "EUR",
-              value: "5.00",
+              value: "10.00",
             },
             discount: {
               currency_code: "EUR",
@@ -65,7 +65,7 @@ exports.handler = async function (event, context) {
               type: "SHIPPING",
               selected: true,
               amount: {
-                value: "5.00",
+                value: "10.00",
                 currency_code: "EUR",
               },
             },
