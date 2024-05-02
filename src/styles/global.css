@@ -493,6 +493,10 @@ h6 {
   gap: 1em;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .z--1 {
   z-index: -1;
 }
@@ -674,7 +678,7 @@ dialog button {
 footer {
   font-size: 1.2rem;
   padding-top: 2em;
-  align-items: center;
+  align-items: end;
   border-top: 1px solid var(--base-color);
   margin: 4em;
 }
@@ -693,6 +697,7 @@ footer nav {
 
 .footer__section {
   display: flex;
+  gap: 2em;
   align-items: center;
   justify-content: center;
   margin-block-start: 1em;
