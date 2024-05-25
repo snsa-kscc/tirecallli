@@ -60,6 +60,18 @@
     "imgUrl": "/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp"
   },
   {
+    "id": 451,
+    "price": 175,
+    "name": "Basic Denim Overall Pant - S",
+    "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
+  },
+  {
+    "id": 452,
+    "price": 175,
+    "name": "Basic Denim Overall Pant - M",
+    "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
+  },
+  {
     "id": 502,
     "price": 70,
     "name": "Nude Pink Licitar T-Shirt - M",

@@ -2,6 +2,12 @@
 import Head from "../../components/Head.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import { Buttons } from "../../components/Buttons";
+
+const buttons = [
+  { id: 451, size: "S" },
+  { id: 452, size: "M" },
+];
 ---
 
 <html>
@@ -16,8 +22,14 @@ import Footer from "../../components/Footer.astro";
       <article class="product">
         <aside class="product__aside">
           <div class="product__figures">
-            <a href="details.html#photo-1"><img src="/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant.webp" alt="tirecalli-picture" /></a>
-            <a href="details.html#photo-2"><img src="/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-back.webp" alt="tirecalli-picture" /></a>
+            <a href="details.html#photo-1" class="relative"
+              ><img src="/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant.webp" alt="tirecalli-picture" />
+              <div class="product__exclusive bold"><p>WEB EXCLUSIVE</p></div>
+            </a>
+            <a href="details.html#photo-2" class="relative"
+              ><img src="/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-back.webp" alt="tirecalli-picture" />
+              <div class="product__exclusive bold"><p>WEB EXCLUSIVE</p></div>
+            </a>
           </div>
           <div class="product__figures">
             <a href="details.html#photo-3"
@@ -87,10 +99,13 @@ import Footer from "../../components/Footer.astro";
             <p>Price: 175€</p>
           </div>
           <div class="product__item product__item--size-select">
-            <p>SOLD OUT</p>
+            <p>Select your size and add to bag</p>
+          </div>
+          <div class="product__item product__item--sizes">
+            <Buttons client:load items={buttons} />
           </div>
           <div class="product__item product__item--description">
-            <p>To pre-order sizes XS, S, M, L or XL, contact us using a form <a href="/about">here &rsaquo;.</a></p>
+            <p>To pre-order sizes XS, L or XL, contact us using a form <a href="/about">here &rsaquo;.</a></p>
             <p class="mt">
               A basic denim overall pant. At first glance. But if examined closely, when worn, additional styling techniques will emerge; playing with straps,
               using them as a belt, this item can be worn as a regular pant, high waist or low crotch. Deeply hidden, two additional inner pockets will reveal

@@ -462,6 +462,10 @@ h6 {
   display: block;
 }
 
+.relative {
+  position: relative;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -857,6 +861,12 @@ footer nav {
 .product__figures img {
   height: 100%;
   object-fit: cover;
+}
+
+.product__exclusive {
+  position: absolute;
+  top: 1%;
+  right: 3%;
 }
 
 /* accordion */
