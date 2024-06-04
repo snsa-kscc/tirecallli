@@ -3152,3 +3152,32 @@ input {
 .displacement {
   filter: url(#displacementFilter);
 }
+
+.brand-cards {
+  margin: 4rem 0;
+}
+
+.brand-card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin: 4em 0;
+}
+
+.brand-card {
+  flex: 30rem;
+  border: 1px solid black;
+  border-radius: 0 0 3rem 3rem;
+}
+
+.brand-picture {
+  border-bottom: 1px solid black;
+}
+
+.brand-picture__dark {
+  background-color: black;
+}
+
+.brand-info {
+  padding: 1em;
+}
