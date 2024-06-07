@@ -19,7 +19,7 @@ exports.handler = async function (event, context) {
     return sum + storeItems.get(item.id).price * item.quantity;
   }, 0);
 
-  const discountPercentage = discount ? (appliedDiscountCode === "TCRIMAC30" || appliedDiscountCode === "TCJUICE30" ? 0.3 : 0.1) : 0;
+  const discountPercentage = discount ? (appliedDiscountCode === "T14M4S5KOFC" || appliedDiscountCode === "TCJUICE30" ? 0.3 : 0.1) : 0;
   const discountAmount = discountPercentage * itemTotal;
   const total = itemTotal + 10 - discountAmount;
 

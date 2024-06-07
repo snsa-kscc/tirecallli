@@ -58,7 +58,7 @@ export function ShoppingCart() {
   const handleApplyDiscount = (event) => {
     event.preventDefault();
     const userInput = event.target.elements.code.value;
-    if (userInput === "WELCOME10" || userInput === "TCRIMAC30" || userInput === "TCJUICE30") {
+    if (userInput === "WELCOME10" || userInput === "T14M4S5KOFC" || userInput === "TCJUICE30") {
       setAppliedDiscountCode(userInput);
       setDiscount(true);
       setMessage("");
@@ -106,7 +106,7 @@ export function ShoppingCart() {
 
   const deliveryAndHandling = 10;
 
-  const discountPercentage = discount ? (appliedDiscountCode === "TCRIMAC30" || appliedDiscountCode === "TCJUICE30" ? 0.3 : 0.1) : 0;
+  const discountPercentage = discount ? (appliedDiscountCode === "T14M4S5KOFC" || appliedDiscountCode === "TCJUICE30" ? 0.3 : 0.1) : 0;
   const discountAmount = discountPercentage * subtotal;
 
   const total = subtotal + deliveryAndHandling - discountAmount;
