@@ -6,15 +6,15 @@
     "imgUrl": "/img/Black-TC-Tote-bag/girl-in-grey-tshirt-with-tote-bag-and-laptop.webp"
   },
   {
-    "id": 202,
+    "id": 201,
     "price": 250,
-    "name": "Hybrid Jacket - M",
+    "name": "Hybrid Jacket - S",
     "imgUrl": "/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp"
   },
   {
-    "id": 203,
+    "id": 202,
     "price": 250,
-    "name": "Hybrid Jacket - L",
+    "name": "Hybrid Jacket - M",
     "imgUrl": "/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp"
   },
   {
@@ -22,6 +22,12 @@
     "price": 250,
     "name": "Hybrid Jacket - XL",
     "imgUrl": "/img/Hybrid-Jacket/girl-in-hybrid-jacket-3.webp"
+  },
+  {
+    "id": 301,
+    "price": 180,
+    "name": "Basic Denim Jacket - S",
+    "imgUrl": "/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp"
   },
   {
     "id": 302,
@@ -42,15 +48,15 @@
     "imgUrl": "/img/Basic-Denim-Jacket/man-in-basic-denim-jacket.webp"
   },
   {
-    "id": 402,
+    "id": 401,
     "price": 80,
-    "name": "Black Quilted Jacket - M",
+    "name": "Black Quilted Jacket - S",
     "imgUrl": "/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp"
   },
   {
-    "id": 403,
+    "id": 402,
     "price": 80,
-    "name": "Black Quilted Jacket - L",
+    "name": "Black Quilted Jacket - M",
     "imgUrl": "/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp"
   },
   {
