@@ -2,12 +2,6 @@
 import Head from "../../components/Head.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
-import { Buttons } from "../../components/Buttons";
-
-const buttons = [
-  { id: 451, size: "S" },
-  { id: 452, size: "M" },
-];
 ---
 
 <html>
@@ -99,13 +93,10 @@ const buttons = [
             <p>Price: 175€</p>
           </div>
           <div class="product__item product__item--size-select">
-            <p>Select your size and add to bag</p>
-          </div>
-          <div class="product__item product__item--sizes">
-            <Buttons client:load items={buttons} />
+            <p>SOLD OUT</p>
           </div>
           <div class="product__item product__item--description">
-            <p>To pre-order sizes XS, L or XL, contact us using a form <a href="/about">here &rsaquo;.</a></p>
+            <p>To pre-order, contact us using a form <a href="/about">here &rsaquo;.</a></p>
             <p class="mt">
               A basic denim overall pant. At first glance. But if examined closely, when worn, additional styling techniques will emerge; playing with straps,
               using them as a belt, this item can be worn as a regular pant, high waist or low crotch. Deeply hidden, two additional inner pockets will reveal

@@ -63,20 +63,6 @@
     }
   ],
   [
-    451,
-    {
-      "price": 175,
-      "name": "Basic Denim Overall Pant - S"
-    }
-  ],
-  [
-    452,
-    {
-      "price": 175,
-      "name": "Basic Denim Overall Pant - M"
-    }
-  ],
-  [
     502,
     {
       "price": 70,
@@ -116,55 +102,6 @@
     {
       "price": 70,
       "name": "Sand Brown Licitar T-Shirt - XL"
-    }
-  ],
-  [
-    702,
-    {
-      "price": 60,
-      "name": "Pale Lemon Licitar T-Shirt - M"
-    }
-  ],
-  [
-    703,
-    {
-      "price": 60,
-      "name": "Pale Lemon Licitar T-Shirt - L"
-    }
-  ],
-  [
-    704,
-    {
-      "price": 60,
-      "name": "Pale Lemon Licitar T-Shirt - XL"
-    }
-  ],
-  [
-    802,
-    {
-      "price": 60,
-      "name": "Pale Lemon Licitar Tank Top - M"
-    }
-  ],
-  [
-    803,
-    {
-      "price": 60,
-      "name": "Pale Lemon Licitar Tank Top - L"
-    }
-  ],
-  [
-    804,
-    {
-      "price": 60,
-      "name": "Pale Lemon Licitar Tank Top - XL"
-    }
-  ],
-  [
-    902,
-    {
-      "price": 75,
-      "name": "Ash Brown Licitar Longsleeve T - M"
     }
   ]
 ]

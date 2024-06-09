@@ -60,18 +60,6 @@
     "imgUrl": "/img/Black-Quilted-Jacket/man-in-black-quilted-jacket-front.webp"
   },
   {
-    "id": 451,
-    "price": 175,
-    "name": "Basic Denim Overall Pant - S",
-    "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
-  },
-  {
-    "id": 452,
-    "price": 175,
-    "name": "Basic Denim Overall Pant - M",
-    "imgUrl": "/img/Basic-Denim-Overall-Pant/girl-in-basic-denim-overall-pant-2.webp"
-  },
-  {
     "id": 502,
     "price": 70,
     "name": "Nude Pink Licitar T-Shirt - M",
@@ -106,47 +94,5 @@
     "price": 70,
     "name": "Sand Brown Licitar T-Shirt - XL",
     "imgUrl": "/img/Sand-Brown-Licitar-T-Shirt/girl-in-sand-brown-licitar-t-shirt-back.webp"
-  },
-  {
-    "id": 702,
-    "price": 60,
-    "name": "Pale Lemon Licitar T-Shirt - M",
-    "imgUrl": "/img/Pale-Lemon-Licitar-T-shirt/man-in-pale-lemon-licitar-t-shirt-back.webp"
-  },
-  {
-    "id": 703,
-    "price": 60,
-    "name": "Pale Lemon Licitar T-Shirt - L",
-    "imgUrl": "/img/Pale-Lemon-Licitar-T-shirt/man-in-pale-lemon-licitar-t-shirt-back.webp"
-  },
-  {
-    "id": 704,
-    "price": 60,
-    "name": "Pale Lemon Licitar T-Shirt - XL",
-    "imgUrl": "/img/Pale-Lemon-Licitar-T-shirt/man-in-pale-lemon-licitar-t-shirt-back.webp"
-  },
-  {
-    "id": 802,
-    "price": 60,
-    "name": "Pale Lemon Licitar Tank Top - M",
-    "imgUrl": "/img/Pale-Lemon-Licitar-T-shirt/girl-in-pale-lemon-licitar-t-shirt-back.webp"
-  },
-  {
-    "id": 803,
-    "price": 60,
-    "name": "Pale Lemon Licitar Tank Top - L",
-    "imgUrl": "/img/Pale-Lemon-Licitar-T-shirt/girl-in-pale-lemon-licitar-t-shirt-back.webp"
-  },
-  {
-    "id": 804,
-    "price": 60,
-    "name": "Pale Lemon Licitar Tank Top - XL",
-    "imgUrl": "/img/Pale-Lemon-Licitar-T-shirt/girl-in-pale-lemon-licitar-t-shirt-back.webp"
-  },
-  {
-    "id": 902,
-    "price": 75,
-    "name": "Ash Brown Licitar Longsleeve T - M",
-    "imgUrl": "/img/Ash-Brown-Licitar-T-Shirt/girl-in-ash-brown-licitar-longsleeve-t-shirt-side-detail.webp"
   }
 ]
