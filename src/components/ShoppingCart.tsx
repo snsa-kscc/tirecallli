@@ -58,7 +58,8 @@ export function ShoppingCart() {
   const handleApplyDiscount = (event) => {
     event.preventDefault();
     const userInput = event.target.elements.code.value;
-    if (userInput === "WELCOME10" || userInput === "T14M4S5KOFC" || userInput === "TCJUICE30") {
+    if (userInput === "WELCOME10") {
+      // if (userInput === "WELCOME10" || userInput === "TCJUICE30") {
       setAppliedDiscountCode(userInput);
       setDiscount(true);
       setMessage("");
