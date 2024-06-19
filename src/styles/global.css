@@ -826,12 +826,6 @@ footer nav {
   margin: 6em 2em;
 }
 
-.sale {
-  display: grid;
-  place-content: center;
-  padding: 2em;
-}
-
 /* product */
 
 .product {
