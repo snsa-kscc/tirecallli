@@ -2,112 +2,112 @@
   [
     100,
     {
-      "price": 30,
+      "price": 50,
       "name": "Black TC Tote bag"
     }
   ],
   [
     201,
     {
-      "price": 150,
+      "price": 250,
       "name": "Hybrid Jacket - S"
     }
   ],
   [
     202,
     {
-      "price": 150,
+      "price": 250,
       "name": "Hybrid Jacket - M"
     }
   ],
   [
     204,
     {
-      "price": 150,
+      "price": 250,
       "name": "Hybrid Jacket - XL"
     }
   ],
   [
     301,
     {
-      "price": 108,
+      "price": 180,
       "name": "Basic Denim Jacket - S"
     }
   ],
   [
     302,
     {
-      "price": 108,
+      "price": 180,
       "name": "Basic Denim Jacket - M"
     }
   ],
   [
     303,
     {
-      "price": 108,
+      "price": 180,
       "name": "Basic Denim Jacket - L"
     }
   ],
   [
     304,
     {
-      "price": 108,
+      "price": 180,
       "name": "Basic Denim Jacket - XL"
     }
   ],
   [
     401,
     {
-      "price": 48,
+      "price": 80,
       "name": "Black Quilted Jacket - S"
     }
   ],
   [
     402,
     {
-      "price": 48,
+      "price": 80,
       "name": "Black Quilted Jacket - M"
     }
   ],
   [
     404,
     {
-      "price": 48,
+      "price": 80,
       "name": "Black Quilted Jacket - XL"
     }
   ],
   [
     503,
     {
-      "price": 42,
+      "price": 70,
       "name": "Nude Pink Licitar T-Shirt - L"
     }
   ],
   [
     601,
     {
-      "price": 42,
+      "price": 70,
       "name": "Sand Brown Licitar T-Shirt - S"
     }
   ],
   [
     602,
     {
-      "price": 42,
+      "price": 70,
       "name": "Sand Brown Licitar T-Shirt - M"
     }
   ],
   [
     603,
     {
-      "price": 42,
+      "price": 70,
       "name": "Sand Brown Licitar T-Shirt - L"
     }
   ],
   [
     604,
     {
-      "price": 42,
+      "price": 70,
       "name": "Sand Brown Licitar T-Shirt - XL"
     }
   ]
