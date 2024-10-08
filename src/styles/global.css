@@ -785,7 +785,7 @@ footer nav {
 
 .hero-collection img {
   min-height: 60vh;
-  max-height: 80vh;
+  max-height: 100vh;
   object-fit: cover;
 }
 
