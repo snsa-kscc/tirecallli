@@ -1,19 +1,16 @@
 ---
-import { ViewTransitions } from "astro:transitions";
 import stylesUrl from "../styles/global.css?url";
 
 export interface Props {
   title?: string;
   url?: string;
   description?: string;
-  isTransitioning?: boolean;
 }
 
 const {
   title = "Tire Calligraphy - From The Community For The Community",
   url = "https://tirecalli.com/",
   description = "A contemporary apparel brand. From The Community For The Community. Proudly crafted in Zagreb, Croatia, oriented globally.",
-  isTransitioning = false,
 } = Astro.props as Props;
 ---
 
@@ -61,5 +58,4 @@ const {
     })(window, document, "script", "dataLayer", "GTM-TVFQ3CN");
   </script>
   <!-- End Google Tag Manager -->
-  {isTransitioning && <ViewTransitions />}
 </head>
