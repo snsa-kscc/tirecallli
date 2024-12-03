@@ -3189,14 +3189,3 @@ input {
 .brand-info {
   padding: 1em;
 }
-
-.black-friday {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-  background: #151515;
-}
-
-.black-friday img {
-  min-height: 40vh;
-}
