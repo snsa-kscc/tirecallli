@@ -2,8 +2,11 @@
 **/.DS_Store
 # Local Netlify folder
 .netlify
+
 node_modules
 dist
 .env
 .env.production
 .astro
+
+pnpm-lock.yaml
