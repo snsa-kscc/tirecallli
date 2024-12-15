@@ -23,7 +23,7 @@ export function Buttons({ items }) {
           onClick={() => {
             increaseCartQuantity(item.id, setCartItems);
             toast("Item added into the bag!", {
-              position: toast.POSITION.TOP_RIGHT,
+              position: "top-right",
             });
           }}
         >

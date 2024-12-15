@@ -19,10 +19,10 @@ export function Button({ id }: ButtonProps) {
   cartQuantityStore.set(cartQuantity);
 
   const handleClick = () => {
-    toast("Item added into the bag!", {
-      position: toast.POSITION.TOP_RIGHT,
-    });
     increaseCartQuantity(id, setCartItems);
+    toast("Item added into the bag!", {
+      position: "top-right",
+    });
   };
 
   return (

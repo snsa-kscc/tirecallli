@@ -19,8 +19,8 @@ export function ShoppingCart() {
   const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0);
   const [parent, enableAnimations] = useAutoAnimate<any>();
   cartQuantityStore.set(cartQuantity);
-  const buttonContainerRef = useRef();
-  const buttonRef = useRef(null);
+  const buttonContainerRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<any>(null);
 
   const createOrder = (data, actions) => {
     const requestBody = {
@@ -72,7 +72,7 @@ export function ShoppingCart() {
   useEffect(() => {
     const initPayPalButton = async () => {
       const paypal = await loadScript({
-        "client-id": "AbJEWWb11uZPepCWJ-lcU4d3FS-AU96otqyvH5fNPAmamH8a5OLsMOOKgZJaAuXV5UIuq981mvcQdfVT",
+        clientId: "AbJEWWb11uZPepCWJ-lcU4d3FS-AU96otqyvH5fNPAmamH8a5OLsMOOKgZJaAuXV5UIuq981mvcQdfVT",
         currency: "EUR",
         intent: "authorize",
       });

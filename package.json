@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "check": "astro check"
   },
   "repository": {
     "type": "git",
@@ -19,25 +20,27 @@
   },
   "homepage": "https://github.com/snsa-kscc/tirecalli#readme",
   "dependencies": {
-    "@astrojs/react": "^3.0.2",
-    "@astrojs/ts-plugin": "^1.1.1",
+    "@astrojs/react": "^4.1.0",
+    "@astrojs/ts-plugin": "^1.10.4",
     "@formkit/auto-animate": "1.0.0-beta.5",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
-    "@nanostores/react": "^0.4.0",
+    "@nanostores/react": "^0.8.2",
     "@paypal/checkout-server-sdk": "^1.0.3",
-    "@paypal/paypal-js": "^5.1.6",
-    "@studio-freight/lenis": "^1.0.19",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.8",
-    "curtainsjs": "^8.1.5",
-    "gsap": "^3.12.2",
-    "nanostores": "^0.7.1",
-    "node-fetch": "^2.6.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-toastify": "^9.1.1"
+    "@paypal/paypal-js": "^8.1.2",
+    "curtainsjs": "^8.1.6",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.18",
+    "nanostores": "^0.11.3",
+    "node-fetch": "^3.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-toastify": "^10.0.6",
+    "typescript": "^5.7.2"
   },
   "devDependencies": {
-    "astro": "^3.0.12"
+    "@astrojs/check": "^0.9.4",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "astro": "^5.0.5"
   }
 }

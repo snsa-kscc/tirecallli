@@ -1,4 +1,4 @@
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 
 let vid = document.querySelector(".vid");
 let sound = document.querySelector(".sound");
